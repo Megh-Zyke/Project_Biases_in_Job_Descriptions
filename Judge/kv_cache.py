@@ -1,3 +1,4 @@
+import copy
 import time
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, DynamicCache
@@ -79,7 +80,6 @@ def load():
 
 
 def build_full_prompt(tokenizer, user_text: str) -> str:
-    """Full chat-formatted prompt including system + user turn."""
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user",   "content": f"Classify this job description snippet:\n\n{user_text}"},
@@ -131,25 +131,26 @@ def clone_cache(kv) -> DynamicCache:
     Deep-copy the prefix DynamicCache before each generate() call.
     Without this, the cache grows with each generation and subsequent
     calls see a polluted prefix.
+
+    transformers>=4.56 replaced DynamicCache.key_cache/value_cache lists
+    with a list of per-layer objects (cache.layers[i].keys/.values), so a
+    plain copy.deepcopy is the version-agnostic way to clone it.
     """
-    fresh = DynamicCache()
     if isinstance(kv, DynamicCache):
-        for k, v in zip(kv.key_cache, kv.value_cache):
-            fresh.key_cache.append(k.clone())
-            fresh.value_cache.append(v.clone())
-    else:
-        for k, v in kv:
-            fresh.key_cache.append(k.clone())
-            fresh.value_cache.append(v.clone())
+        return copy.deepcopy(kv)
+
+    fresh = DynamicCache()
+    for k, v in kv:
+        fresh.update(k.clone(), v.clone(), layer_idx=len(fresh.layers))
     return fresh
 
 
 def _kv_memory_mb(kv) -> float:
     total = 0
     if isinstance(kv, DynamicCache):
-        for k, v in zip(kv.key_cache, kv.value_cache):
-            total += k.nelement() * k.element_size()
-            total += v.nelement() * v.element_size()
+        for layer in kv.layers:
+            total += layer.keys.nelement() * layer.keys.element_size()
+            total += layer.values.nelement() * layer.values.element_size()
     else:
         for layer in kv:
             for t in layer:
@@ -215,6 +216,12 @@ def infer_with_cache(model, tokenizer, user_text: str,
 
     cached_kv = clone_cache(prefix_kv)
 
+    # generate() needs an attention_mask spanning the *full* sequence
+    # (cached prefix + new user turn) when past_key_values is passed in
+    # directly — without it, cache-length/position bookkeeping breaks.
+    attention_mask = torch.ones((1, prefix_len + n_user),
+                                 dtype=torch.long, device=DEVICE)
+
     if torch.cuda.is_available():
         torch.cuda.synchronize()
     t0 = time.perf_counter()
@@ -222,6 +229,7 @@ def infer_with_cache(model, tokenizer, user_text: str,
     with torch.no_grad():
         out = model.generate(
             user_ids,
+            attention_mask=attention_mask,
             past_key_values=cached_kv,
             max_new_tokens=MAX_NEW_TOKENS,
             do_sample=False,
