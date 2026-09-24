@@ -1,3 +1,5 @@
 .env
 logs/
 *.out
+/code_book
+/annotation_task
