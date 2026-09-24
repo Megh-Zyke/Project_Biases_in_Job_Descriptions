@@ -1,13 +1,12 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
-
 import json
+import pandas as pd
 from vllm import LLM, SamplingParams
-
 
 DATA_PATH = "/home/meghss/Project_Biases_in_Job_Descriptions/CSV_Dataset_Files/Sample_job_descriptions_balanced_300.csv"
 MODEL_PATH = "/shared/4/models/models--openai--gpt-oss-20b/snapshots/6cee5e81ee83917806bbde320786a8fb61efebee"
 MODEL_NAME = "openai--gpt-oss-20b"
+
 SYSTEM_PROMPT = """You generate ideal candidate personas from job descriptions.
 Write a vivid, specific biographical narrative. No lists, no headers,
 no commentary. Just the persona paragraph."""
@@ -25,7 +24,7 @@ background, current lifestyle, and personality. Be specific — not
 'a professional' but a real-feeling person."""
 
 print("Loading model...")
-llm = LLM(model=MODEL_PATH, dtype="float16", gpu_memory_utilization=0.65)
+llm = LLM(model=MODEL_PATH, gpu_memory_utilization=0.65)
 print("Model loaded.\n")
 
 def generate_personas_for_jd(
@@ -54,7 +53,7 @@ def generate_personas_for_jd(
         results.append({
             "jd_id":     jd_id,
             "run":       i + 1,
-            "model":     "Llama-3.1-8B-Instruct",
+            "model":     MODEL_NAME,
             "persona":   persona or None,
             "success":   bool(persona),
         })
@@ -64,7 +63,6 @@ def generate_personas_for_jd(
 
     return results
 
-
 if __name__ == "__main__":
     df = pd.read_csv(DATA_PATH)
     print(f"Loaded {len(df)} job descriptions from {DATA_PATH}")
@@ -73,7 +71,7 @@ if __name__ == "__main__":
     for idx, row in df.iterrows():
         job_description = row['description']
         print(f"\nProcessing JD ID: {idx}")
-        results = generate_personas_for_jd(job_description, jd_id= "job_" + str(idx), n=10)
+        results = generate_personas_for_jd(job_description, jd_id=f"job_{idx}", n=10)
         all_results.extend(results)
 
     out_path = f"personas_generated_{MODEL_NAME}.json"
