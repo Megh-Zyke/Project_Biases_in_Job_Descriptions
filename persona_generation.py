@@ -1,14 +1,13 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
-
-from transformers import AutoTokenizer, AutoModelForCausalLM
+import sys
+import argparse
+import pandas as pd
 import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM
 import json
 import time
 import traceback
 from typing import Optional
-
-MODEL_PATH = "/shared/4/models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
 
 SYSTEM_PROMPT = """You generate ideal candidate personas from job descriptions.
 Write a vivid, specific biographical narrative. No lists, no headers,
@@ -26,25 +25,12 @@ Include their full name, specific age, where they grew up, their educational
 background, current lifestyle, and personality. Be specific — not
 'a professional' but a real-feeling person."""
 
-print("Loading tokenizer...")
-tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
-if tokenizer.pad_token is None:
-    tokenizer.pad_token = tokenizer.eos_token
-
-print("Loading model...")
-model = AutoModelForCausalLM.from_pretrained(
-    MODEL_PATH,
-    torch_dtype=torch.float16,
-    device_map="auto",
-)
-model.eval()
-print(f"Model loaded on: {next(model.parameters()).device}\n")
-
 def generate_persona(
+    model,
+    tokenizer,
     job_description: str,
     retries: int = 2,
 ) -> Optional[str]:
-
     prompt = generate_prompt(job_description)
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
@@ -54,9 +40,10 @@ def generate_persona(
         messages,
         tokenize=True,
         add_generation_prompt=True,
+        enable_thinking=False,
         return_tensors="pt",
         return_dict=True,
-    ).to("cuda:0")
+    ).to(model.device)
 
     for attempt in range(retries + 1):
         try:
@@ -91,46 +78,127 @@ def generate_persona(
     return None
 
 
-def generate_personas_for_jd(
-    job_description: str,
-    jd_id: str,
-    n: int = 10,
-) -> list[dict]:
-    results = []
+def main():
+    parser = argparse.ArgumentParser(description="Generate ideal personas from job descriptions using local LLMs")
+    parser.add_argument("--input", "-i", default="CSV_Dataset_Files/Sample_job_descriptions_balanced_300.csv", help="Path to input CSV (must contain 'description' column)")
+    parser.add_argument("--outdir", "-o", default="personas_output", help="Directory to write outputs")
+    parser.add_argument("--model", "-m", default="/shared/4/models/models--Qwen--Qwen3.5-9B/snapshots/c202236235762e1c871ad0ccb60c8ee5ba337b9a", help="Model path snapshot")
+    parser.add_argument("--start", "-s", type=int, default=0, help="Start row index (0-based) to process")
+    parser.add_argument("--end", "-e", type=int, default=None, help="End row index (exclusive)")
+    parser.add_argument("--n", "-n", type=int, default=10, help="Number of runs/personas per job description")
+    parser.add_argument("--append", action="store_true", help="Append to existing output files")
+    args = parser.parse_args()
 
-    for i in range(n):
-        print(f"  Run {i + 1}/{n}...")
-        persona = generate_persona(job_description)
+    print("=" * 70)
+    print("Persona Generator (Causal LLMs)")
+    print("=" * 70)
+    print(f"Input file: {args.input}")
+    print(f"Output directory: {args.outdir}")
+    print(f"Model path: {args.model}")
+    print(f"Runs per job description: {args.n}")
+    print(f"Append mode: {args.append}")
+    print("=" * 70)
 
-        results.append({
-            "jd_id":     jd_id,
-            "run":       i + 1,
-            "model":     "Llama-3.1-8B-Instruct",
-            "persona":   persona, 
-            "success":   persona is not None,
-        })
+    # Read input CSV
+    print("Reading input CSV...")
+    try:
+        df = pd.read_csv(args.input)
+    except Exception as e:
+        print(f"ERROR reading CSV: {e}", file=sys.stderr)
+        sys.exit(1)
 
-        if persona:
-            continue
-        else:
-            print(f"Generation failed for run {i + 1}\n")
+    if "description" not in df.columns:
+        print("ERROR: input CSV must contain a 'description' column", file=sys.stderr)
+        sys.exit(1)
 
-    return results
+    start = args.start
+    end = args.end if args.end is not None else len(df)
+    end = min(end, len(df))
+    print(f"✓ Loaded {len(df)} rows, processing rows {start} to {end}")
 
+    os.makedirs(args.outdir, exist_ok=True)
+    out_jsonl = os.path.join(args.outdir, "personas.jsonl")
 
-test_jd = """
-We're looking for a rockstar software engineer to join our fast-paced startup team.
-The ideal candidate is a self-starter who thrives under pressure and can hustle to meet
-tight deadlines. You should have a CS degree from a top-tier university and 5+ years of
-experience. We offer unlimited PTO, Friday beer bashes, and a ping pong table.
-Must be able to work long hours when needed. Culture fit is extremely important to us —
-we're a tight-knit family that works hard and plays harder.
-"""
+    # Load tokenizer and model
+    print(f"Loading tokenizer from {args.model}...")
+    try:
+        tokenizer = AutoTokenizer.from_pretrained(args.model)
+        if tokenizer.pad_token is None:
+            tokenizer.pad_token = tokenizer.eos_token
+        print("✓ Tokenizer loaded")
+    except Exception as e:
+        print(f"ERROR loading tokenizer: {e}", file=sys.stderr)
+        sys.exit(1)
 
-print("Generating personas...\n")
-results = generate_personas_for_jd(test_jd, jd_id="test_jd_001", n=10)
+    print(f"Loading model from {args.model}...")
+    try:
+        model = AutoModelForCausalLM.from_pretrained(
+            args.model,
+            torch_dtype=torch.float16,
+            device_map="auto",
+        )
+        model.eval()
+        print(f"✓ Model loaded on device: {next(model.parameters()).device}")
+    except Exception as e:
+        print(f"ERROR loading model: {e}", file=sys.stderr)
+        sys.exit(1)
 
-out_path = "personas_test_jd_001.json"
-with open(out_path, "w") as f:
-    json.dump(results, f, indent=2)
-print(f"\nAll results saved to {out_path}")
+    # Identify ID column if it exists, otherwise default to row index
+    id_col = None
+    for col in ["id", "job_id", "jd_id"]:
+        if col in df.columns:
+            id_col = col
+            break
+
+    # Extract short model name for logging
+    model_name = os.path.basename(args.model.rstrip("/"))
+    if "models--" in model_name:
+        model_name = model_name.replace("models--", "")
+
+    mode = "a" if args.append else "w"
+    print(f"Writing results to {out_jsonl} in '{'append' if args.append else 'write'}' mode...")
+    
+    with open(out_jsonl, mode, encoding="utf-8") as jf:
+        for idx in range(start, end):
+            row = df.iloc[idx]
+            desc = row.get("description", "")
+
+            if pd.isna(desc) or not str(desc).strip():
+                print(f"Skipping empty description at row {idx}")
+                continue
+
+            jd_id = str(row[id_col]) if id_col else f"row_{idx}"
+            print(f"\n[{idx}/{end}] Generating {args.n} personas for job: {jd_id}")
+
+            for run_idx in range(args.n):
+                print(f"  - Run {run_idx + 1}/{args.n}...")
+                start_time = time.time()
+                persona = generate_persona(model, tokenizer, desc)
+                duration = time.time() - start_time
+
+                result = {
+                    "jd_id": jd_id,
+                    "row_index": idx,
+                    "run": run_idx + 1,
+                    "model": model_name,
+                    "persona": persona,
+                    "success": persona is not None,
+                    "duration_seconds": round(duration, 2)
+                }
+
+                # Attach metadata
+                for col in ["searched_role", "company_description"]:
+                    if col in df.columns:
+                        result[col] = str(row[col])
+
+                jf.write(json.dumps(result, ensure_ascii=False) + "\n")
+                jf.flush()
+
+    print("\n" + "=" * 70)
+    print("Processing Complete")
+    print("=" * 70)
+    print(f"Output JSONL: {out_jsonl}")
+    print("=" * 70)
+
+if __name__ == "__main__":
+    main()
