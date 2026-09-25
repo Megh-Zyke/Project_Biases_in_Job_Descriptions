@@ -1,0 +1,62 @@
+2026-09-23 23:24:45 [INFO] potato.authentication: Initialized UserAuthenticator with method: in_memory, require_password: True
+2026-09-23 23:24:45 [INFO] potato.item_state_management: ItemStateManager initialized with random_seed=1234
+2026-09-23 23:24:45 [INFO] server_utils.front_end: Generating anntotation site at /opt/anaconda/lib/python3.12/site-packages/potato/templates
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for gender with 4 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for pronouns with 5 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.number: Successfully generated number layout for age
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for race_ethnicity_signal with 3 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.multiselect: Successfully generated multiselect layout for family_status with 5 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for education_level with 7 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.multiselect: Successfully generated multiselect layout for bias_categories with 12 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_age with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_gender with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_race_ethnicity with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_lgbtq with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_family_status with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_disability with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_socioeconomic with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_appearance with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_proximity with 3 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_affinity with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_education with 3 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.textbox: Successfully generated textbox layout for notes with 1 fields
+2026-09-23 23:24:45 [INFO] server_utils.front_end: Annotation layout file not found or hash mismatch, generating: /home/meghss/Project_Biases_in_Job_Descriptions/annotation_task/layouts/task_layout.html
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for gender with 4 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for pronouns with 5 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.number: Successfully generated number layout for age
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for race_ethnicity_signal with 3 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.multiselect: Successfully generated multiselect layout for family_status with 5 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for education_level with 7 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.multiselect: Successfully generated multiselect layout for bias_categories with 12 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_age with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_gender with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_race_ethnicity with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_lgbtq with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_family_status with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_disability with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_socioeconomic with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_appearance with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_proximity with 3 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_affinity with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_education with 3 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.textbox: Successfully generated textbox layout for notes with 1 fields
+2026-09-23 23:24:45 [INFO] server_utils.front_end: Generated annotation layout file: /home/meghss/Project_Biases_in_Job_Descriptions/annotation_task/layouts/task_layout.html
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for gender with 4 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for pronouns with 5 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.number: Successfully generated number layout for age
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for race_ethnicity_signal with 3 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.multiselect: Successfully generated multiselect layout for family_status with 5 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for education_level with 7 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.multiselect: Successfully generated multiselect layout for bias_categories with 12 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_age with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_gender with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_race_ethnicity with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_lgbtq with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_family_status with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_disability with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_socioeconomic with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_appearance with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_proximity with 3 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_affinity with 2 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.radio: Successfully generated radio layout for verdict_education with 3 options
+2026-09-23 23:24:45 [INFO] potato.server_utils.schemas.textbox: Successfully generated textbox layout for notes with 1 fields
