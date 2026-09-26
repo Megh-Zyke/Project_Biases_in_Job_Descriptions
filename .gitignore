@@ -3,3 +3,4 @@ logs/
 *.out
 /code_book
 /annotation_task
+__pycache__
