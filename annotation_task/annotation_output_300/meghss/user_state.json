@@ -544,6 +544,18 @@
           "source": "user",
           "phase": "annotation",
           "page": null
+        },
+        {
+          "timestamp": 1790697103.1926646,
+          "schema_name": "age",
+          "label_name": "number",
+          "old_label": null,
+          "action": "update",
+          "old_value": "32",
+          "new_value": "32",
+          "source": "user",
+          "phase": "annotation",
+          "page": null
         }
       ],
       "navigation_history": [],
