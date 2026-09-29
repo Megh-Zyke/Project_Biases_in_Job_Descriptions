@@ -5,14 +5,7 @@
 set -euo pipefail
 PORT="${1:-8791}"
 TASK=/home/meghss/Project_Biases_in_Job_Descriptions/annotation_task
-TPL=/opt/anaconda/lib/python3.12/site-packages/potato/templates
 
-# Potato 2.3.0 writes generated pages into its install dir; it crashes if it can't.
-if ! { [[ -d "$TPL/generated" && -w "$TPL/generated" ]] || [[ -w "$TPL" ]]; }; then
-  echo "ERROR: $TPL/generated is missing or not writable. Potato will crash on start."
-  echo "Ask a cluster admin to create it writable by the lab, or to upgrade potato-annotation."
-  exit 1
-fi
 if ss -ltn | grep -q ":$PORT "; then
   echo "ERROR: port $PORT is already in use. Pass another: bash run_server.sh 8792"; exit 1
 fi

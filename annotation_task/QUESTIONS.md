@@ -15,3 +15,7 @@
 3. Should evidence spans be mandatory? They are currently optional (see DESIGN.md).
 4. Who logs in? `allow_all_users: true` is fine on curry. Set an allowlist before
    the server is reachable from outside the cluster.
+5. Sampling choices for the personas_300 set: one run per model per job (run 1 unless
+   unusable). Skipping OLMo runs with anonymized names slightly favours runs where
+   the anonymizer didn't fire. Is that acceptable, or should those names be restored
+   from the raw generations?

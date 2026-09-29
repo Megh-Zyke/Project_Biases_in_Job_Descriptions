@@ -1,0 +1,834 @@
+{
+  "user_id": "meghss",
+  "instance_id_ordering": [
+    "p01",
+    "p02",
+    "p03",
+    "p04",
+    "p05",
+    "p06",
+    "p07",
+    "p08",
+    "p09",
+    "p10",
+    "p11",
+    "p12",
+    "p13",
+    "p14",
+    "p15",
+    "p16",
+    "p17",
+    "p18",
+    "p19",
+    "p20",
+    "p21",
+    "p22",
+    "p23",
+    "p24",
+    "p25",
+    "p26",
+    "p27",
+    "p28",
+    "p29",
+    "p30",
+    "p31",
+    "p32",
+    "p33",
+    "p34",
+    "p35",
+    "p36",
+    "p37",
+    "p38",
+    "p39",
+    "p40",
+    "p41",
+    "p42",
+    "p43",
+    "p44",
+    "p45",
+    "p46",
+    "p47",
+    "p48",
+    "p49",
+    "p50",
+    "p51",
+    "p52",
+    "p53",
+    "p54",
+    "p55",
+    "p56",
+    "p57",
+    "p58",
+    "p59",
+    "p60",
+    "p61",
+    "p62",
+    "p63",
+    "p64",
+    "p65",
+    "p66",
+    "p67",
+    "p68",
+    "p69",
+    "p70"
+  ],
+  "current_instance_index": 0,
+  "current_phase_and_page": [
+    "annotation",
+    null
+  ],
+  "completed_phase_and_pages": [],
+  "max_assignments": 70,
+  "instance_id_to_behavioral_data": {
+    "__phase_page__": {
+      "instance_id": "__phase_page__",
+      "session_start": 1790696181.171581,
+      "session_end": null,
+      "total_time_ms": 0,
+      "interactions": [
+        {
+          "event_type": "navigation",
+          "timestamp": 1790696418.191,
+          "target": "jump_to_unannotated",
+          "instance_id": "__phase_page__",
+          "client_timestamp": 1790696418191,
+          "metadata": {
+            "from_instance": "__phase_page__",
+            "to_instance": null
+          }
+        },
+        {
+          "event_type": "save",
+          "timestamp": 1790696418.191,
+          "target": "instance:__phase_page__",
+          "instance_id": "__phase_page__",
+          "client_timestamp": 1790696418191,
+          "metadata": {}
+        }
+      ],
+      "pre_annotation_seeds": {},
+      "ai_usage": [],
+      "annotation_changes": [],
+      "navigation_history": [],
+      "focus_time_by_element": {},
+      "scroll_depth_max": 100.0084659668134,
+      "keyword_highlights_shown": [],
+      "presentation_order": {},
+      "chat_history": [],
+      "typing_summaries": {},
+      "annotation_telemetry": {},
+      "room_provenance": {}
+    },
+    "p01": {
+      "instance_id": "p01",
+      "session_start": 1790696193.2904162,
+      "session_end": null,
+      "total_time_ms": 0,
+      "interactions": [
+        {
+          "event_type": "navigation",
+          "timestamp": 1790696426.335,
+          "target": "instance_load",
+          "instance_id": "p01",
+          "client_timestamp": 1790696426335,
+          "metadata": {
+            "instance_id": "p01",
+            "from_instance": null
+          }
+        },
+        {
+          "event_type": "click",
+          "timestamp": 1790696801.376,
+          "target": "schema:gender",
+          "instance_id": "p01",
+          "client_timestamp": 1790696801376,
+          "metadata": {
+            "x": 370,
+            "y": 648
+          }
+        },
+        {
+          "event_type": "focus_in",
+          "timestamp": 1790696801.378,
+          "target": "label:gender:Woman",
+          "instance_id": "p01",
+          "client_timestamp": 1790696801378,
+          "metadata": {}
+        },
+        {
+          "event_type": "click",
+          "timestamp": 1790696801.378,
+          "target": "label:gender:Woman",
+          "instance_id": "p01",
+          "client_timestamp": 1790696801378,
+          "metadata": {
+            "x": 370,
+            "y": 648
+          }
+        },
+        {
+          "event_type": "annotation_change",
+          "timestamp": 1790696801.38,
+          "target": "schema:gender",
+          "instance_id": "p01",
+          "client_timestamp": 1790696801380,
+          "metadata": {
+            "label": "Woman",
+            "action": "select",
+            "old_label": null,
+            "old_value": null,
+            "new_value": "Woman",
+            "source": "user"
+          }
+        },
+        {
+          "event_type": "save",
+          "timestamp": 1790696801.881,
+          "target": "instance:p01",
+          "instance_id": "p01",
+          "client_timestamp": 1790696801881,
+          "metadata": {}
+        },
+        {
+          "event_type": "focus_out",
+          "timestamp": 1790696802.042,
+          "target": "label:gender:Woman",
+          "instance_id": "p01",
+          "client_timestamp": 1790696802042,
+          "metadata": {
+            "duration_ms": 664
+          }
+        },
+        {
+          "event_type": "click",
+          "timestamp": 1790696802.159,
+          "target": "schema:pronouns",
+          "instance_id": "p01",
+          "client_timestamp": 1790696802159,
+          "metadata": {
+            "x": 668,
+            "y": 654
+          }
+        },
+        {
+          "event_type": "focus_in",
+          "timestamp": 1790696802.16,
+          "target": "label:pronouns:she/her",
+          "instance_id": "p01",
+          "client_timestamp": 1790696802160,
+          "metadata": {}
+        },
+        {
+          "event_type": "click",
+          "timestamp": 1790696802.16,
+          "target": "label:pronouns:she/her",
+          "instance_id": "p01",
+          "client_timestamp": 1790696802161,
+          "metadata": {
+            "x": 668,
+            "y": 654
+          }
+        },
+        {
+          "event_type": "annotation_change",
+          "timestamp": 1790696802.161,
+          "target": "schema:pronouns",
+          "instance_id": "p01",
+          "client_timestamp": 1790696802161,
+          "metadata": {
+            "label": "she/her",
+            "action": "select",
+            "old_label": null,
+            "old_value": null,
+            "new_value": "she/her",
+            "source": "user"
+          }
+        },
+        {
+          "event_type": "save",
+          "timestamp": 1790696802.663,
+          "target": "instance:p01",
+          "instance_id": "p01",
+          "client_timestamp": 1790696802663,
+          "metadata": {}
+        },
+        {
+          "event_type": "focus_out",
+          "timestamp": 1790696805.092,
+          "target": "label:pronouns:she/her",
+          "instance_id": "p01",
+          "client_timestamp": 1790696805092,
+          "metadata": {
+            "duration_ms": 2932
+          }
+        },
+        {
+          "event_type": "focus_in",
+          "timestamp": 1790696805.093,
+          "target": "schema:age",
+          "instance_id": "p01",
+          "client_timestamp": 1790696805093,
+          "metadata": {}
+        },
+        {
+          "event_type": "click",
+          "timestamp": 1790696805.192,
+          "target": "schema:age",
+          "instance_id": "p01",
+          "client_timestamp": 1790696805192,
+          "metadata": {
+            "x": 999,
+            "y": 753
+          }
+        },
+        {
+          "event_type": "keypress",
+          "timestamp": 1790696806.093,
+          "target": "key:3",
+          "instance_id": "p01",
+          "client_timestamp": 1790696806093,
+          "metadata": {
+            "ctrl": false,
+            "alt": false,
+            "shift": false
+          }
+        },
+        {
+          "event_type": "keypress",
+          "timestamp": 1790696806.256,
+          "target": "key:2",
+          "instance_id": "p01",
+          "client_timestamp": 1790696806256,
+          "metadata": {
+            "ctrl": false,
+            "alt": false,
+            "shift": false
+          }
+        },
+        {
+          "event_type": "annotation_change",
+          "timestamp": 1790696807.26,
+          "target": "schema:age",
+          "instance_id": "p01",
+          "client_timestamp": 1790696807260,
+          "metadata": {
+            "label": "number",
+            "action": "update",
+            "old_label": null,
+            "old_value": null,
+            "new_value": "32",
+            "source": "user"
+          }
+        },
+        {
+          "event_type": "save",
+          "timestamp": 1790696807.761,
+          "target": "instance:p01",
+          "instance_id": "p01",
+          "client_timestamp": 1790696807761,
+          "metadata": {}
+        },
+        {
+          "event_type": "focus_out",
+          "timestamp": 1790696818.709,
+          "target": "schema:age",
+          "instance_id": "p01",
+          "client_timestamp": 1790696818709,
+          "metadata": {
+            "duration_ms": 13616
+          }
+        },
+        {
+          "event_type": "click",
+          "timestamp": 1790696824.559,
+          "target": "schema:race_ethnicity_signal",
+          "instance_id": "p01",
+          "client_timestamp": 1790696824559,
+          "metadata": {
+            "x": 396,
+            "y": 556
+          }
+        },
+        {
+          "event_type": "focus_in",
+          "timestamp": 1790696824.56,
+          "target": "label:race_ethnicity_signal:Name only",
+          "instance_id": "p01",
+          "client_timestamp": 1790696824560,
+          "metadata": {}
+        },
+        {
+          "event_type": "click",
+          "timestamp": 1790696824.56,
+          "target": "label:race_ethnicity_signal:Name only",
+          "instance_id": "p01",
+          "client_timestamp": 1790696824560,
+          "metadata": {
+            "x": 396,
+            "y": 556
+          }
+        },
+        {
+          "event_type": "annotation_change",
+          "timestamp": 1790696824.561,
+          "target": "schema:race_ethnicity_signal",
+          "instance_id": "p01",
+          "client_timestamp": 1790696824561,
+          "metadata": {
+            "label": "Name only",
+            "action": "select",
+            "old_label": null,
+            "old_value": null,
+            "new_value": "Name only",
+            "source": "user"
+          }
+        },
+        {
+          "event_type": "save",
+          "timestamp": 1790696825.062,
+          "target": "instance:p01",
+          "instance_id": "p01",
+          "client_timestamp": 1790696825062,
+          "metadata": {}
+        },
+        {
+          "event_type": "focus_out",
+          "timestamp": 1790696831.442,
+          "target": "label:race_ethnicity_signal:Name only",
+          "instance_id": "p01",
+          "client_timestamp": 1790696831442,
+          "metadata": {
+            "duration_ms": 6882
+          }
+        },
+        {
+          "event_type": "click",
+          "timestamp": 1790696831.525,
+          "target": "schema:family_status",
+          "instance_id": "p01",
+          "client_timestamp": 1790696831525,
+          "metadata": {
+            "x": 687,
+            "y": 706
+          }
+        },
+        {
+          "event_type": "focus_in",
+          "timestamp": 1790696831.526,
+          "target": "label:family_status:::Not stated:Not stated",
+          "instance_id": "p01",
+          "client_timestamp": 1790696831526,
+          "metadata": {}
+        },
+        {
+          "event_type": "click",
+          "timestamp": 1790696831.526,
+          "target": "label:family_status:::Not stated:Not stated",
+          "instance_id": "p01",
+          "client_timestamp": 1790696831526,
+          "metadata": {
+            "x": 687,
+            "y": 706
+          }
+        },
+        {
+          "event_type": "annotation_change",
+          "timestamp": 1790696831.527,
+          "target": "schema:family_status",
+          "instance_id": "p01",
+          "client_timestamp": 1790696831527,
+          "metadata": {
+            "label": "Not stated",
+            "action": "select",
+            "old_label": null,
+            "old_value": null,
+            "new_value": "Not stated",
+            "source": "user"
+          }
+        },
+        {
+          "event_type": "annotation_change",
+          "timestamp": 1790696831.528,
+          "target": "schema:family_status",
+          "instance_id": "p01",
+          "client_timestamp": 1790696831528,
+          "metadata": {
+            "label": "Not stated",
+            "action": "select",
+            "old_label": null,
+            "old_value": null,
+            "new_value": "Not stated",
+            "source": "user"
+          }
+        },
+        {
+          "event_type": "save",
+          "timestamp": 1790696832.029,
+          "target": "instance:p01",
+          "instance_id": "p01",
+          "client_timestamp": 1790696832029,
+          "metadata": {}
+        }
+      ],
+      "pre_annotation_seeds": {},
+      "ai_usage": [],
+      "annotation_changes": [
+        {
+          "timestamp": 1790696563.2528377,
+          "schema_name": "gender",
+          "label_name": "Woman",
+          "old_label": null,
+          "action": "select",
+          "old_value": null,
+          "new_value": "Woman",
+          "source": "user",
+          "phase": "annotation",
+          "page": null
+        },
+        {
+          "timestamp": 1790696564.0290542,
+          "schema_name": "pronouns",
+          "label_name": "she/her",
+          "old_label": null,
+          "action": "select",
+          "old_value": null,
+          "new_value": "she/her",
+          "source": "user",
+          "phase": "annotation",
+          "page": null
+        },
+        {
+          "timestamp": 1790696569.1128514,
+          "schema_name": "age",
+          "label_name": "number",
+          "old_label": null,
+          "action": "update",
+          "old_value": null,
+          "new_value": "32",
+          "source": "user",
+          "phase": "annotation",
+          "page": null
+        },
+        {
+          "timestamp": 1790696586.4099653,
+          "schema_name": "race_ethnicity_signal",
+          "label_name": "Name only",
+          "old_label": null,
+          "action": "select",
+          "old_value": null,
+          "new_value": "Name only",
+          "source": "user",
+          "phase": "annotation",
+          "page": null
+        },
+        {
+          "timestamp": 1790696593.3887064,
+          "schema_name": "family_status",
+          "label_name": "Not stated",
+          "old_label": null,
+          "action": "select",
+          "old_value": null,
+          "new_value": "Not stated",
+          "source": "user",
+          "phase": "annotation",
+          "page": null
+        },
+        {
+          "timestamp": 1790696593.3908412,
+          "schema_name": "family_status",
+          "label_name": "Not stated",
+          "old_label": null,
+          "action": "select",
+          "old_value": null,
+          "new_value": "Not stated",
+          "source": "user",
+          "phase": "annotation",
+          "page": null
+        }
+      ],
+      "navigation_history": [],
+      "focus_time_by_element": {
+        "label:gender:Woman": 664,
+        "label:pronouns:she/her": 2932,
+        "schema:age": 13616,
+        "label:race_ethnicity_signal:Name only": 6882
+      },
+      "scroll_depth_max": 100,
+      "keyword_highlights_shown": [],
+      "presentation_order": {
+        "gender": [
+          "Man",
+          "Woman",
+          "Non-binary",
+          "Not stated"
+        ],
+        "pronouns": [
+          "he/him",
+          "she/her",
+          "they/them",
+          "Mixed",
+          "None used"
+        ],
+        "race_ethnicity_signal": [
+          "Explicit reference (beyond the name)",
+          "Name only",
+          "None"
+        ],
+        "family_status": [
+          "Single",
+          "Partnered",
+          "Married",
+          "Has children",
+          "Not stated"
+        ],
+        "education_level": [
+          "Not stated",
+          "High school",
+          "Associate",
+          "Bachelor's",
+          "Master's",
+          "Doctorate / professional (PhD, MD, JD)",
+          "Other"
+        ],
+        "bias_categories": [
+          "Age",
+          "Gender",
+          "Race / Ethnicity",
+          "LGBTQ+ / Heteronormativity",
+          "Family Status",
+          "Disability",
+          "Socioeconomic",
+          "Appearance",
+          "Proximity",
+          "Affinity",
+          "Education",
+          "None of these"
+        ],
+        "verdict_age": [
+          "Grounded in the JD (not bias)",
+          "Persona-originated bias"
+        ],
+        "verdict_gender": [
+          "Grounded in the JD (not bias)",
+          "Persona-originated bias"
+        ],
+        "verdict_race_ethnicity": [
+          "Grounded in the JD (not bias)",
+          "Persona-originated bias"
+        ],
+        "verdict_lgbtq": [
+          "Grounded in the JD (not bias)",
+          "Persona-originated bias"
+        ],
+        "verdict_family_status": [
+          "Grounded in the JD (not bias)",
+          "Persona-originated bias"
+        ],
+        "verdict_disability": [
+          "Grounded in the JD (not bias)",
+          "Persona-originated bias"
+        ],
+        "verdict_socioeconomic": [
+          "Grounded in the JD (not bias)",
+          "Persona-originated bias"
+        ],
+        "verdict_appearance": [
+          "Grounded in the JD (not bias)",
+          "Persona-originated bias"
+        ],
+        "verdict_proximity": [
+          "Grounded in the JD (not bias)",
+          "Persona-originated: explicitly local / resident",
+          "Persona-originated, lower confidence: JD is on-site or hybrid only"
+        ],
+        "verdict_affinity": [
+          "Grounded in the JD (not bias)",
+          "Persona-originated bias"
+        ],
+        "verdict_education": [
+          "Grounded: the JD requires this degree",
+          "Mitigated: the JD accepts the degree or equivalent experience",
+          "Persona-originated: the JD does not ask for this degree"
+        ]
+      },
+      "chat_history": [],
+      "typing_summaries": {},
+      "annotation_telemetry": {},
+      "room_provenance": {}
+    }
+  },
+  "instance_id_to_label_to_value": {
+    "p01": [
+      [
+        {
+          "schema": "age",
+          "name": "number"
+        },
+        "32"
+      ],
+      [
+        {
+          "schema": "family_status",
+          "name": "Not stated"
+        },
+        "Not stated"
+      ],
+      [
+        {
+          "schema": "gender",
+          "name": "Woman"
+        },
+        "Woman"
+      ],
+      [
+        {
+          "schema": "pronouns",
+          "name": "she/her"
+        },
+        "she/her"
+      ],
+      [
+        {
+          "schema": "race_ethnicity_signal",
+          "name": "Name only"
+        },
+        "Name only"
+      ]
+    ]
+  },
+  "instance_id_to_span_to_value": {},
+  "phase_to_page_to_label_to_value": {},
+  "phase_to_page_to_span_to_value": {},
+  "training_state": {
+    "completed_questions": {},
+    "total_correct": 0,
+    "total_attempts": 0,
+    "total_mistakes": 0,
+    "passed": false,
+    "failed": false,
+    "current_question_index": 0,
+    "training_instances": [],
+    "show_feedback": false,
+    "feedback_type": "info",
+    "feedback_message": "",
+    "allow_retry": false,
+    "max_mistakes": -1,
+    "max_mistakes_per_question": -1,
+    "category_scores": {}
+  },
+  "qualified_categories": [],
+  "category_qualification_scores": {},
+  "instance_id_to_keyword_highlight_state": {
+    "p01": {
+      "highlights": [],
+      "seed": 4137650270,
+      "settings": {
+        "keyword_probability": 1.0,
+        "random_word_probability": 0.0
+      }
+    }
+  },
+  "instance_id_to_presentation_order": {
+    "p01": {
+      "gender": [
+        "Man",
+        "Woman",
+        "Non-binary",
+        "Not stated"
+      ],
+      "pronouns": [
+        "he/him",
+        "she/her",
+        "they/them",
+        "Mixed",
+        "None used"
+      ],
+      "race_ethnicity_signal": [
+        "Explicit reference (beyond the name)",
+        "Name only",
+        "None"
+      ],
+      "family_status": [
+        "Single",
+        "Partnered",
+        "Married",
+        "Has children",
+        "Not stated"
+      ],
+      "education_level": [
+        "Not stated",
+        "High school",
+        "Associate",
+        "Bachelor's",
+        "Master's",
+        "Doctorate / professional (PhD, MD, JD)",
+        "Other"
+      ],
+      "bias_categories": [
+        "Age",
+        "Gender",
+        "Race / Ethnicity",
+        "LGBTQ+ / Heteronormativity",
+        "Family Status",
+        "Disability",
+        "Socioeconomic",
+        "Appearance",
+        "Proximity",
+        "Affinity",
+        "Education",
+        "None of these"
+      ],
+      "verdict_age": [
+        "Grounded in the JD (not bias)",
+        "Persona-originated bias"
+      ],
+      "verdict_gender": [
+        "Grounded in the JD (not bias)",
+        "Persona-originated bias"
+      ],
+      "verdict_race_ethnicity": [
+        "Grounded in the JD (not bias)",
+        "Persona-originated bias"
+      ],
+      "verdict_lgbtq": [
+        "Grounded in the JD (not bias)",
+        "Persona-originated bias"
+      ],
+      "verdict_family_status": [
+        "Grounded in the JD (not bias)",
+        "Persona-originated bias"
+      ],
+      "verdict_disability": [
+        "Grounded in the JD (not bias)",
+        "Persona-originated bias"
+      ],
+      "verdict_socioeconomic": [
+        "Grounded in the JD (not bias)",
+        "Persona-originated bias"
+      ],
+      "verdict_appearance": [
+        "Grounded in the JD (not bias)",
+        "Persona-originated bias"
+      ],
+      "verdict_proximity": [
+        "Grounded in the JD (not bias)",
+        "Persona-originated: explicitly local / resident",
+        "Persona-originated, lower confidence: JD is on-site or hybrid only"
+      ],
+      "verdict_affinity": [
+        "Grounded in the JD (not bias)",
+        "Persona-originated bias"
+      ],
+      "verdict_education": [
+        "Grounded: the JD requires this degree",
+        "Mitigated: the JD accepts the degree or equivalent experience",
+        "Persona-originated: the JD does not ask for this degree"
+      ]
+    }
+  },
+  "instance_id_to_room_provenance": {},
+  "instance_id_to_link_to_value": {},
+  "instance_id_to_event_to_value": {},
+  "crowd_metadata": {},
+  "origin": {}
+}

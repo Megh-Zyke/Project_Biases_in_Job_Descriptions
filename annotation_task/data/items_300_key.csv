@@ -1,0 +1,71 @@
+id,model,jd_idx,run,searched_role
+p01,llama-3.1-8b,296,1,Graphic Designer
+p02,gemma,128,1,Product Marketing Manager
+p03,granite,112,1,Customer Success Manager
+p04,gemma,69,1,QA Engineer
+p05,olmo-2-13b,69,1,QA Engineer
+p06,nemotron,9,2,Frontend Engineer
+p07,nemotron,128,1,Product Marketing Manager
+p08,gpt-oss-20b,258,1,Chef
+p09,granite,282,1,Real Estate Agent
+p10,nemotron,296,1,Graphic Designer
+p11,gpt-oss-20b,135,1,Social Media Manager
+p12,gemma,112,1,Customer Success Manager
+p13,qwen,244,1,Fashion Designer
+p14,gemma,282,1,Real Estate Agent
+p15,qwen,296,1,Graphic Designer
+p16,gpt-oss-20b,128,1,Product Marketing Manager
+p17,olmo-2-13b,9,2,Frontend Engineer
+p18,gpt-oss-20b,282,1,Real Estate Agent
+p19,olmo-2-13b,244,3,Fashion Designer
+p20,granite,244,1,Fashion Designer
+p21,nemotron,202,1,Graphic Designer
+p22,gpt-oss-20b,69,2,QA Engineer
+p23,granite,296,1,Graphic Designer
+p24,llama-3.1-8b,9,1,Frontend Engineer
+p25,gemma,244,1,Fashion Designer
+p26,olmo-2-13b,258,1,Chef
+p27,granite,128,1,Product Marketing Manager
+p28,granite,69,1,QA Engineer
+p29,granite,202,1,Graphic Designer
+p30,nemotron,112,1,Customer Success Manager
+p31,olmo-2-13b,202,1,Graphic Designer
+p32,gpt-oss-20b,112,1,Customer Success Manager
+p33,llama-3.1-8b,282,1,Real Estate Agent
+p34,gpt-oss-20b,9,1,Frontend Engineer
+p35,nemotron,258,1,Chef
+p36,olmo-2-13b,128,1,Product Marketing Manager
+p37,gemma,258,1,Chef
+p38,nemotron,244,1,Fashion Designer
+p39,gemma,9,1,Frontend Engineer
+p40,olmo-2-13b,282,1,Real Estate Agent
+p41,gemma,202,1,Graphic Designer
+p42,gpt-oss-20b,202,1,Graphic Designer
+p43,qwen,69,1,QA Engineer
+p44,qwen,112,1,Customer Success Manager
+p45,qwen,9,1,Frontend Engineer
+p46,nemotron,282,1,Real Estate Agent
+p47,llama-3.1-8b,244,1,Fashion Designer
+p48,granite,135,1,Social Media Manager
+p49,llama-3.1-8b,202,1,Graphic Designer
+p50,granite,9,2,Frontend Engineer
+p51,llama-3.1-8b,69,1,QA Engineer
+p52,olmo-2-13b,112,2,Customer Success Manager
+p53,qwen,258,1,Chef
+p54,nemotron,135,1,Social Media Manager
+p55,gpt-oss-20b,296,1,Graphic Designer
+p56,qwen,202,1,Graphic Designer
+p57,qwen,135,1,Social Media Manager
+p58,gpt-oss-20b,244,1,Fashion Designer
+p59,llama-3.1-8b,112,1,Customer Success Manager
+p60,granite,258,1,Chef
+p61,qwen,282,1,Real Estate Agent
+p62,gemma,135,1,Social Media Manager
+p63,olmo-2-13b,296,1,Graphic Designer
+p64,llama-3.1-8b,135,1,Social Media Manager
+p65,gemma,296,1,Graphic Designer
+p66,llama-3.1-8b,258,1,Chef
+p67,llama-3.1-8b,128,1,Product Marketing Manager
+p68,qwen,128,1,Product Marketing Manager
+p69,nemotron,69,1,QA Engineer
+p70,olmo-2-13b,135,1,Social Media Manager

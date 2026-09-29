@@ -4,9 +4,12 @@
     python prepare.py sample --n 50       # data/sample_jobs.csv (same jobs for every model)
     python prepare.py items --model llama # data/items_llama.jsonl
 
+    python prepare.py sample300 --n 10    # data/sample_jobs_300.csv (personas_300/ set)
+    python prepare.py items300            # data/items_300.jsonl, n items per model, shuffled
+
 The sample is drawn once and then reused, so every model is annotated on the
-same job descriptions. Delete data/sample_jobs.csv only if you really want a
-new sample.
+same job descriptions. Delete the sample CSV only if you really want a new
+sample.
 """
 import argparse
 import html
@@ -30,6 +33,20 @@ MODELS = {
     "qwen": ("Output_Files/Qwen_personas.csv", "ideal_persona", "description"),
 }
 MAX_PERSONA_CHARS = 3000
+
+# personas_300/: 300 JDs x 10 runs per model. JD i is row i of the wide files'
+# `description` column; long files refer to it as job_i / row_i.
+P300 = os.path.join(ROOT, "personas_300")
+SAMPLE_300_CSV = os.path.join(TASK, "data/sample_jobs_300.csv")
+MODELS_300 = {
+    "gemma": ("Gemma_personas.csv", "wide"),
+    "nemotron": ("Nemotron_personas.csv", "wide"),
+    "llama-3.1-8b": ("Lama_3.1_8B.csv", "long"),
+    "gpt-oss-20b": ("gpt-oss_personas.csv", "long"),
+    "granite": ("ibm_granite_personas.csv", "long"),
+    "olmo-2-13b": ("olmo_personas.csv", "long"),
+    "qwen": ("qwen_personas.csv", "long"),
+}
 
 # Category -> slug used in scheme names. Order is the order annotators see.
 CATEGORIES = {
@@ -219,6 +236,101 @@ def cmd_items(args):
     print(f"wrote {n} items -> {out_path}")
 
 
+def clean_persona(text):
+    """Return the persona text, or None if the run has no usable answer."""
+    if pd.isna(text) or not str(text).strip():
+        return None
+    text = str(text)
+    # gpt-oss leaks its reasoning channel; the persona follows "assistantfinal".
+    if text.startswith("analysis"):
+        if "assistantfinal" not in text:
+            return None
+        text = text.split("assistantfinal", 1)[1]
+    text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)  # OLMo's **bold** names
+    text = text.strip()
+    if len(text) > MAX_PERSONA_CHARS:
+        return None
+    # ~20% of OLMo runs had names replaced by "<PRESIDIO_ANONYMIZED_PERSON>";
+    # the name is a gender/race signal, so those runs cannot be judged.
+    if re.search(r"<[A-Z_]+>", text):
+        return None
+    # Cut off mid-sentence (Nemotron ~12%, gpt-oss ~4% of runs).
+    if not re.search(r"[.!?\"'”’)]$", text):
+        return None
+    return text
+
+
+def runs_300(model):
+    """DataFrame of (jd_idx, run, persona) for one personas_300 model."""
+    fname, layout = MODELS_300[model]
+    df = pd.read_csv(os.path.join(P300, fname))
+    if layout == "wide":
+        cols = [f"persona_{r}" for r in range(1, 11)]
+        df = df[cols].reset_index().melt(id_vars="index", var_name="run", value_name="persona")
+        df = df.rename(columns={"index": "jd_idx"})
+        df["run"] = df.run.str.removeprefix("persona_").astype(int)
+    else:
+        df = df[df.success.astype(str) == "True"]
+        df = df.assign(jd_idx=df.jd_id.str.extract(r"(\d+)$")[0].astype(int))
+        df = df[["jd_idx", "run", "persona"]]
+    df["persona"] = df.persona.map(clean_persona)
+    return df.dropna(subset=["persona"])
+
+
+def jds_300():
+    return pd.read_csv(os.path.join(P300, "Gemma_personas.csv"), usecols=["description", "searched_role"])
+
+
+def cmd_sample300(args):
+    if os.path.exists(SAMPLE_300_CSV):
+        print(f"{SAMPLE_300_CSV} already exists; reusing it (delete it to redraw)")
+        return
+    jds = jds_300()
+    # Distinct JDs only (263 of the 300 are unique), and only JDs every model has a usable run for.
+    ok = set(jds.drop_duplicates("description").index)
+    for m in MODELS_300:
+        ok &= set(runs_300(m).jd_idx)
+    pool = jds.loc[sorted(ok)]
+    sample = pool.sample(n=args.n, random_state=args.seed)
+    out = pd.DataFrame({"jd_idx": sample.index, "searched_role": sample.searched_role,
+                        "jd": sample.description})
+    out.to_csv(SAMPLE_300_CSV, index=False)
+    print(f"sampled {len(out)} jobs from a pool of {len(pool)} -> {SAMPLE_300_CSV}")
+
+
+def cmd_items300(args):
+    sample = pd.read_csv(SAMPLE_300_CSV)
+    rows = []
+    for m in MODELS_300:
+        runs = runs_300(m).sort_values("run")
+        for jd_idx, jd in zip(sample.jd_idx, sample.jd):
+            # The lowest-numbered usable run (normally run 1).
+            r = runs[runs.jd_idx == jd_idx].iloc[0]
+            rows.append({
+                "model": m,
+                "jd_idx": int(jd_idx),
+                "run": int(r.run),
+                "persona": r.persona,
+                "jd_html": jd_to_html(jd),
+            })
+    # Shuffle once so annotators never see one model's personas in a block.
+    items = pd.DataFrame(rows).sample(frac=1, random_state=args.seed).reset_index(drop=True)
+    # Neutral IDs: Potato puts the ID in the page, so it must not name the model.
+    items.insert(0, "id", [f"p{i + 1:02d}" for i in range(len(items))])
+    rows = items.to_dict("records")
+    out_path = os.path.join(TASK, "data/items_300.jsonl")
+    with open(out_path, "w") as f:
+        for row in rows:
+            f.write(json.dumps(row) + "\n")
+    # The key for analysis: which model wrote which persona.
+    key = items[["id", "model", "jd_idx", "run"]].merge(
+        sample[["jd_idx", "searched_role"]], on="jd_idx")
+    key.sort_values("id").to_csv(os.path.join(TASK, "data/items_300_key.csv"), index=False)
+    not_run1 = sum(r["run"] != 1 for r in rows)
+    print(f"wrote {len(rows)} items ({len(MODELS_300)} models x {len(sample)} jobs) -> {out_path}; "
+          f"{not_run1} fell back past run 1")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -230,5 +342,12 @@ if __name__ == "__main__":
     i = sub.add_parser("items")
     i.add_argument("--model", choices=list(MODELS), required=True)
     i.set_defaults(fn=cmd_items)
+    s3 = sub.add_parser("sample300")
+    s3.add_argument("--n", type=int, default=10)
+    s3.add_argument("--seed", type=int, default=42)
+    s3.set_defaults(fn=cmd_sample300)
+    i3 = sub.add_parser("items300")
+    i3.add_argument("--seed", type=int, default=42)
+    i3.set_defaults(fn=cmd_items300)
     a = ap.parse_args()
     a.fn(a)
