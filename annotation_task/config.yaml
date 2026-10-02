@@ -2,7 +2,7 @@
 # Items: 10 jobs x 7 models from personas_300/, shuffled into one file (prepare.py items300).
 # IDs are neutral (p01-p70). Which model wrote each persona: data/items_300_key.csv.
 annotation_task_name: Persona Bias Annotation
-task_dir: /home/meghss/Project_Biases_in_Job_Descriptions/annotation_task
+task_dir: .
 output_annotation_dir: annotation_output_300/
 
 data_files: [data/items_300.jsonl]
