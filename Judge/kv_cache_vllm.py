@@ -21,7 +21,8 @@ SAMPLING = SamplingParams(temperature=TEMPERATURE, top_p=TOP_P, top_k=TOP_K,
 
 
 def load(model_id: str = MODEL_ID, tensor_parallel_size: int = 1, dtype: str = "float16",
-         max_model_len: int | None = None, language_model_only: bool = False):
+         max_model_len: int | None = None, language_model_only: bool = False,
+         disable_custom_all_reduce: bool = False, gpu_memory_utilization: float = 0.90):
     print(f"Loading {model_id} with vLLM (tp={tensor_parallel_size}, {dtype})...")
     # Prefix caching is on; the no-cache batch flushes it before every call.
     llm = LLM(
@@ -30,7 +31,8 @@ def load(model_id: str = MODEL_ID, tensor_parallel_size: int = 1, dtype: str = "
         tensor_parallel_size=tensor_parallel_size,
         max_model_len=max_model_len,
         language_model_only=language_model_only,
-        gpu_memory_utilization=0.90,
+        disable_custom_all_reduce=disable_custom_all_reduce,
+        gpu_memory_utilization=gpu_memory_utilization,
         enable_prefix_caching=True,
     )
     print("Loaded.\n")
@@ -127,14 +129,22 @@ if __name__ == "__main__":
     parser.add_argument("--tensor-parallel-size", type=int, default=1)
     parser.add_argument("--dtype", default="float16", help="float16 | bfloat16 | auto")
     parser.add_argument("--max-model-len", type=int, default=None,
-                        help="cap context so the KV cache fits (prompts here are <7k tokens)")
+                        help="cap context so the KV cache fits (11-category prompts are up to ~17k tokens + output)")
     parser.add_argument("--language-model-only", action="store_true",
                         help="skip the vision encoder of multimodal checkpoints (Qwen3.5+)")
     parser.add_argument("--results-path", default=None,
                         help="output CSV (default: Output_Files/kv_cache_vllm_<model>.csv)")
+    parser.add_argument("--disable-custom-all-reduce", action="store_true",
+                        help="use plain NCCL between GPUs (for cards without working PCIe P2P)")
+    parser.add_argument("--gpu-memory-utilization", type=float, default=0.90,
+                        help="fraction of each GPU vLLM may take (lower it on shared cards)")
+    parser.add_argument("--batch-size", type=int, default=BATCH_SIZE,
+                        help="personas per batch (no-cache and cached); small values for smoke tests")
     args = parser.parse_args()
+    BATCH_SIZE = args.batch_size
     RESULTS_PATH = args.results_path or results_path_for(args.model, "kv_cache_vllm")
 
     llm, tokenizer = load(args.model, args.tensor_parallel_size, args.dtype,
-                          args.max_model_len, args.language_model_only)
+                          args.max_model_len, args.language_model_only,
+                          args.disable_custom_all_reduce, args.gpu_memory_utilization)
     run_experiment(llm, tokenizer)

@@ -1,0 +1,989 @@
+input_tokens,output_tokens,tokens_computed,tokens_saved,time_s,prefill_tok_per_s,output,mode,jd_id,searched_role,verdict
+1060,36,1060,0,0.624272950924933,1697.975218098889,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Ability to multitask in a fast-paced environment"",
+  ""rule_applied"": ""4""
+}",No Cache,job_203,Graphic Designer,pass
+750,39,750,0,0.6077908771112561,1233.977060604535,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""A positive, outgoing, motivating and energizing personality is required."",
+  ""rule_applied"": ""4""
+}",No Cache,job_266,Fitness Trainer,pass
+2036,38,2036,0,0.7798283202573657,2610.8310600056966,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""10\+ years of Commercial Banking Relationship Management experience"",
+  ""rule_applied"": ""4""
+}",No Cache,job_152,Finance Manager,parse_error
+1886,76,1886,0,1.2533134575933218,1504.8110977932017,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""To be successful as a Senior GenAI and Python Developer – AVP, you should have: ... Experience with observability and FinOps tools, such as Langfuse and Phoenix, to monitor, evaluate, and optimize GenAI application performance and costs"",
+  ""rule_applied"": ""4""
+}",No Cache,job_9,Frontend Engineer,pass
+1417,76,1417,0,1.210273084230721,1170.810140672243,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We recognize the growing role of AI tools, including ChatGPT, and value familiarity with them. That said, we want to hear from your authentic self. Your application should reflect your own skills, experiences, and insights rather than AI-generated responses."",
+  ""rule_applied"": ""4""
+}",No Cache,job_233,Copywriter,pass
+1024,38,1024,0,0.6566667798906565,1559.3905940704192,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Strong background in branding, graphic design, and visual communication."",
+  ""rule_applied"": ""4""
+}",No Cache,job_226,Motion Graphics Designer,pass
+1031,60,1031,0,0.9722288688644767,1060.4498930423301,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We hire attitude over experience. We'll teach you everything you need to know through paid training, daily coaching, and mentorship from leaders who started exactly where you are."",
+  ""rule_applied"": ""4""
+}",No Cache,job_196,Business Development Representative,pass
+1160,33,1160,0,0.6026818780228496,1924.7301807140461,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""bright, talented, and motivated"",
+  ""rule_applied"": ""4""
+}",No Cache,job_109,Business Development Representative,pass
+1500,38,1500,0,0.7130573373287916,2103.6176496257667,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Perform full-stack development of cloud-based applications and microservices."",
+  ""rule_applied"": ""4""
+}",No Cache,job_5,Frontend Engineer,pass
+1094,39,1094,0,0.6625339454039931,1651.2361481084745,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Ability to work in a fast-paced environment and make timely decisions"",
+  ""rule_applied"": ""4""
+}",No Cache,job_175,Supply Chain Analyst,pass
+1569,50,1569,0,0.8756407890468836,1791.8306451984988,"{
+  ""verdict"": ""needs_review"",
+  ""evidence"": ""agile, authentic, and collaborative professionals ... agile and flexible, humble but driven, with a client-focused mindset"",
+  ""rule_applied"": ""3""
+}",No Cache,job_237,Art Director,needs_review
+1976,46,1976,0,0.8793325675651431,2247.1588940137976,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""5\+ years of experience in an IT support, systems administration, or IT generalist role"",
+  ""rule_applied"": ""4""
+}",No Cache,job_57,Mobile Engineer,parse_error
+1015,34,1015,0,0.5832716776058078,1740.183929667792,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""dynamic and creative Photographer/Sales Associate"",
+  ""rule_applied"": ""4""
+}",No Cache,job_218,Photographer,pass
+1737,48,1737,0,0.862416879273951,2014.1071467227548,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Action oriented - Taking on new opportunities and tough challenges with a sense of urgency, high energy, and enthusiasm."",
+  ""rule_applied"": ""4""
+}",No Cache,job_45,Security Engineer,pass
+1555,45,1555,0,0.8074916489422321,1925.7165099316644,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Excellent communication skills with the ability to influence senior stakeholders and thrive in ambiguous, fast-paced environments."",
+  ""rule_applied"": ""4""
+}",No Cache,job_182,Product Manager,pass
+1385,42,1385,0,0.7336258785799146,1887.8832391803783,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""7\+ years relevant videographer/editor/animator experience in a professional environment"",
+  ""rule_applied"": ""4""
+}",No Cache,job_221,Animator,parse_error
+1589,51,1589,0,0.8841502359136939,1797.2058768472803,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""The job description focuses on skills and responsibilities relevant to the marketing and graphic design role, without using age-based language or proxies."",
+  ""rule_applied"": ""4""
+}",No Cache,job_289,Graphic Designer,pass
+1524,45,1524,0,0.7887139823287725,1932.2593920551622,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Demonstrated ability to manage independent production schedules and meet strict weekly deadlines without direct physical oversight."",
+  ""rule_applied"": ""4""
+}",No Cache,job_211,Video Editor,pass
+2036,38,2036,0,0.7560952370986342,2692.782469854918,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""10\+ years of Commercial Banking Relationship Management experience"",
+  ""rule_applied"": ""4""
+}",No Cache,job_148,Finance Manager,parse_error
+1307,49,1307,0,0.8225680021569133,1588.9263824666455,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Do you enjoy leveraging social media, digital marketing, AI technology, and innovative sourcing strategies to connect with top candidates?"",
+  ""rule_applied"": ""4""
+}",No Cache,job_165,Talent Acquisition Specialist,pass
+1600,58,1600,0,0.9885889450088143,1618.4684322822711,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Three (3) years in a full-stack role, with experience in coding both JavaScript-based applications and backend applications, as well as optimizing the communication middleware protocol"",
+  ""rule_applied"": ""4""
+}",No Cache,job_78,Frontend Engineer,pass
+2039,80,2039,0,1.357549293898046,1501.9712427128497,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""AWS values diverse experiences. Even if you do not meet all of the qualifications and skills listed in the 8 description, we encourage candidates to apply. If your career is just starting, hasn’t followed a traditional path, or includes alternative experiences, don’t let it stop you from applying."",
+  ""rule_applied"": """,No Cache,job_113,Customer Success Manager,parse_error
+1201,43,1201,0,0.7330526541918516,1638.3543434871447,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""At least two (2) years of design experience within the commercial real estate market"",
+  ""rule_applied"": ""4""
+}",No Cache,job_249,Interior Designer,pass
+1201,43,1201,0,0.7333265654742718,1637.742387285895,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""At least two (2) years of design experience within the commercial real estate market"",
+  ""rule_applied"": ""4""
+}",No Cache,job_250,Interior Designer,pass
+1082,34,1082,0,0.58460149820894,1850.8334366486465,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Experience in a fast-paced work environment"",
+  ""rule_applied"": ""4""
+}",No Cache,job_104,Sales Representative,pass
+1730,47,1730,0,0.8573994431644678,2017.7293253363455,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""The job description focuses on technical skills, experience, and education requirements without using age-related language or proxies."",
+  ""rule_applied"": ""4""
+}",No Cache,job_42,Systems Engineer,pass
+2439,35,2439,0,0.7916526962071657,3080.8964735234654,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Required: High school diploma or GED"",
+  ""rule_applied"": ""4""
+}",No Cache,job_281,Real Estate Agent,pass
+972,56,972,0,0.8887953972443938,1093.6150243504549,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We're growing our in-house design team and looking for a Senior Visual Designer to join our team of designers and lead the visual side of the product."",
+  ""rule_applied"": ""4""
+}",No Cache,job_295,UX Designer,pass
+1229,73,1229,0,1.149754841811955,1068.9235263955563,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We're looking for an HR Generalist to be a key part of our Human Resources team \- someone who's organized, people\-focused, and ready to grow their HR career with a company that genuinely invests in its people."",
+  ""rule_applied"": ""4""
+}",No Cache,job_157,Human Resources Generalist,parse_error
+1471,46,1471,0,0.8209771141409874,1791.7673643547917,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""High tolerance for change and the capacity to accomplish significant work in a fast-paced, ever-changing environment."",
+  ""rule_applied"": ""4""
+}",No Cache,job_238,Art Director,pass
+961,61,961,0,0.9612164655700326,999.774800393266,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""You are a great fit for this team if you have the innate curiosity necessary to learn new processes, meet new people, and are persistently detail-oriented with a quality mindset."",
+  ""rule_applied"": ""4""
+}",No Cache,job_17,Machine Learning Engineer,pass
+1307,57,1307,0,0.9414201518520713,1388.3280461212962,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Qualified applicants are considered for employment without regard to age, race, color, religion, sex, national origin, sexual orientation, disability, or veteran status."",
+  ""rule_applied"": ""4""
+}",No Cache,job_164,Talent Acquisition Specialist,pass
+1368,56,1368,0,0.9344250969588757,1464.0017744088975,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Bachelor's degree with a minimum of three years of experience in the category field. Two additional years of experience may be substituted for the bachelor's degree."",
+  ""rule_applied"": ""4""
+}",No Cache,job_33,DevOps Engineer,pass
+1177,34,1177,0,0.6058728275820613,1942.6519005600783,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""3+ years of experience in manufacturing"",
+  ""rule_applied"": ""4""
+}",No Cache,job_24,AI Engineer,pass
+2135,52,2135,0,0.9973716419190168,2140.6263325194427,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Photographers in this role will typically work 10-20 hours per week, depending on their location and business needs."",
+  ""rule_applied"": ""4""
+}",No Cache,job_215,Photographer,pass
+1296,44,1296,0,0.7705042380839586,1682.0154074983561,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""The ideal candidate will have a passion for storytelling and a strong understanding of digital marketing strategies."",
+  ""rule_applied"": ""4""
+}",No Cache,job_119,Marketing Specialist,pass
+1392,39,1392,0,0.7049797158688307,1974.5248957758624,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Demonstrated ability to work in a dynamic and challenging environment."",
+  ""rule_applied"": ""4""
+}",No Cache,job_7,Frontend Engineer,pass
+2528,49,2528,0,0.998001485131681,2533.062362794424,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Exceptional organization and attention to detail — you naturally bring structure to complexity and don't let edge cases slip through."",
+  ""rule_applied"": ""4""
+}",No Cache,job_90,Machine Learning Engineer,pass
+2795,41,2795,0,0.92914979159832,3008.126380991865,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""This position is contingent upon your ability to maintain your active Top Secret clearance."",
+  ""rule_applied"": ""4""
+}",No Cache,job_46,Security Engineer,pass
+1927,76,1927,0,1.294330426491797,1488.800665238949,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""U.S. Bank is an equal opportunity employer. We consider all qualified applicants without regard to race, religion, color, sex, national origin, age, sexual orientation, gender identity, disability or veteran status, and other factors protected under applicable law."",
+  ""rule_applied"": ""4""
+}",No Cache,job_73,Software Engineer,pass
+1885,56,1885,0,0.9966604672372341,1891.3161121211756,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""You’ll use your expertise in analytical exploration and data examination while you oversee the assessment, design, building, and maintenance of scalable platforms for your clients."",
+  ""rule_applied"": ""4""
+}",No Cache,job_93,Data Engineer,pass
+1331,51,1331,0,0.863620919175446,1541.1854558488353,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We care deeply about what we do, and we're driven by the impact our work has on real people's financial futures."",
+  ""rule_applied"": ""4""
+}",No Cache,job_76,Software Engineer,pass
+1139,58,1139,0,0.9353085635229945,1217.7799331909973,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""At least eight (8) years of experience relevant to the labor category, with at least a portion of the experience within the last two (2) years"",
+  ""rule_applied"": ""4""
+}",No Cache,job_286,Graphic Designer,pass
+1638,57,1638,0,0.9876995449885726,1658.3990630662397,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Strong DevOps and systems engineering experience, with an emphasis on Linux administration, automation, virtualization, networking, storage, and monitoring within complex enterprise environments."",
+  ""rule_applied"": ""4""
+}",No Cache,job_60,iOS Engineer,pass
+1981,43,1981,0,0.8391769677400589,2360.6462953039827,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""12\+ years of experience delivering complex software systems within mission\-critical environments"",
+  ""rule_applied"": ""4""
+}",No Cache,job_77,Software Engineer,parse_error
+1293,80,1293,0,1.2466563377529383,1037.1743686239904,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status."",
+  ""rule_applied"": ""4""",No Cache,job_63,iOS Engineer,parse_error
+1364,75,1364,0,1.1968011129647493,1139.7048224838802,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We don’t discriminate on the basis of race, religion, color, sex, gender identity or expression, sexual orientation, age, non-disqualifying physical or mental disability, national origin, veteran status or any other basis covered by appropriate law."",
+  ""rule_applied"": ""4""
+}",No Cache,job_234,Copywriter,pass
+2228,49,2228,0,0.9666480170562863,2304.8720534128684,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""5–7 years of experience in Marketing, Social Media, Partnerships, Influencer, and/or related fields."",
+  ""rule_applied"": ""4""
+}",No Cache,job_229,Content Creator,pass
+2349,41,2349,0,0.8657751148566604,2713.175696195548,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Ross is committed to complying with all applicable laws prohibiting discrimination based on age"",
+  ""rule_applied"": ""4""
+}",No Cache,job_111,Business Development Representative,pass
+1533,39,1533,0,0.7256687004119158,2112.534272361222,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Self-driven, positive and able to manage multiple projects at once"",
+  ""rule_applied"": ""4""
+}",No Cache,job_231,Content Creator,pass
+1778,60,1778,0,1.0471894042566419,1697.8781419796082,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""The text describes the role and qualifications without using any age-related language or proxies that could be interpreted as biased. It focuses on technical and leadership requirements relevant to the position."",
+  ""rule_applied"": ""4""
+}",No Cache,job_180,Project Manager,pass
+953,30,953,0,0.5305090406909585,1796.3878594015487,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""fast-paced environment"",
+  ""rule_applied"": ""4""
+}",No Cache,job_144,Accountant,pass
+1378,49,1378,0,0.8434949535876513,1633.6790091498822,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Comfortable working onsite in St. George, Utah, and collaborating in a fast-paced, in-house creative environment."",
+  ""rule_applied"": ""4""
+}",No Cache,job_239,Art Director,pass
+1927,76,1927,0,1.2845628950744867,1500.121175373247,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""U.S. Bank is an equal opportunity employer. We consider all qualified applicants without regard to race, religion, color, sex, national origin, age, sexual orientation, gender identity, disability or veteran status, and other factors protected under applicable law."",
+  ""rule_applied"": ""4""
+}",No Cache,job_75,Software Engineer,pass
+975,42,975,0,0.7054512314498425,1382.094121511676,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""1-3 years of experience in a graphic design-oriented position or marketing field"",
+  ""rule_applied"": ""4""
+}",No Cache,job_297,Graphic Designer,pass
+1126,37,1126,0,0.7232609828934073,1556.8377482432886,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Currently enrolled in college (with eligibility for college credit)"",
+  ""rule_applied"": ""4""
+}",No Cache,job_278,Event Coordinator,pass
+1362,51,1362,0,0.8691965341567993,1566.9643705163476,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We recognize that our people are our strength and the diverse talents they bring to our global workforce are directly linked to our success."",
+  ""rule_applied"": ""4""
+}",No Cache,job_97,Software Engineer,pass
+1343,80,1343,0,1.26831956487149,1058.8814027607284,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Nightwing is An Equal Opportunity/Affirmative Action Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability or veteran status, age or any other federally protected class."",
+  ""rule_applied"": ""4""
+}",No Cache,job_92,Data Engineer,pass
+840,62,840,0,0.9567818818613887,877.9430462936931,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We’re a fast-growing towing and hauling company based in Memphis, TN, looking for an ambitious, results-driven Sales Representative to join our team and help expand our local customer base."",
+  ""rule_applied"": ""4""
+}",No Cache,job_192,Account Executive,pass
+1744,42,1744,0,0.7870150189846754,2215.9678760005454,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We look for builders who question it, improve it, and occasionally rewrite it."",
+  ""rule_applied"": ""4""
+}",No Cache,job_25,AI Engineer,pass
+1291,39,1291,0,0.7021481739357114,1838.6432492783265,"{
+  ""verdict"": ""pass"",
+  ""evidenc"": ""Must be a minimum of 21 years of age"",
+  ""rule_applied"": ""4""
+}",No Cache,job_232,Content Creator,pass
+1175,40,1175,0,0.7004835791885853,1677.412625947745,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Prioritizing tasks and meeting SLAs in a fast-paced environment."",
+  ""rule_applied"": ""5""
+}",No Cache,job_59,Mobile Engineer,pass
+1384,39,1384,0,0.6974980151280761,1984.2350372077647,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Demonstrated ability to work in a dynamic and challenging environment."",
+  ""rule_applied"": ""4""
+}",No Cache,job_6,Frontend Engineer,pass
+1067,56,1067,0,0.905052580870688,1178.9370281376512,"{
+  ""verdict"": ""needs_review"",
+  ""evidence"": ""Energetic role offers the opportunity to lead business development efforts, manage client accounts, and expand our presence in the territory through innovative sales strategies."",
+  ""rule_applied"": ""3""
+}",No Cache,job_185,Sales Representative,needs_review
+2604,70,2604,0,1.30739956907928,1991.7399864479341,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""The job description does not contain any explicit age labels, generational terms, or youth proxies that would indicate bias against a protected trait. It focuses on technical and operational requirements relevant to the role of Manager, Asset Management."",
+  ""rule_applied"": ""4""
+}",No Cache,job_173,Supply Chain Analyst,pass
+1367,56,1367,0,0.9405526667833328,1453.4008017595725,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Bachelor's degree with a minimum of six years of experience in the category field. Three additional years of experience may be substituted for the bachelor's degree."",
+  ""rule_applied"": ""4""
+}",No Cache,job_30,DevOps Engineer,pass
+2105,36,2105,0,0.7610809691250324,2765.8029636715105,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We’re driven by skill, grit and purpose."",
+  ""rule_applied"": ""4""
+}",No Cache,job_22,Data Engineer,pass
+698,44,698,0,0.689985298551619,1011.6157568359862,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Trader Joe's is an equal-opportunity employer and is committed to hiring a diverse Crew."",
+  ""rule_applied"": ""4""
+}",No Cache,job_256,Illustrator,pass
+1522,51,1522,0,0.8942164210602641,1702.048815202229,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""The ideal candidate is a collaborative technology leader with deep experience in ERP systems, supply chain operations, analytics, and data management."",
+  ""rule_applied"": ""4""
+}",No Cache,job_56,Mobile Engineer,pass
+1038,80,1038,0,1.2328948015347123,841.9209803690417,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Town Pump is proud to be an Equal Employment Opportunity (EEO) employer. We are committed to equal employment opportunities regardless of race, color, religion, national origin, sex, sexual orientation, gender identity, age, citizenship, marital status, disability, or Veteran status."",
+  ""rule_applied"": ""4""
+}",No Cache,job_186,Sales Representative,pass
+1158,40,1158,0,0.6977038029581308,1659.7300961959807,"{
+  ""verdict"": ""needs_review"",
+  ""evidence"": ""Enthusiastic, energetic, friendly, and personable"",
+  ""rule_applied"": ""3""
+}",No Cache,job_108,Business Development Representative,needs_review
+1173,41,1173,0,0.7083546882495284,1655.9500762233868,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We believe diverse perspectives strengthen our business and create better outcomes for our customers."",
+  ""rule_applied"": ""4""
+}",No Cache,job_126,Digital Marketing Specialist,pass
+2524,54,2524,0,1.0782659910619259,2340.795333361343,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We believe in building powerful teams with purpose - and we relentlessly curate transformative initiatives that make our commitment to fairness, and equity a reality."",
+  ""rule_applied"": ""4""
+}",No Cache,job_230,Content Creator,pass
+809,31,809,0,0.5365380924195051,1507.8146573933543,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""no prior experience required"",
+  ""rule_applied"": ""4""
+}",No Cache,job_193,Account Manager,pass
+1932,56,1932,0,1.030259933322668,1875.2549114175006,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""A career with U.S. Bank gives you a wide, ever-growing range of opportunities to discover what makes you thrive at every stage of your career."",
+  ""rule_applied"": ""4""
+}",No Cache,job_129,Product Marketing Manager,pass
+997,60,997,0,0.954452758654952,1044.577629389439,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""As a Sales Executive Trainee, you will assist in providing our Owners/guests with experiences and events to make memorable vacation memories, where meaningful moments are made together."",
+  ""rule_applied"": ""4""
+}",No Cache,job_282,Real Estate Agent,pass
+1864,47,1864,0,0.8858053917065263,2104.299677391845,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We're looking for talented people across the ecommerce space to join us on the next chapter of this adventure."",
+  ""rule_applied"": ""4""
+}",No Cache,job_82,Backend Engineer,pass
+1781,60,1781,0,1.056686894968152,1685.4566934452976,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Strong candidates are deep in at least one and capable across all four, and they stay hands-on in the code while helping steward the architecture and standards the platform depends on."",
+  ""rule_applied"": ""4""
+}",No Cache,job_84,Backend Engineer,pass
+1364,80,1364,0,1.2775174649432302,1067.695775149824,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status."",
+  ""rule_applied"": ""4""",No Cache,job_66,Android Engineer,parse_error
+691,60,691,0,0.9107585335150361,758.7082355771219,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""This is a extremely rapid paced operation and the clientele are demanding we uphold the quality, speed, and precision required for our industry and will expect the same level of dedication."",
+  ""rule_applied"": ""4""
+}",No Cache,job_288,Graphic Designer,pass
+1307,57,1307,0,0.9559948304668069,1367.1622045924655,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Qualified applicants are considered for employment without regard to age, race, color, religion, sex, national origin, sexual orientation, disability, or veteran status."",
+  ""rule_applied"": ""4""
+}",No Cache,job_163,Talent Acquisition Specialist,pass
+1413,40,1413,0,0.7304943269118667,1934.3066030004595,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Ability to prioritize multiple projects and meet deadlines in a fast-paced environment"",
+  ""rule_applied"": ""4""
+}",No Cache,job_154,Human Resources Generalist,pass
+1447,46,1447,0,0.8265996798872948,1750.5450766655215,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Minimum 3 years of work experience with Liquid Cooling and CFD is required (MUST HAVE)"",
+  ""rule_applied"": ""4""
+}",No Cache,job_19,Machine Learning Engineer,pass
+2047,48,2047,0,0.9317918745800853,2196.842509409611,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Confident and experienced in the use of social media, tablets, Smart phones, online tools, and applications."",
+  ""rule_applied"": ""4""
+}",No Cache,job_124,Digital Marketing Specialist,pass
+1834,53,1834,0,0.961178433150053,1908.0744394039973,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We carefully hire the best talent we can find, which means actively seeking diversity of beliefs, backgrounds, education, and ways of thinking."",
+  ""rule_applied"": ""4""
+}",No Cache,job_79,Frontend Engineer,pass
+2039,80,2039,0,1.377284056507051,1480.4498682509518,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""AWS values diverse experiences. Even if you do not meet all of the qualifications and skills listed in the 8 description, we encourage candidates to apply. If your career is just starting, hasn’t followed a traditional path, or includes alternative experiences, don’t let it stop you from applying."",
+  ""rule_applied"": """,No Cache,job_114,Customer Success Manager,parse_error
+1259,40,1259,0,0.7117961766198277,1768.764769120747,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""This is a results-focused digital marketing role tied directly to lead generation."",
+  ""rule_applied"": ""4""
+}",No Cache,job_118,Marketing Specialist,pass
+2438,52,2438,0,1.052154317498207,2317.1505923171335,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""High School Diploma/GED or Technical school diploma with a minimum of 5 years work related experience in electrical/electronic systems."",
+  ""rule_applied"": ""4""
+}",No Cache,job_72,QA Engineer,pass
+1309,42,1309,0,0.750704986974597,1743.694290982904,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""At CMT Services, we believe that extraordinary results come from empowering exceptional people."",
+  ""rule_applied"": ""4""
+}",No Cache,job_15,Full Stack Engineer,pass
+1456,40,1456,0,0.7363972123712301,1977.1937964181295,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Design, implement, and integrate software applications or perform software engineering tasks."",
+  ""rule_applied"": ""4""
+}",No Cache,job_10,Backend Engineer,pass
+1160,50,1160,0,0.8386743310838938,1383.1352135230231,"{
+  ""verdict"": ""needs_review"",
+  ""evidence"": ""This is a role for go-getters who are high energy, competitive, coachable, and motivated to earn."",
+  ""rule_applied"": ""3""
+}",No Cache,job_194,Account Manager,needs_review
+1882,50,1882,0,0.9151405980810523,2056.514598900261,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We are looking for curious and empathetic people. We also love to hear from people who are motivated by meaningful work..."",
+  ""rule_applied"": ""4""
+}",No Cache,job_101,Sales Representative,pass
+1173,80,1173,0,1.2457670839503407,941.5885321679912,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status."",
+  ""rule_applied"": ""4""",No Cache,job_68,Android Engineer,parse_error
+1916,49,1916,0,0.9024039069190621,2123.217757934473,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""5\+ years of experience in information graphics, information design, data visualization, visual journalism or a related discipline"",
+  ""rule_applied"": ""4""
+}",No Cache,job_224,Motion Graphics Designer,parse_error
+1794,38,1794,0,0.7409879928454757,2421.091862920534,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Self-motivated individual with a high level of initiative."",
+  ""rule_applied"": ""4""
+}",No Cache,job_37,Firmware Engineer,pass
+1302,60,1302,0,0.9858341058716178,1320.7090242113773,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We move with speed, passion and purpose — as one team. We are bold in our ideas, accountable in our actions, and committed to doing the right things right."",
+  ""rule_applied"": ""4""
+}",No Cache,job_16,Full Stack Engineer,pass
+1779,60,1779,0,1.0495310304686427,1695.0427842096585,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""The role requires experience leading complex programs and managing dependencies, but there are no explicit age labels, youth proxies, or experience caps that could be interpreted as age-based bias."",
+  ""rule_applied"": ""4""
+}",No Cache,job_179,Project Manager,pass
+1622,56,1622,0,0.975979071110487,1661.9208833591672,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""A career with U.S. Bank gives you a wide, ever-growing range of opportunities to discover what makes you thrive at every stage of your career."",
+  ""rule_applied"": ""4""
+}",No Cache,job_147,Accountant,pass
+1311,33,1311,0,0.624359973706305,2099.7502325744636,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We welcome candidates from all backgrounds."",
+  ""rule_applied"": ""4""
+}",No Cache,job_274,Travel Consultant,pass
+1216,80,1216,0,1.2559401392936707,968.19901041133,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status."",
+  ""rule_applied"": ""4""",No Cache,job_67,Android Engineer,parse_error
+1618,42,1170,448,0.7431285846978426,1574.4247013129284,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Proven experience in video editing and motion graphics with a strong portfolio of work."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_228,Motion Graphics Designer,pass
+1349,35,885,464,0.6059447079896927,1460.5292996717683,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Ability to work in a fast-paced environment"",
+  ""rule_applied"": ""5""
+}",KV Cache,job_69,QA Engineer,pass
+1359,42,895,464,0.7002380145713687,1278.1368354413742,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Bachelor's degree with a minimum of ten years of experience in the category field."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_31,DevOps Engineer,pass
+1932,56,1468,464,0.972132115624845,1510.0828132361744,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""A career with U.S. Bank gives you a wide, ever-growing range of opportunities to discover what makes you thrive at every stage of your career."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_183,Product Manager,pass
+1226,49,762,464,0.8380682449787855,909.2338297811164,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We're a results-driven, family-style fitness studio that specializes in working with adults aged 50 and over"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_265,Fitness Trainer,pass
+1014,32,550,464,0.5430344631895423,1012.827062152824,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""dynamic and innovative Graphic Designer"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_225,Motion Graphics Designer,pass
+1407,35,943,464,0.6108854999765754,1543.6608006511199,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""work in a vigorous, fast-paced environment"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_140,Financial Analyst,pass
+2600,53,2136,464,1.0288696233183146,2076.064791485401,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Digital products play a central role in how we create value for customers, support the teams who serve them, and shape the consumer experience."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_18,Machine Learning Engineer,pass
+1481,48,1017,464,0.804900174960494,1263.5107205063239,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Minimum 15 years of post-licensure experience in roadway design, with significant experience with FDOT."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_181,Project Manager,pass
+1856,80,1392,464,1.3206091430038214,1054.0590358429558,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We recognize that our people are our strength and the diverse talents they bring to our global workforce are directly linked to our success. We are an equal opportunity employer and place a high value on diversity and inclusion at our company. We do not discriminate on the basis of any protected attribute, including age..."",
+  ""rule_applied"":",KV Cache,job_96,Software Engineer,parse_error
+1140,59,676,464,0.9128967160359025,740.4999800365305,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""You’ll Be Successful With * 2–4 years of experience in eCommerce, digital marketing, or a related field with hands-on personalization or CRO experience"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_132,Content Marketing Specialist,pass
+1238,38,774,464,0.636696926318109,1215.6490286137978,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Strong ability to perform under pressure in a fast-paced environment"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_262,Chef,pass
+1691,50,1227,464,0.8525021113455296,1439.2926230568382,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We’re looking for a seasoned developer like you with the expertise needed to build software and systems from vision to production-ready."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_86,Full Stack Engineer,pass
+1364,36,900,464,0.6310483515262604,1426.1981634580777,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Minimum 5+ years Commercial Furniture Sales experience"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_248,Interior Designer,pass
+1021,38,557,464,0.5982116684317589,931.1085513597599,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""3–7 years of apparel design and technical design experience"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_245,Fashion Designer,pass
+1421,49,957,464,0.8197864145040512,1167.3772376173852,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""This is a fast-paced, highly collaborative role that blends client success, digital marketing, analysis, and strategic thinking."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_116,Customer Success Manager,pass
+1622,56,1046,576,0.9114760849624872,1147.5890780426228,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""A career with U.S. Bank gives you a wide, ever-growing range of opportunities to discover what makes you thrive at every stage of your career."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_146,Accountant,pass
+982,31,518,464,0.49873889330774546,1038.619620307754,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""fast-moving team environment"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_292,UI Designer,pass
+1022,47,558,464,0.7246315618976951,770.0465027202052,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We seek an licensed energetic professional interested in helping our business grow through value-based conversations and remarkable customer experience."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_197,Business Development Representative,pass
+1108,50,644,464,0.7782882610335946,827.4569105600347,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Experience designing for both web and mobile, with a solid grasp of responsive design and platform conventions (iOS/Android)."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_206,UX Designer,pass
+2934,50,2470,464,1.040708102285862,2373.3840397463723,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""The incumbent must be able to support physical sites, network equipment, wireless coverage, endpoint deployment, and direct staff operations."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_55,Mobile Engineer,pass
+940,47,476,464,0.7104559503495693,669.992277164814,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Knowledge of basic accounting practices required with a strong preference for previous experience in a bank/financial services environment."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_172,Operations Manager,pass
+1394,36,930,464,0.625819998793304,1486.0503048691494,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""thrive in a rapid paced and dynamic environment"",
+  ""rule_applied"": ""5""
+}",KV Cache,job_184,Sales Representative,pass
+1581,29,1117,464,0.5594116197898984,1996.740790653434,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""dynamic team"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_167,Talent Acquisition Specialist,pass
+2472,58,2008,464,1.0969952773302794,1830.4545529920624,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_139,Financial Analyst,pass
+1850,80,1386,464,1.3027265379205346,1063.9224423971511,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We all have unique skills that we bring to work and celebrate every day. For this role, there are foundation skills you’ll need to succeed and excel. Additionally, while formal education in a related field is great to have, we are most interested in your 4+ years of experience and professional achievements."",
+  ""rule_ap",KV Cache,job_253,Illustrator,parse_error
+1872,31,1408,464,0.6183361168950796,2277.0786980229263,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Senior Electrical Test Engineer"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_38,Firmware Engineer,pass
+2243,58,1763,480,1.0581994159147143,1666.0375856246826,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Careers that change lives start here. Medtronic is a global leader in healthcare technology with a Mission to alleviate pain, restore health, and extend life."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_125,Digital Marketing Specialist,pass
+1078,46,614,464,0.7172633446753025,856.0314765254751,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""The text is neutral and job-relevant, focusing on qualifications and responsibilities without targeting any protected trait."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_195,Business Development Representative,pass
+1328,35,864,464,0.6061323368921876,1425.4312918363225,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Must be energetic, outgoing and tenacious."",
+  ""rule_applied"": ""5""
+}",KV Cache,job_283,Real Estate Agent,pass
+987,34,523,464,0.5428322311490774,963.4652660415978,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""dynamic and energetic Marketing and Events Manager"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_137,Social Media Manager,pass
+2039,80,1575,464,1.3329467037692666,1181.592628982286,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""AWS values diverse experiences. Even if you do not meet all of the qualifications and skills listed in the 8 description, we encourage candidates to apply. If your career is just starting, hasn’t followed a traditional path, or includes alternative experiences, don’t let it stop you from applying."",
+  ""rule_applied"": """,KV Cache,job_112,Customer Success Manager,parse_error
+1668,28,1204,464,0.5536195607855916,2174.7786481595995,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""dynamic"",
+  ""rule_applied"": ""3""
+}",KV Cache,job_168,Operations Manager,pass
+1971,41,1507,464,0.7671713037416339,1964.3591889452682,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""The ideal candidate is creative, detail-oriented, and passionate about digital engagement."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_117,Marketing Specialist,pass
+1814,37,1350,464,0.6963391518220305,1938.7104638129429,"{
+  ""verdict"": ""flag"",
+  ""evidence"": ""Must be 18 years or older to apply."",
+  ""rule_applied"": ""1""
+}",KV Cache,job_277,Travel Consultant,flag
+794,37,330,464,0.554034105502069,595.63120162242,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Ability to work in a fast-paced and dynamic environment"",
+  ""rule_applied"": ""5""
+}",KV Cache,job_271,Hair Stylist,pass
+1414,80,950,464,1.2438520807772875,763.7564101724553,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""This organization is an equal employment opportunity employer. Employment decisions are based on merit and business needs, and not on race, color, citizenship status, national origin, ancestry, gender, sexual orientation, age, weight, religion, creed, physical or mental disability, marital status, veteran status, political affiliation, or any other factor",KV Cache,job_155,Human Resources Generalist,parse_error
+1275,42,811,464,0.7052722694352269,1149.9105170396654,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""This is a 6 month contract role with the potential to go full-time."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_176,Supply Chain Analyst,pass
+968,35,504,464,0.6063579805195332,831.1921607235516,"{
+  ""verdict"": ""needs_review"",
+  ""evidence"": ""Your energetic approach will drive project success"",
+  ""rule_applied"": ""3""
+}",KV Cache,job_178,Project Manager,needs_review
+1790,37,1326,464,0.6941828830167651,1910.1594586105286,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""The team is fast-paced, collaborative and impact-driven."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_2,Software Engineer,pass
+1396,52,932,464,0.8483889112249017,1098.5527835982448,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We are committed to fostering a culture of innovation, collaboration, and inclusivity, offering professional growth opportunities and a supportive team atmosphere."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_115,Customer Success Manager,pass
+948,38,484,464,0.5816880920901895,832.0610419595058,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Experience: income tax preparation: 5 years (Required)"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_143,Accountant,pass
+1285,77,821,464,1.192990499548614,688.1865365320493,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Wing is an equal opportunity employer and it is Wing's policy to comply with all applicable national, state and local laws pertaining to nondiscrimination and equal opportunity. Employment at Wing is based solely on a person's merit and qualifications directly related to professional competence."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_177,Supply Chain Analyst,pass
+913,30,449,464,0.47868864238262177,937.9792212431661,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Energetic"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_120,Marketing Specialist,pass
+983,52,519,464,0.7847939739003778,661.3200626663861,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We want someone who: * Has real experience with social platforms — Instagram, Facebook, X, YouTube Shorts, and TikTok"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_210,Video Editor,pass
+854,41,390,464,0.6167340744286776,632.3633088722775,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Ability to work efficiently in a fast-paced environment while maintaining attention to detail"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_260,Chef,pass
+1702,30,1238,464,0.5712837288156152,2167.049291893225,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""fast-paced environment"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_127,Product Marketing Manager,pass
+1927,76,1351,576,1.2331400755792856,1095.577077377319,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""U.S. Bank is an equal opportunity employer. We consider all qualified applicants without regard to race, religion, color, sex, national origin, age, sexual orientation, gender identity, disability or veteran status, and other factors protected under applicable law."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_74,Software Engineer,pass
+1637,43,1173,464,0.7551541458815336,1553.3252467689117,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""10\+ years of experience as a DevSecOps Engineer or similar role"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_29,DevOps Engineer,parse_error
+1412,35,948,464,0.6111948052421212,1551.0603033094421,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""5–8 years of hands-on experience"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_83,Backend Engineer,pass
+1050,31,586,464,0.504155108705163,1162.3406961104524,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""dynamic, energetic environment"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_269,Hair Stylist,pass
+1882,77,1418,464,1.2458007177338004,1138.2237783418861,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We are looking for curious and empathetic people. We also love to hear from people who are motivated by meaningful work, resonate with our four core values, have a positive outlook, are comfortable with ambiguity and thrive working in an ever evolving and complex environment."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_107,Account Executive,pass
+823,37,359,464,0.5530452532693744,649.1331367148362,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Experience creating looping animation is a plus but not required."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_223,Animator,pass
+1474,80,1010,464,1.2434882167726755,812.2312591118344,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Oshkosh is committed to working with and offering reasonable accommodation to job applicants with disabilities. If you need assistance or an accommodation due to disability for any part of the employment process, please contact us at corporatetalentacquisition@oshkoshcorp.com."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_158,Recruiter,pass
+1214,54,750,464,0.8384670065715909,894.4895793415608,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""HomeLight is an equal opportunity employer dedicated to building an inclusive and diverse workforce, providing employees with a work environment free of discrimination and harassment."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_280,Event Coordinator,pass
+2449,52,1985,464,0.993969595991075,1997.0429759682745,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We value diverse backgrounds, including but not limited to race, ethnicity, gender, age, religion, sexual orientation, and disability"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_246,Fashion Designer,pass
+1280,49,816,464,0.7925217989832163,1029.6246753678013,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""This is an independent contractor position, not full-time employment. Work is project-based with strong potential for ongoing collaboration."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_222,Animator,pass
+1768,55,1304,464,0.9390076054260135,1388.7001473309633,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Bachelor's degree in Computer Science, Electrical Engineering, Electronic Engineering, or related field and 6+ years of Software Engineering or related work experience."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_65,Android Engineer,pass
+986,46,522,464,0.7068292917683721,738.5092922423189,"{
+  ""verdict"": ""needs_review"",
+  ""evidence"": ""Energetic professional interested in helping our business grow through value-based conversations and remarkable customer experience"",
+  ""rule_applied"": ""3""
+}",KV Cache,job_198,Business Development Representative,needs_review
+1714,51,1250,464,0.8655972713604569,1444.0895799444681,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""8\+ years of experience in software development including backend and services, including in a lead or senior role on delivered systems"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_85,Full Stack Engineer,parse_error
+577,50,113,464,0.7109659695997834,158.93869022115067,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""A Videographer is needed to operate ENG Camera to gather video and audio for local news stories. Other duties as assigned."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_213,Video Editor,pass
+1597,70,1133,464,1.1203705556690693,1011.2725600177779,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Gotion Inc. is proud to be an equal opportunity employer. We are dedicated to fostering a diverse workforce that reflects the communities we serve, cultivating a culture of inclusion and belonging, and ensuring equal employment opportunities for all."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_159,Recruiter,pass
+1366,56,902,464,0.9005847256630659,1001.5715060411358,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Bachelor's degree with a minimum of six years of experience in the category field. Three additional years of experience may be substituted for the bachelor's degree."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_12,Backend Engineer,pass
+1744,42,1280,464,0.7547601824626327,1695.9029235268004,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We look for builders who question it, improve it, and occasionally rewrite it."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_35,Embedded Engineer,pass
+1744,42,928,816,0.7273919684812427,1275.7908255951968,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We look for builders who question it, improve it, and occasionally rewrite it."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_28,Cloud Engineer,pass
+1856,50,1392,464,0.8824061788618565,1577.504819600682,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""This role is only available as a 100% remote position if you reside in one of the following states"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_142,Financial Analyst,pass
+1211,35,667,544,0.5814628591760993,1147.1068005015868,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Must be energetic, outgoing and tenacious."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_284,Real Estate Agent,pass
+698,44,234,464,0.8423638381063938,277.7897025185985,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Trader Joe's is an equal-opportunity employer and is committed to hiring a diverse Crew."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_254,Illustrator,pass
+1653,46,1189,464,0.8017287403345108,1483.045249823407,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""The role requires strong leadership, analytical skills, and the ability to deliver results aligned with business objectives."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_170,Operations Manager,pass
+2178,75,1714,464,1.2887780610471964,1329.941944082513,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""The successful applicant may be performing work on US Government classified environments, and therefore, must be a U.S. Person (i.e., U.S. citizen, U.S. national, lawful permanent resident, asylee, or refugee)."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_51,Site Reliability Engineer,pass
+1856,70,1392,464,1.1626038886606693,1197.31235511658,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We recognize that our people are our strength and the diverse talents they bring to our global workforce are directly linked to our success. We are an equal opportunity employer and place a high value on diversity and inclusion at our company."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_95,Software Engineer,pass
+2329,79,1865,464,1.3653648095205426,1365.9353068099856,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""At EAB, we believe that to fulfill our mission to \""make education smarter and our communities stronger\"" we need team members who bring a diversity of perspectives to the table and are committed to fostering a workplace where each team member is valued, respected, and heard."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_208,UX Designer,pass
+1501,43,1037,464,0.7388400686904788,1403.5513826936597,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Must be self-motivated and able to multi-task in a fast-paced environment"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_247,Interior Designer,pass
+1739,69,1275,464,1.120322335511446,1138.0653224394932,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, status as a protected veteran, or other applicable legally protected characteristics."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_41,Systems Engineer,pass
+2528,51,2064,464,1.0059956638142467,2051.6987043207673,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We are looking for a Solutions Engineer to join our R&D team and own that translation layer between the customer and the platform."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_89,Machine Learning Engineer,pass
+2449,52,1025,1424,0.9046511435881257,1133.033443073463,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We value diverse backgrounds, including but not limited to race, ethnicity, gender, age, religion, sexual orientation, and disability"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_244,Fashion Designer,pass
+1582,39,1118,464,0.6888439450412989,1623.0091126560917,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Ability to lift or carry up to 25 pounds occasionally"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_136,Social Media Manager,pass
+1741,42,925,816,0.7192141404375434,1286.1259922354475,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We look for builders who question it, improve it, and occasionally rewrite it."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_26,AI Engineer,pass
+2328,79,1656,672,1.3434158023446798,1232.6786666568632,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""At EAB, we believe that to fulfill our mission to \""make education smarter and our communities stronger\"" we need team members who bring a diversity of perspectives to the table and are committed to fostering a workplace where each team member is valued, respected, and heard."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_293,UX Designer,pass
+1856,50,16,1840,0.747126517817378,21.41538229260244,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""This role is only available as a 100% remote position if you reside in one of the following states"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_141,Financial Analyst,pass
+1646,59,1182,464,0.9856524998322129,1199.2056025842892,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""No explicit age labels, generational terms, or youth proxies are present in the text. The requirements are grounded in technical and professional qualifications, not age-related criteria."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_200,Graphic Designer,pass
+2221,53,1757,464,0.9809721503406763,1791.0804087453669,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""This role is intended for new or recent graduates (internships, co-ops, academic projects, or personal projects are great)."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_0,Software Engineer,pass
+940,33,476,464,0.5184770850464702,918.0733608648046,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Up-to-date with industry trends"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_268,Hair Stylist,pass
+747,37,283,464,0.5598962604999542,505.4507771623582,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Passionate about delivering high-quality results and customer care"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_272,Hair Stylist,pass
+2250,74,1786,464,1.2870763279497623,1387.6410910648897,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""GSK is a place where people can thrive. Our culture is grounded in being ambitious for patients, accountable for impact, and committed to doing the right thing — creating an environment where individuals are supported to grow and contribute at their full potential."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_100,Sales Representative,pass
+2218,70,1754,464,1.2295964052900672,1426.4843264454923,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We prioritize your work/life balance and provide various scheduling options in addition to generous time off, health, and wellness benefits and we're committed to helping you reach your potential by providing opportunities for professional growth across the state."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_259,Chef,pass
+698,44,10,688,0.6362900733947754,15.71610247924718,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Trader Joe's is an equal-opportunity employer and is committed to hiring a diverse Crew."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_255,Illustrator,pass
+1538,36,1074,464,0.6546691628172994,1640.5232764869431,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Ability to work under pressure in fast-paced environments"",
+  ""rule_applied"": ""5""
+}",KV Cache,job_171,Operations Manager,pass
+1478,80,1014,464,1.2573588825762272,806.4523296025043,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We recognize that our people are our strength and the diverse talents they bring to our global workforce are directly linked to our success. We are an equal opportunity employer and place a high value on diversity and inclusion at our company. We do not discriminate on the basis of any protected attribute, including age..."",
+  ""rule_applied"":",KV Cache,job_98,Software Engineer,parse_error
+822,41,358,464,0.6079110447317362,588.9019505443944,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""2-4 Years with BS or 0-2 Years with MS"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_36,Firmware Engineer,pass
+2594,45,2130,464,0.9212445914745331,2312.0895576610633,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""This is a senior engineering role for someone who has already made the shift to AI-native development."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_61,iOS Engineer,pass
+2036,38,1572,464,0.7493803231045604,2097.7332224143015,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""10\+ years of Commercial Banking Relationship Management experience"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_150,Finance Manager,parse_error
+1277,37,813,464,0.6250224197283387,1300.7533399415724,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""able to manage multiple priorities in a fast-paced environment"",
+  ""rule_applied"": ""5""
+}",KV Cache,job_236,Copywriter,pass
+1438,38,974,464,0.6643220353871584,1466.156394213787,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Ability to thrive in a fast-paced, high-volume environment"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_202,Graphic Designer,pass
+2449,52,1025,1424,0.9106204407289624,1125.6061847013618,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We value diverse backgrounds, including but not limited to race, ethnicity, gender, age, religion, sexual orientation, and disability"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_242,Fashion Designer,pass
+1461,40,997,464,0.7024567667394876,1419.3044286948216,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Design, implement, and integrate software applications or perform software engineering tasks."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_11,Backend Engineer,pass
+918,43,454,464,0.6559619773179293,692.1132865906295,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""A keen eye for detail, print production knowledge, and excellent file organization are essential."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_296,Graphic Designer,pass
+643,30,179,464,0.4512402415275574,396.68447874693464,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""fast growing company"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_267,Fitness Trainer,pass
+1741,42,13,1728,0.6400573439896107,20.31068016338707,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""We look for builders who question it, improve it, and occasionally rewrite it."",
+  ""rule_applied"": ""4""
+}",KV Cache,job_27,AI Engineer,pass
+1941,41,1477,464,0.7809711154550314,1891.23511839414,"{
+  ""verdict"": ""pass"",
+  ""evidence"": ""Requirements include 3–5 years of professional experience as a motion designer"",
+  ""rule_applied"": ""4""
+}",KV Cache,job_219,Animator,pass

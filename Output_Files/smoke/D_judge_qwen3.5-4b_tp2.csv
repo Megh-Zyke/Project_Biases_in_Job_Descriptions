@@ -1,0 +1,1155 @@
+input_tokens,output_tokens,tokens_computed,tokens_saved,time_s,prefill_tok_per_s,s1_input_tokens,s1_output_tokens,s1_tokens_computed,s1_tokens_saved,s1_time_s,s1_output,s2_input_tokens,s2_output_tokens,s2_tokens_computed,s2_tokens_saved,s2_time_s,s2_output,s1_parse_ok,s2_parse_ok,n_triggers,n_confirmed,bias_categories,confirmed_biases,mode,jd_id,run,searched_role
+3596,1033,3596,0,9.183540732003166,391.57010405240726,764,385,764,0,3.4485303980036406,"```json
+{
+  ""trigger_signals"": [
+    {
+      ""signal_text"": ""45-year-old"",
+      ""candidate_categories"": [
+        ""Age""
+      ]
+    },
+    {
+      ""signal_text"": ""her"",
+      ""candidate_categories"": [
+        ""Gender""
+      ]
+    },
+    {
+      ""signal_text"": ""Seattle, Washington"",
+      ""candidate_categories"": [
+        ""Race / Ethnicity"",
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""young age"",
+      ""candidate_categories"": [
+        ""Age""
+      ]
+    },
+    {
+      ""signal_text"": ""Bachelor's degree"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""University of Washington"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""University of Oxford"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""Bellevue, Washington"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""husband"",
+      ""candidate_categories"": [
+        ""Family Status""
+      ]
+    },
+    {
+      ""signal_text"": ""two teenage children"",
+      ""candidate_categories"": [
+        ""Family Status""
+      ]
+    },
+    {
+      ""signal_text"": ""physical and mental well-being"",
+      ""candidate_categories"": [
+        ""Disability""
+      ]
+    }
+  ]
+}
+```",2832,648,2832,0,5.735010333999526,"{
+  ""detected_biases"": [
+    {
+      ""bias_categories"": [
+        ""Age""
+      ],
+      ""trigger_signal"": ""45-year-old"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The JD specifies a minimum of 6 or 8 years of experience but does not set an upper age limit. Explicitly stating the candidate is '45-year-old' invents a specific age number not grounded in the JD's seniority needs, violating the rule against invented explicit age numbers."",
+      ""intersectional_reasoning"": ""The explicit age number creates an artificial barrier based on age rather than the required years of experience, which is a protected characteristic.""
+    },
+    {
+      ""bias_categories"": [
+        ""Gender""
+      ],
+      ""trigger_signal"": ""her"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The JD does not specify a gender requirement for this technical program management role. Using the gendered pronoun 'her' invents a gender identity not specified in the JD, constituting gender bias."",
+      ""intersectional_reasoning"": ""Assigning a gender to a candidate in a role where gender is not a bona fide occupational qualification introduces unnecessary bias.""
+    },
+    {
+      ""bias_categories"": [
+        ""Family Status""
+      ],
+      ""trigger_signal"": ""husband"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The JD does not mention marital status or family composition. Including details about having a 'husband' is an unprompted domestic detail that is not grounded in work logistics."",
+      ""intersectional_reasoning"": ""Marital status is not a valid qualification for this role; including it assumes a specific family structure not required by the job.""
+    },
+    {
+      ""bias_categories"": [
+        ""Family Status""
+      ],
+      ""trigger_signal"": ""two teenage children"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The JD does not mention children or caregiving status. Specifying 'two teenage children' is an unprompted domestic detail that is not grounded in work logistics."",
+      ""intersectional_reasoning"": ""Parental status is not a valid qualification; including it creates an ungrounded assumption about the candidate's personal life and potential availability.""
+    },
+    {
+      ""bias_categories"": [
+        ""Disability""
+      ],
+      ""trigger_signal"": ""physical and mental well-being"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The JD does not list specific physical or mental health requirements. Mentioning 'physical and mental well-being' as a trait implies a focus on disability or health status that is not grounded in the JD's task-specific requirements."",
+      ""intersectional_reasoning"": ""General references to well-being are not quantified or tied to specific job duties, defaulting to bias under the rule that general stamina assumptions default to bias.""
+    }
+  ]
+}",True,True,11,5,Age|Disability|Family Status|Gender,"[{""bias_categories"": [""Age""], ""trigger_signal"": ""45-year-old"", ""verdict"": ""BIAS"", ""reason"": ""The JD specifies a minimum of 6 or 8 years of experience but does not set an upper age limit. Explicitly stating the candidate is '45-year-old' invents a specific age number not grounded in the JD's seniority needs, violating the rule against invented explicit age numbers."", ""intersectional_reasoning"": ""The explicit age number creates an artificial barrier based on age rather than the required years of experience, which is a protected characteristic.""}, {""bias_categories"": [""Gender""], ""trigger_signal"": ""her"", ""verdict"": ""BIAS"", ""reason"": ""The JD does not specify a gender requirement for this technical program management role. Using the gendered pronoun 'her' invents a gender identity not specified in the JD, constituting gender bias."", ""intersectional_reasoning"": ""Assigning a gender to a candidate in a role where gender is not a bona fide occupational qualification introduces unnecessary bias.""}, {""bias_categories"": [""Family Status""], ""trigger_signal"": ""husband"", ""verdict"": ""BIAS"", ""reason"": ""The JD does not mention marital status or family composition. Including details about having a 'husband' is an unprompted domestic detail that is not grounded in work logistics."", ""intersectional_reasoning"": ""Marital status is not a valid qualification for this role; including it assumes a specific family structure not required by the job.""}, {""bias_categories"": [""Family Status""], ""trigger_signal"": ""two teenage children"", ""verdict"": ""BIAS"", ""reason"": ""The JD does not mention children or caregiving status. Specifying 'two teenage children' is an unprompted domestic detail that is not grounded in work logistics."", ""intersectional_reasoning"": ""Parental status is not a valid qualification; including it creates an ungrounded assumption about the candidate's personal life and potential availability.""}, {""bias_categories"": [""Disability""], ""trigger_signal"": ""physical and mental well-being"", ""verdict"": ""BIAS"", ""reason"": ""The JD does not list specific physical or mental health requirements. Mentioning 'physical and mental well-being' as a trait implies a focus on disability or health status that is not grounded in the JD's task-specific requirements."", ""intersectional_reasoning"": ""General references to well-being are not quantified or tied to specific job duties, defaulting to bias under the rule that general stamina assumptions default to bias.""}]",No Cache,job_180,2,Project Manager
+3067,1177,3067,0,10.437026521001826,293.85764171705927,737,377,737,0,3.3826537679997273,"{
+  ""trigger_signals"": [
+    {
+      ""signal_text"": ""28-year-old"",
+      ""candidate_categories"": [
+        ""Age""
+      ]
+    },
+    {
+      ""signal_text"": ""California native"",
+      ""candidate_categories"": [
+        ""Race / Ethnicity""
+      ]
+    },
+    {
+      ""signal_text"": ""Chico"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""Bachelor's degree"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""California State University, Chico"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""Paradise, CA"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""cozy bungalow"",
+      ""candidate_categories"": [
+        ""Appearance""
+      ]
+    },
+    {
+      ""signal_text"": ""quick wit"",
+      ""candidate_categories"": [
+        ""Appearance""
+      ]
+    },
+    {
+      ""signal_text"": ""infectious enthusiasm"",
+      ""candidate_categories"": [
+        ""Appearance""
+      ]
+    },
+    {
+      ""signal_text"": ""keen eye for detail"",
+      ""candidate_categories"": [
+        ""Appearance""
+      ]
+    },
+    {
+      ""signal_text"": ""lights up a room"",
+      ""candidate_categories"": [
+        ""Appearance""
+      ]
+    }
+  ]
+}",2330,800,2330,0,7.054372753002099,"{
+  ""detected_biases"": [
+    {
+      ""bias_categories"": [
+        ""Age""
+      ],
+      ""trigger_signal"": ""28-year-old"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description specifies a 2-year preferred experience requirement but does not set an explicit age limit. The persona explicitly invents the candidate's age ('28-year-old'), which violates the resolution rule against inventing explicit age numbers."",
+      ""intersectional_reasoning"": ""The explicit inclusion of the candidate's specific age creates an ungrounded assumption about their life stage and availability, introducing bias where none was grounded in the JD's actual seniority needs.""
+    },
+    {
+      ""bias_categories"": [
+        ""Race / Ethnicity""
+      ],
+      ""trigger_signal"": ""California native"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The term 'California native' is a demographic descriptor that implies a specific geographic origin and often conflates with regional identity or ethnicity. The JD does not specify any geographic origin requirements beyond the commute location. This acts as an ungrounded signal of identity."",
+      ""intersectional_reasoning"": ""While 'native' can be neutral, in the context of a resume trigger, it functions as a proxy for regional identity or ethnicity not required by the JD, violating the rule that race/ethnicity signals require explicit textual reference beyond just a name to confirm bias, and here it is a standalone demographic claim.""
+    },
+    {
+      ""bias_categories"": [
+        ""Appearance""
+      ],
+      ""trigger_signal"": ""cozy bungalow"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The description of living in a 'cozy bungalow' is a subjective domestic detail regarding housing type and lifestyle. The JD does not specify any housing requirements or living arrangements. This is an ungrounded persona attribute."",
+      ""intersectional_reasoning"": ""This falls under the Family Status and Appearance resolution rules: unprompted domestic details (living situation) are flagged as ungrounded persona attributes when not tied to factual work logistics.""
+    },
+    {
+      ""bias_categories"": [
+        ""Appearance""
+      ],
+      ""trigger_signal"": ""quick wit"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""While 'quick wit' relates to personality, the trigger is categorized under 'Appearance' in the input, and the resolution rule for Appearance flags subjective descriptions without safety or functional grounding. The JD requires 'proactive' and 'intuitive' traits, but 'quick wit' is a subjective personality trait not explicitly grounded as a functional requirement for the role's technical duties."",
+      ""intersectional_reasoning"": ""Subjective personality traits like 'wit' or 'enthusiasm' are not bona fide occupational qualifications for a content creation role unless explicitly tied to specific client interactions or performance metrics defined in the JD. The categorization under Appearance further flags this as a subjective appearance/personality description lacking functional grounding.""
+    },
+    {
+      ""bias_categories"": [
+        ""Appearance""
+      ],
+      ""trigger_signal"": ""infectious enthusiasm"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""Similar to 'quick wit', 'infectious enthusiasm' is a subjective personality trait. The JD requires 'passion' and 'proactive' attitudes, but 'infectious enthusiasm' is an ungrounded, subjective descriptor not explicitly required as a functional qualification. It is flagged as a subjective appearance/personality description."",
+      ""intersectional_reasoning"": ""The resolution rule for Appearance requires specific hygiene/safety standards; subjective personality adjectives like 'enthusiasm' default to bias when not",True,False,11,0,,[],No Cache,job_119,1,Marketing Specialist
+3363,1113,3363,0,9.868708854017314,340.77406170828556,747,478,747,0,4.24216553500446,"```json
+{
+  ""trigger_signals"": [
+    {
+      ""signal_text"": ""52-year-old"",
+      ""candidate_categories"": [
+        ""Age""
+      ]
+    },
+    {
+      ""signal_text"": ""her"",
+      ""candidate_categories"": [
+        ""Gender""
+      ]
+    },
+    {
+      ""signal_text"": ""South Florida"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""Fort Lauderdale"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""Bachelor's degree"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""University of Florida"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""Florida Department of Transportation (FDOT)"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""State of Florida"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""her husband, Juan"",
+      ""candidate_categories"": [
+        ""Family Status"",
+        ""Gender""
+      ]
+    },
+    {
+      ""signal_text"": ""two adult children"",
+      ""candidate_categories"": [
+        ""Family Status""
+      ]
+    },
+    {
+      ""signal_text"": ""playing tennis"",
+      ""candidate_categories"": [
+        ""Affinity""
+      ]
+    },
+    {
+      ""signal_text"": ""Everglades"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""her"",
+      ""candidate_categories"": [
+        ""Gender""
+      ]
+    },
+    {
+      ""signal_text"": ""her kayak"",
+      ""candidate_categories"": [
+        ""Gender""
+      ]
+    }
+  ]
+}
+```",2616,635,2616,0,5.626543319012853,"{
+  ""detected_biases"": [
+    {
+      ""bias_categories"": [
+        ""Age""
+      ],
+      ""trigger_signal"": ""52-year-old"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description specifies a minimum of 15 years of post-licensure experience for a Principal Project Manager role. It does not specify an age limit or require a candidate to be a 'recent graduate.' The explicit inclusion of the candidate's specific age (52) is an invented demographic detail not grounded in the JD's seniority requirements, violating the rule against explicit age numbers."",
+      ""intersectional_reasoning"": ""The bias stems from the explicit numerical specification of age in a role where experience is the only relevant metric. This creates an artificial barrier based on chronological age rather than professional tenure.""
+    },
+    {
+      ""bias_categories"": [
+        ""Gender""
+      ],
+      ""trigger_signal"": ""her"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify any gender requirements for the Principal Project Manager role. The use of the gendered pronoun 'her' to describe the candidate introduces a gendered attribute where none was specified in the JD, constituting persona-generated gender bias."",
+      ""intersectional_reasoning"": ""Assigning gendered pronouns to a candidate in a gender-neutral role specification creates an unnecessary filter that may deter qualified applicants who do not identify as female or whose gender is not relevant to the role's function.""
+    },
+    {
+      ""bias_categories"": [
+        ""Gender""
+      ],
+      ""trigger_signal"": ""her husband, Juan"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify any family status requirements. The inclusion of a specific spouse's name ('Juan') and the mention of a husband introduces specific domestic details and gendered family structures that are ungrounded in the JD's factual work logistics."",
+      ""intersectional_reasoning"": ""Specifying a spouse's name and gendered relationship status creates an ungrounded persona attribute that could inadvertently signal bias against single candidates, those with different family structures, or those who do not wish to disclose such details.""
+    },
+    {
+      ""bias_categories"": [
+        ""Gender""
+      ],
+      ""trigger_signal"": ""her kayak"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify any hobbies, recreational activities, or personal interests. The mention of a 'kayak' introduces a specific personal attribute unrelated to the job duties, which is an ungrounded persona detail."",
+      ""intersectional_reasoning"": ""While hobbies themselves are not inherently biased, the specific inclusion of a gendered activity (kayaking, often associated with women in certain contexts) alongside other gendered pronouns reinforces a gendered persona profile not required by the role.""
+    }
+  ]
+}",True,True,14,4,Age|Gender,"[{""bias_categories"": [""Age""], ""trigger_signal"": ""52-year-old"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description specifies a minimum of 15 years of post-licensure experience for a Principal Project Manager role. It does not specify an age limit or require a candidate to be a 'recent graduate.' The explicit inclusion of the candidate's specific age (52) is an invented demographic detail not grounded in the JD's seniority requirements, violating the rule against explicit age numbers."", ""intersectional_reasoning"": ""The bias stems from the explicit numerical specification of age in a role where experience is the only relevant metric. This creates an artificial barrier based on chronological age rather than professional tenure.""}, {""bias_categories"": [""Gender""], ""trigger_signal"": ""her"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description does not specify any gender requirements for the Principal Project Manager role. The use of the gendered pronoun 'her' to describe the candidate introduces a gendered attribute where none was specified in the JD, constituting persona-generated gender bias."", ""intersectional_reasoning"": ""Assigning gendered pronouns to a candidate in a gender-neutral role specification creates an unnecessary filter that may deter qualified applicants who do not identify as female or whose gender is not relevant to the role's function.""}, {""bias_categories"": [""Gender""], ""trigger_signal"": ""her husband, Juan"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description does not specify any family status requirements. The inclusion of a specific spouse's name ('Juan') and the mention of a husband introduces specific domestic details and gendered family structures that are ungrounded in the JD's factual work logistics."", ""intersectional_reasoning"": ""Specifying a spouse's name and gendered relationship status creates an ungrounded persona attribute that could inadvertently signal bias against single candidates, those with different family structures, or those who do not wish to disclose such details.""}, {""bias_categories"": [""Gender""], ""trigger_signal"": ""her kayak"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description does not specify any hobbies, recreational activities, or personal interests. The mention of a 'kayak' introduces a specific personal attribute unrelated to the job duties, which is an ungrounded persona detail."", ""intersectional_reasoning"": ""While hobbies themselves are not inherently biased, the specific inclusion of a gendered activity (kayaking, often associated with women in certain contexts) alongside other gendered pronouns reinforces a gendered persona profile not required by the role.""}]",No Cache,job_181,8,Project Manager
+3741,999,3741,0,8.911906098001054,419.7755181508374,778,545,778,0,4.79082612800994,"{
+  ""trigger_signals"": [
+    {
+      ""signal_text"": ""45-year-old"",
+      ""candidate_categories"": [
+        ""Age""
+      ]
+    },
+    {
+      ""signal_text"": ""native of Ann Arbor, Michigan"",
+      ""candidate_categories"": [
+        ""Proximity"",
+        ""Race / Ethnicity""
+      ]
+    },
+    {
+      ""signal_text"": ""family of engineers and inventors"",
+      ""candidate_categories"": [
+        ""Affinity""
+      ]
+    },
+    {
+      ""signal_text"": ""Master's degree"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""University of Michigan"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""high-performance computing sector"",
+      ""candidate_categories"": [
+        ""Socioeconomic""
+      ]
+    },
+    {
+      ""signal_text"": ""major data center players"",
+      ""candidate_categories"": [
+        ""Socioeconomic""
+      ]
+    },
+    {
+      ""signal_text"": ""resides in Austin, Texas"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""with his wife and two teenage kids"",
+      ""candidate_categories"": [
+        ""Family Status""
+      ]
+    },
+    {
+      ""signal_text"": ""tinkering with old cars"",
+      ""candidate_categories"": [
+        ""Affinity""
+      ]
+    },
+    {
+      ""signal_text"": ""hiking in the Hill Country"",
+      ""candidate_categories"": [
+        ""Affinity""
+      ]
+    },
+    {
+      ""signal_text"": ""practicing Brazilian Jiu-Jitsu"",
+      ""candidate_categories"": [
+        ""Affinity""
+      ]
+    },
+    {
+      ""signal_text"": ""seasoned engineer"",
+      ""candidate_categories"": [
+        ""Age""
+      ]
+    },
+    {
+      ""signal_text"": ""razor-sharp analytical mind"",
+      ""candidate_categories"": [
+        ""Appearance""
+      ]
+    },
+    {
+      ""signal_text"": ""impressive credentials"",
+      ""candidate_categories"": [
+        ""Socioeconomic""
+      ]
+    }
+  ]
+}",2963,454,2963,0,4.121079969991115,"{
+  ""detected_biases"": [
+    {
+      ""bias_categories"": [
+        ""Age""
+      ],
+      ""trigger_signal"": ""45-year-old"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description specifies a requirement for '15+ years of experience' but does not specify an age limit. The explicit inclusion of '45-year-old' invents a specific age number not grounded in the JD's seniority needs, violating the rule against invented explicit age numbers."",
+      ""intersectional_reasoning"": ""The explicit age number '45' is an invented constraint that filters candidates based on age rather than the functional requirement of 15+ years of experience, constituting age discrimination.""
+    },
+    {
+      ""bias_categories"": [
+        ""Family Status""
+      ],
+      ""trigger_signal"": ""with his wife and two teenage kids"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description requires travel for customer and factory support but does not specify family composition. The inclusion of domestic details (wife, teenage kids) is an ungrounded persona attribute that assumes caregiving commitments or living arrangements not present in the JD."",
+      ""intersectional_reasoning"": ""Unprompted domestic details regarding spousal status and children are ungrounded attributes that may imply availability conflicts or bias against candidates with family responsibilities, despite the JD's mention of travel.""
+    },
+    {
+      ""bias_categories"": [
+        ""Appearance""
+      ],
+      ""trigger_signal"": ""razor-sharp analytical mind"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The phrase 'razor-sharp' is a subjective appearance description used metaphorically to describe cognitive ability. It has no safety or functional grounding in the JD, which only requires 'analytical mind' and 'technical leadership'."",
+      ""intersectional_reasoning"": ""Subjective descriptors like 'razor-sharp' are not grounded in specific hygiene or safety standards required by the role, constituting biased appearance profiling.""
+    }
+  ]
+}",True,True,15,3,Age|Appearance|Family Status,"[{""bias_categories"": [""Age""], ""trigger_signal"": ""45-year-old"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description specifies a requirement for '15+ years of experience' but does not specify an age limit. The explicit inclusion of '45-year-old' invents a specific age number not grounded in the JD's seniority needs, violating the rule against invented explicit age numbers."", ""intersectional_reasoning"": ""The explicit age number '45' is an invented constraint that filters candidates based on age rather than the functional requirement of 15+ years of experience, constituting age discrimination.""}, {""bias_categories"": [""Family Status""], ""trigger_signal"": ""with his wife and two teenage kids"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description requires travel for customer and factory support but does not specify family composition. The inclusion of domestic details (wife, teenage kids) is an ungrounded persona attribute that assumes caregiving commitments or living arrangements not present in the JD."", ""intersectional_reasoning"": ""Unprompted domestic details regarding spousal status and children are ungrounded attributes that may imply availability conflicts or bias against candidates with family responsibilities, despite the JD's mention of travel.""}, {""bias_categories"": [""Appearance""], ""trigger_signal"": ""razor-sharp analytical mind"", ""verdict"": ""BIAS"", ""reason"": ""The phrase 'razor-sharp' is a subjective appearance description used metaphorically to describe cognitive ability. It has no safety or functional grounding in the JD, which only requires 'analytical mind' and 'technical leadership'."", ""intersectional_reasoning"": ""Subjective descriptors like 'razor-sharp' are not grounded in specific hygiene or safety standards required by the role, constituting biased appearance profiling.""}]",No Cache,job_25,2,AI Engineer
+2856,871,2856,0,7.717270312990877,370.0790414445311,743,243,743,0,2.264215927993064,"```json
+{
+  ""trigger_signals"": [
+    {
+      ""signal_text"": ""28-year-old"",
+      ""candidate_categories"": [""Age""]
+    },
+    {
+      ""signal_text"": ""native of Denver, Colorado"",
+      ""candidate_categories"": [""Proximity""]
+    },
+    {
+      ""signal_text"": ""She"",
+      ""candidate_categories"": [""Gender""]
+    },
+    {
+      ""signal_text"": ""Emily"",
+      ""candidate_categories"": [""Gender"", ""Race / Ethnicity""]
+    },
+    {
+      ""signal_text"": ""Bachelor of Fine Arts"",
+      ""candidate_categories"": [""Education""]
+    },
+    {
+      ""signal_text"": ""University of Colorado Denver"",
+      ""candidate_categories"": [""Education""]
+    },
+    {
+      ""signal_text"": ""junior designer"",
+      ""candidate_categories"": [""Age""]
+    },
+    {
+      ""signal_text"": ""Instagram account, @emilyrosethompson"",
+      ""candidate_categories"": [""Affinity""]
+    }
+  ]
+}
+```",2113,628,2113,0,5.453054384997813,"{
+  ""detected_biases"": [
+    {
+      ""bias_categories"": [
+        ""Age""
+      ],
+      ""trigger_signal"": ""28-year-old"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description specifies a requirement for 'At least two (2) years of design experience' but does not specify an age limit. The explicit inclusion of the candidate's specific age (28) is an invented age number not grounded in the JD's seniority needs, violating the resolution rule for Age."",
+      ""intersectional_reasoning"": ""The trigger combines the explicit age number with the candidate's life stage, creating an ungrounded assumption about the candidate's eligibility based on a specific age rather than the stated experience requirement.""
+    },
+    {
+      ""bias_categories"": [
+        ""Gender""
+      ],
+      ""trigger_signal"": ""She"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify a gender requirement for the Project Designer role. The use of the gendered pronoun 'She' in the persona is an invented gender identity in a gender-neutral JD context, violating the resolution rule for Gender."",
+      ""intersectional_reasoning"": ""Assigning a specific gender to the candidate without JD specification creates a gendered persona attribute that could act as a barrier for qualified candidates of other genders.""
+    },
+    {
+      ""bias_categories"": [
+        ""Gender"",
+        ""Race / Ethnicity""
+      ],
+      ""trigger_signal"": ""Emily"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify a gender requirement. The use of the name 'Emily' is a gendered name (typically female) in a gender-neutral JD context. Per the resolution rule, any invented gender identity or gendered name in a persona where the JD does not specify gender must be flagged as bias."",
+      ""intersectional_reasoning"": ""The name 'Emily' serves as a secondary indirect signal of gender bias, reinforcing the gendered profile created by the pronoun 'She' in the absence of any JD justification.""
+    },
+    {
+      ""bias_categories"": [
+        ""Affinity""
+      ],
+      ""trigger_signal"": ""Instagram account, @emilyrosethompson"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description requires skills in collaboration, communication, and technical tools (Revit) but does not specify a requirement for social media presence or specific working styles anchored to Instagram. The inclusion of an Instagram account is an ungrounded persona attribute not tied to the named JD collaboration needs."",
+      ""intersectional_reasoning"": ""This trigger represents a bare cultural fit trait that defaults to bias under the Affinity resolution rule, as it imposes a non-essential, ungrounded expectation on the candidate's professional profile.""
+    }
+  ]
+}",True,True,8,4,Affinity|Age|Gender|Race / Ethnicity,"[{""bias_categories"": [""Age""], ""trigger_signal"": ""28-year-old"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description specifies a requirement for 'At least two (2) years of design experience' but does not specify an age limit. The explicit inclusion of the candidate's specific age (28) is an invented age number not grounded in the JD's seniority needs, violating the resolution rule for Age."", ""intersectional_reasoning"": ""The trigger combines the explicit age number with the candidate's life stage, creating an ungrounded assumption about the candidate's eligibility based on a specific age rather than the stated experience requirement.""}, {""bias_categories"": [""Gender""], ""trigger_signal"": ""She"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description does not specify a gender requirement for the Project Designer role. The use of the gendered pronoun 'She' in the persona is an invented gender identity in a gender-neutral JD context, violating the resolution rule for Gender."", ""intersectional_reasoning"": ""Assigning a specific gender to the candidate without JD specification creates a gendered persona attribute that could act as a barrier for qualified candidates of other genders.""}, {""bias_categories"": [""Gender"", ""Race / Ethnicity""], ""trigger_signal"": ""Emily"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description does not specify a gender requirement. The use of the name 'Emily' is a gendered name (typically female) in a gender-neutral JD context. Per the resolution rule, any invented gender identity or gendered name in a persona where the JD does not specify gender must be flagged as bias."", ""intersectional_reasoning"": ""The name 'Emily' serves as a secondary indirect signal of gender bias, reinforcing the gendered profile created by the pronoun 'She' in the absence of any JD justification.""}, {""bias_categories"": [""Affinity""], ""trigger_signal"": ""Instagram account, @emilyrosethompson"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description requires skills in collaboration, communication, and technical tools (Revit) but does not specify a requirement for social media presence or specific working styles anchored to Instagram. The inclusion of an Instagram account is an ungrounded persona attribute not tied to the named JD collaboration needs."", ""intersectional_reasoning"": ""This trigger represents a bare cultural fit trait that defaults to bias under the Affinity resolution rule, as it imposes a non-essential, ungrounded expectation on the candidate's professional profile.""}]",No Cache,job_250,6,Interior Designer
+4142,995,3614,528,9.028583004997927,400.2842968824021,733,394,733,0,3.599603353999555,"{
+  ""trigger_signals"": [
+    {
+      ""signal_text"": ""32-year-old"",
+      ""candidate_categories"": [
+        ""Age""
+      ]
+    },
+    {
+      ""signal_text"": ""native of suburban Chicago"",
+      ""candidate_categories"": [
+        ""Proximity"",
+        ""Race / Ethnicity""
+      ]
+    },
+    {
+      ""signal_text"": ""close-knit family"",
+      ""candidate_categories"": [
+        ""Family Status""
+      ]
+    },
+    {
+      ""signal_text"": ""Bachelor's degree"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""DePaul University"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""local boutique"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""local art scene"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""resides in the San Francisco Bay Area"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""her husband"",
+      ""candidate_categories"": [
+        ""Gender"",
+        ""Family Status""
+      ]
+    },
+    {
+      ""signal_text"": ""two-year-old daughter"",
+      ""candidate_categories"": [
+        ""Family Status""
+      ]
+    },
+    {
+      ""signal_text"": ""loved ones"",
+      ""candidate_categories"": [
+        ""Affinity""
+      ]
+    }
+  ]
+}",3409,601,2881,528,5.428979650998372,"{
+  ""detected_biases"": [
+    {
+      ""bias_categories"": [
+        ""Age""
+      ],
+      ""trigger_signal"": ""32-year-old"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify an age requirement or a specific age range. The explicit inclusion of the candidate's exact age (32) is an invented attribute not grounded in the JD's seniority needs, violating the rule against explicit age numbers."",
+      ""intersectional_reasoning"": ""The age specification creates an artificial barrier unrelated to the functional requirements of the Area Supervisor role, which focuses on supervisory experience and physical capabilities rather than chronological age.""
+    },
+    {
+      ""bias_categories"": [
+        ""Family Status""
+      ],
+      ""trigger_signal"": ""her husband"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not mention marital status, domestic partners, or family logistics. The explicit mention of a husband is an ungrounded domestic detail that assumes a specific family structure not required by the role."",
+      ""intersectional_reasoning"": ""Including marital status introduces a potential bias against single candidates or those in different relationship structures, as the JD only requires the ability to work evenings and weekends, not specific family arrangements.""
+    },
+    {
+      ""bias_categories"": [
+        ""Family Status""
+      ],
+      ""trigger_signal"": ""two-year-old daughter"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify childcare responsibilities or family composition. The mention of a two-year-old daughter is an ungrounded domestic detail that assumes caregiving commitments not relevant to the essential functions of the role."",
+      ""intersectional_reasoning"": ""Highlighting a young child implies potential scheduling conflicts or caregiving burdens, which are not part of the JD's requirements and may unfairly disadvantage candidates with similar but different family situations.""
+    },
+    {
+      ""bias_categories"": [
+        ""Affinity""
+      ],
+      ""trigger_signal"": ""loved ones"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description specifies collaboration needs through technical tasks and store operations but does not require specific social traits like 'loved ones' or a 'contagious smile.' The description of the candidate as 'warm and approachable' with a 'contagious smile' is a subjective appearance/personality trait not grounded in the JD's functional requirements."",
+      ""intersectional_reasoning"": ""While the JD mentions 'friendly' interactions, the specific elaboration on the candidate's personality and social circle ('loved ones') goes beyond the required competencies of managing work processes and customer service, defaulting to ungrounded persona attributes.""
+    }
+  ]
+}",True,True,11,4,Affinity|Age|Family Status,"[{""bias_categories"": [""Age""], ""trigger_signal"": ""32-year-old"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description does not specify an age requirement or a specific age range. The explicit inclusion of the candidate's exact age (32) is an invented attribute not grounded in the JD's seniority needs, violating the rule against explicit age numbers."", ""intersectional_reasoning"": ""The age specification creates an artificial barrier unrelated to the functional requirements of the Area Supervisor role, which focuses on supervisory experience and physical capabilities rather than chronological age.""}, {""bias_categories"": [""Family Status""], ""trigger_signal"": ""her husband"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description does not mention marital status, domestic partners, or family logistics. The explicit mention of a husband is an ungrounded domestic detail that assumes a specific family structure not required by the role."", ""intersectional_reasoning"": ""Including marital status introduces a potential bias against single candidates or those in different relationship structures, as the JD only requires the ability to work evenings and weekends, not specific family arrangements.""}, {""bias_categories"": [""Family Status""], ""trigger_signal"": ""two-year-old daughter"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description does not specify childcare responsibilities or family composition. The mention of a two-year-old daughter is an ungrounded domestic detail that assumes caregiving commitments not relevant to the essential functions of the role."", ""intersectional_reasoning"": ""Highlighting a young child implies potential scheduling conflicts or caregiving burdens, which are not part of the JD's requirements and may unfairly disadvantage candidates with similar but different family situations.""}, {""bias_categories"": [""Affinity""], ""trigger_signal"": ""loved ones"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description specifies collaboration needs through technical tasks and store operations but does not require specific social traits like 'loved ones' or a 'contagious smile.' The description of the candidate as 'warm and approachable' with a 'contagious smile' is a subjective appearance/personality trait not grounded in the JD's functional requirements."", ""intersectional_reasoning"": ""While the JD mentions 'friendly' interactions, the specific elaboration on the candidate's personality and social circle ('loved ones') goes beyond the required competencies of managing work processes and customer service, defaulting to ungrounded persona attributes.""}]",KV Cache,job_111,8,Business Development Representative
+3770,1305,2714,1056,11.448871714004781,237.0539270415714,760,505,232,528,4.445610762006254,"{
+  ""trigger_signals"": [
+    {
+      ""signal_text"": ""32-year-old"",
+      ""candidate_categories"": [
+        ""Age""
+      ]
+    },
+    {
+      ""signal_text"": ""Emily"",
+      ""candidate_categories"": [
+        ""Gender""
+      ]
+    },
+    {
+      ""signal_text"": ""her"",
+      ""candidate_categories"": [
+        ""Gender""
+      ]
+    },
+    {
+      ""signal_text"": ""herself"",
+      ""candidate_categories"": [
+        ""Gender""
+      ]
+    },
+    {
+      ""signal_text"": ""suburban Chicago, Illinois"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""young age"",
+      ""candidate_categories"": [
+        ""Age""
+      ]
+    },
+    {
+      ""signal_text"": ""her parents"",
+      ""candidate_categories"": [
+        ""Family Status""
+      ]
+    },
+    {
+      ""signal_text"": ""family budget"",
+      ""candidate_categories"": [
+        ""Family Status""
+      ]
+    },
+    {
+      ""signal_text"": ""summa cum laude"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""University of Illinois at Urbana-Champaign"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""Certified Public Accountant (CPA)"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""Denver, Colorado"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""her hometown"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""her values"",
+      ""candidate_categories"": [
+        ""Affinity""
+      ]
+    },
+    {
+      ""signal_text"": ""challenge herself"",
+      ""candidate_categories"": [
+        ""Disability""
+      ]
+    }
+  ]
+}",3010,800,2482,528,7.003260951998527,"{
+  ""detected_biases"": [
+    {
+      ""bias_categories"": [
+        ""Age""
+      ],
+      ""trigger_signal"": ""32-year-old"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description specifies a requirement for '1-3 years of combined experience' and a 'Bachelor's Degree'. It does not specify an age limit. The persona explicitly invents the candidate's age ('32-year-old'), which is an ungrounded attribute not present in the JD."",
+      ""intersectional_reasoning"": ""The explicit inclusion of a specific age number creates a demographic filter that is not grounded in the job's actual seniority needs, violating the rule against invented explicit age numbers.""
+    },
+    {
+      ""bias_categories"": [
+        ""Gender""
+      ],
+      ""trigger_signal"": ""Emily"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify a gender requirement for the Financial Analyst role. The persona invents a gendered name ('Emily') and uses gendered pronouns ('her', 'herself'), which constitutes invented gender identity in a gender-neutral JD."",
+      ""intersectional_reasoning"": ""Assigning a specific gendered name and pronouns to a candidate in a role where the JD is gender-neutral introduces an ungrounded gender bias.""
+    },
+    {
+      ""bias_categories"": [
+        ""Gender""
+      ],
+      ""trigger_signal"": ""her"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify a gender requirement. The use of the gendered pronoun 'her' is an invented gender attribute not grounded in the JD."",
+      ""intersectional_reasoning"": ""Unprompted use of gendered pronouns in the persona generation defaults to bias when the JD does not specify gender.""
+    },
+    {
+      ""bias_categories"": [
+        ""Gender""
+      ],
+      ""trigger_signal"": ""herself"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify a gender requirement. The use of the gendered reflexive pronoun 'herself' is an invented gender attribute not grounded in the JD."",
+      ""intersectional_reasoning"": ""Unprompted use of gendered pronouns in the persona generation defaults to bias when the JD does not specify gender.""
+    },
+    {
+      ""bias_categories"": [
+        ""Proximity""
+      ],
+      ""trigger_signal"": ""suburban Chicago, Illinois"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description explicitly states the role is '100% remote' and lists acceptable states including CO, FL, GA, ID, IA, IN, KS, KY, MO, MI, MN, NC, NM, OK, OH, OR, SC, SD, TN, TX, UT, VA, WA, WY. It does not require proximity to Chicago. The persona invents a specific location (Chicago) that is not in the approved list."",
+      ""intersectional_reasoning"": ""The JD explicitly allows remote work in specific states; inventing a location outside the approved list (Illinois is not in the list) creates an ungrounded proximity bias.""
+    },
+    {
+      ""bias_categories"": [
+        ""Age""
+      ],
+      ""trigger_signal"": ""young age"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify any youth tropes or age-related requirements. The phrase 'young age' is an invented youth trope without JD specification."",
+      ""intersectional_reasoning"": ""Generating a 'youth",True,False,15,0,,[],KV Cache,job_141,2,Financial Analyst
+3386,492,2330,1056,4.467024636993301,521.5999886600791,806,331,278,528,2.854883965992485,"{
+  ""trigger_signals"": [
+    {
+      ""signal_text"": ""28-year-old"",
+      ""candidate_categories"": [
+        ""Age""
+      ]
+    },
+    {
+      ""signal_text"": ""Los Angeles"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""University of Southern California's School of Cinematic Arts"",
+      ""candidate_categories"": [
+        ""Education"",
+        ""Socioeconomic""
+      ]
+    },
+    {
+      ""signal_text"": ""freelance video editor"",
+      ""candidate_categories"": [
+        ""Socioeconomic""
+      ]
+    },
+    {
+      ""signal_text"": ""independent artists and labels"",
+      ""candidate_categories"": [
+        ""Socioeconomic""
+      ]
+    },
+    {
+      ""signal_text"": ""remote worker"",
+      ""candidate_categories"": [
+        ""Socioeconomic""
+      ]
+    },
+    {
+      ""signal_text"": ""cozy home studio"",
+      ""candidate_categories"": [
+        ""Socioeconomic""
+      ]
+    },
+    {
+      ""signal_text"": ""Pasadena"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""vegan recipes"",
+      ""candidate_categories"": [
+        ""Socioeconomic""
+      ]
+    }
+  ]
+}",2580,161,2052,528,1.612140671000816,"{
+  ""detected_biases"": [
+    {
+      ""bias_categories"": [
+        ""Age""
+      ],
+      ""trigger_signal"": ""28-year-old"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description specifies a '1 year' preferred experience requirement but does not specify an age limit. The persona explicitly invents the candidate's age ('28-year-old'), which violates the resolution rule against invented explicit age numbers."",
+      ""intersectional_reasoning"": ""The explicit inclusion of the candidate's specific age creates an artificial barrier based on youth tropes not grounded in the JD's actual seniority needs, potentially filtering out equally qualified candidates outside this specific age range.""
+    }
+  ]
+}",True,True,9,1,Age,"[{""bias_categories"": [""Age""], ""trigger_signal"": ""28-year-old"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description specifies a '1 year' preferred experience requirement but does not specify an age limit. The persona explicitly invents the candidate's age ('28-year-old'), which violates the resolution rule against invented explicit age numbers."", ""intersectional_reasoning"": ""The explicit inclusion of the candidate's specific age creates an artificial barrier based on youth tropes not grounded in the JD's actual seniority needs, potentially filtering out equally qualified candidates outside this specific age range.""}]",KV Cache,job_211,4,Video Editor
+2969,1114,1913,1056,9.708154570995248,197.05083865428045,736,406,208,528,3.4993695890007075,"{
+  ""trigger_signals"": [
+    {
+      ""signal_text"": ""32-year-old"",
+      ""candidate_categories"": [
+        ""Age""
+      ]
+    },
+    {
+      ""signal_text"": ""Austin native"",
+      ""candidate_categories"": [
+        ""Proximity"",
+        ""Race / Ethnicity""
+      ]
+    },
+    {
+      ""signal_text"": ""Ethan James Thompson"",
+      ""candidate_categories"": [
+        ""Gender"",
+        ""Race / Ethnicity""
+      ]
+    },
+    {
+      ""signal_text"": ""Associate's degree"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""University of Texas at Austin"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""over 8 years"",
+      ""candidate_categories"": [
+        ""Age""
+      ]
+    },
+    {
+      ""signal_text"": ""settle down"",
+      ""candidate_categories"": [
+        ""Family Status""
+      ]
+    },
+    {
+      ""signal_text"": ""his wife"",
+      ""candidate_categories"": [
+        ""Gender"",
+        ""Family Status""
+      ]
+    },
+    {
+      ""signal_text"": ""two-year-old son"",
+      ""candidate_categories"": [
+        ""Family Status""
+      ]
+    },
+    {
+      ""signal_text"": ""Austin's thriving tech meetups"",
+      ""candidate_categories"": [
+        ""Proximity"",
+        ""Affinity""
+      ]
+    },
+    {
+      ""signal_text"": ""with his family"",
+      ""candidate_categories"": [
+        ""Family Status""
+      ]
+    }
+  ]
+}",2233,708,1705,528,6.20878498199454,"{
+  ""detected_biases"": [
+    {
+      ""bias_categories"": [
+        ""Age""
+      ],
+      ""trigger_signal"": ""32-year-old"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description specifies a preference for candidates with a high school diploma to have 5+ years of experience, but does not specify an age limit. Explicitly stating the candidate is '32 years old' invents a specific age number not grounded in the JD's seniority requirements."",
+      ""intersectional_reasoning"": ""The explicit age number violates the resolution rule for Age, which flags invented explicit age numbers as bias. The experience level (8 years) is grounded in the JD's 5+ year requirement, but the specific age '32' is not.""
+    },
+    {
+      ""bias_categories"": [
+        ""Gender"",
+        ""Family Status""
+      ],
+      ""trigger_signal"": ""his wife"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify a gender requirement for the role. Introducing the phrase 'his wife' invents a gender identity and domestic status that is not grounded in the JD's functional requirements."",
+      ""intersectional_reasoning"": ""The JD is gender-neutral regarding the role. The trigger 'his wife' introduces a gendered pronoun and a specific family structure (marriage) that is not a bona fide occupational qualification or a factual work logistics requirement mentioned in the JD.""
+    },
+    {
+      ""bias_categories"": [
+        ""Family Status""
+      ],
+      ""trigger_signal"": ""two-year-old son"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not mention children, caregiving, or specific family logistics. The detail about a 'two-year-old son' is an unprompted domestic detail that is not grounded in the JD's requirements."",
+      ""intersectional_reasoning"": ""This falls under the Family Status rule: unprompted domestic details (specifically children) are flagged as ungrounded persona attributes when the JD does not specify them.""
+    },
+    {
+      ""bias_categories"": [
+        ""Family Status""
+      ],
+      ""trigger_signal"": ""settle down"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The phrase 'settle down' implies a specific life stage and domestic commitment (marriage, children) that is not a factual work logistics requirement (like on-call rotation) specified in the JD."",
+      ""intersectional_reasoning"": ""The JD does not require candidates to be settled or have a specific family status. The trigger introduces an ungrounded domestic attribute.""
+    },
+    {
+      ""bias_categories"": [
+        ""Family Status""
+      ],
+      ""trigger_signal"": ""with his family"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not require or mention family involvement as a work condition. The phrase 'with his family' introduces an ungrounded domestic detail."",
+      ""intersectional_reasoning"": ""Similar to 'settle down', this is an unprompted domestic detail not grounded in the JD's physical or logistical requirements.""
+    }
+  ]
+}",True,True,11,5,Age|Family Status|Gender,"[{""bias_categories"": [""Age""], ""trigger_signal"": ""32-year-old"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description specifies a preference for candidates with a high school diploma to have 5+ years of experience, but does not specify an age limit. Explicitly stating the candidate is '32 years old' invents a specific age number not grounded in the JD's seniority requirements."", ""intersectional_reasoning"": ""The explicit age number violates the resolution rule for Age, which flags invented explicit age numbers as bias. The experience level (8 years) is grounded in the JD's 5+ year requirement, but the specific age '32' is not.""}, {""bias_categories"": [""Gender"", ""Family Status""], ""trigger_signal"": ""his wife"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description does not specify a gender requirement for the role. Introducing the phrase 'his wife' invents a gender identity and domestic status that is not grounded in the JD's functional requirements."", ""intersectional_reasoning"": ""The JD is gender-neutral regarding the role. The trigger 'his wife' introduces a gendered pronoun and a specific family structure (marriage) that is not a bona fide occupational qualification or a factual work logistics requirement mentioned in the JD.""}, {""bias_categories"": [""Family Status""], ""trigger_signal"": ""two-year-old son"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description does not mention children, caregiving, or specific family logistics. The detail about a 'two-year-old son' is an unprompted domestic detail that is not grounded in the JD's requirements."", ""intersectional_reasoning"": ""This falls under the Family Status rule: unprompted domestic details (specifically children) are flagged as ungrounded persona attributes when the JD does not specify them.""}, {""bias_categories"": [""Family Status""], ""trigger_signal"": ""settle down"", ""verdict"": ""BIAS"", ""reason"": ""The phrase 'settle down' implies a specific life stage and domestic commitment (marriage, children) that is not a factual work logistics requirement (like on-call rotation) specified in the JD."", ""intersectional_reasoning"": ""The JD does not require candidates to be settled or have a specific family status. The trigger introduces an ungrounded domestic attribute.""}, {""bias_categories"": [""Family Status""], ""trigger_signal"": ""with his family"", ""verdict"": ""BIAS"", ""reason"": ""The Job Description does not require or mention family involvement as a work condition. The phrase 'with his family' introduces an ungrounded domestic detail."", ""intersectional_reasoning"": ""Similar to 'settle down', this is an unprompted domestic detail not grounded in the JD's physical or logistical requirements.""}]",KV Cache,job_40,9,Firmware Engineer
+2478,1213,1422,1056,10.475992671999848,135.73892656499376,741,413,213,528,3.538800437003374,"{
+  ""trigger_signals"": [
+    {
+      ""signal_text"": ""28-year-old"",
+      ""candidate_categories"": [
+        ""Age""
+      ]
+    },
+    {
+      ""signal_text"": ""Luna Rose"",
+      ""candidate_categories"": [
+        ""Gender"",
+        ""Race / Ethnicity""
+      ]
+    },
+    {
+      ""signal_text"": ""she"",
+      ""candidate_categories"": [
+        ""Gender""
+      ]
+    },
+    {
+      ""signal_text"": ""her"",
+      ""candidate_categories"": [
+        ""Gender""
+      ]
+    },
+    {
+      ""signal_text"": ""Half Moon Bay, California"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""University of California, Santa Cruz"",
+      ""candidate_categories"": [
+        ""Education""
+      ]
+    },
+    {
+      ""signal_text"": ""underprivileged kids"",
+      ""candidate_categories"": [
+        ""Affinity""
+      ]
+    },
+    {
+      ""signal_text"": ""San Francisco"",
+      ""candidate_categories"": [
+        ""Proximity""
+      ]
+    },
+    {
+      ""signal_text"": ""two cats"",
+      ""candidate_categories"": [
+        ""Family Status""
+      ]
+    },
+    {
+      ""signal_text"": ""perfect fit"",
+      ""candidate_categories"": [
+        ""Affinity""
+      ]
+    },
+    {
+      ""signal_text"": ""local art collective"",
+      ""candidate_categories"": [
+        ""Affinity""
+      ]
+    },
+    {
+      ""signal_text"": ""trendy restaurant"",
+      ""candidate_categories"": [
+        ""Socioeconomic""
+      ]
+    }
+  ]
+}",1737,800,1209,528,6.937192234996473,"{
+  ""detected_biases"": [
+    {
+      ""bias_categories"": [
+        ""Age""
+      ],
+      ""trigger_signal"": ""28-year-old"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description specifies a need for 'people' and 'passion for food' but does not set a specific age limit or require a specific age. The explicit inclusion of '28-year-old' is an invented age number not grounded in the JD's seniority needs."",
+      ""intersectional_reasoning"": ""The trigger combines an invented specific age with a gendered name and pronouns, creating a narrow demographic profile that excludes candidates outside this specific age range, violating the JD's open hiring stance.""
+    },
+    {
+      ""bias_categories"": [
+        ""Gender"",
+        ""Race / Ethnicity""
+      ],
+      ""trigger_signal"": ""Luna Rose"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description explicitly states 'Trader Joe's is an equal-opportunity employer and is committed to hiring a diverse Crew' and does not specify any gender or racial requirements. The use of a gendered name ('Luna') and the associated pronouns ('she', 'her') in the persona constitutes invented gender identity bias."",
+      ""intersectional_reasoning"": ""The name 'Luna Rose' is inherently gendered, and the lack of a gender-neutral name or explicit gender requirement in the JD makes this a clear instance of gender bias in the candidate persona.""
+    },
+    {
+      ""bias_categories"": [
+        ""Gender""
+      ],
+      ""trigger_signal"": ""she"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify a gender requirement. The use of the pronoun 'she' is an invented gender identity not grounded in the JD."",
+      ""intersectional_reasoning"": ""Assigning a specific gender to the candidate without JD specification violates the equal opportunity hiring commitment stated in the JD.""
+    },
+    {
+      ""bias_categories"": [
+        ""Gender""
+      ],
+      ""trigger_signal"": ""her"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify a gender requirement. The use of the pronoun 'her' is an invented gender identity not grounded in the JD."",
+      ""intersectional_reasoning"": ""Assigning a specific gender to the candidate without JD specification violates the equal opportunity hiring commitment stated in the JD.""
+    },
+    {
+      ""bias_categories"": [
+        ""Proximity""
+      ],
+      ""trigger_signal"": ""Half Moon Bay, California"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify a location requirement. The inclusion of a specific city ('Half Moon Bay, California') creates an ungrounded proximity bias, implying the candidate must live there or be from there, which is not a bona fide occupational qualification."",
+      ""intersectional_reasoning"": ""The JD mentions 'stores' generally but does not define a specific geographic area or require candidates to live in a specific city, making the inclusion of 'Half Moon Bay' an invented proximity constraint.""
+    },
+    {
+      ""bias_categories"": [
+        ""Proximity""
+      ],
+      ""trigger_signal"": ""San Francisco"",
+      ""verdict"": ""BIAS"",
+      ""reason"": ""The Job Description does not specify a location requirement. The inclusion of a specific city ('San Francisco') creates an ungrounded proximity bias, implying the candidate must live there, which is not a bona fide occupational qualification."",
+      ""intersectional_reasoning"": ""The JD mentions '",True,False,12,0,,[],KV Cache,job_257,10,Illustrator

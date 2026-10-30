@@ -16,7 +16,7 @@ PERSONAS_PATH  = "/home/meghss/Project_Biases_in_Job_Descriptions/personas_300/L
 PROMPT_PATH    = "/home/meghss/Project_Biases_in_Job_Descriptions/Judge/judge_prompt_opus_5.5.jinja2"
 DEVICE         = "cuda" if torch.cuda.is_available() else "cpu"
 DTYPE          = torch.float16 if torch.cuda.is_available() else torch.float32
-MAX_NEW_TOKENS = 1024   # judge returns signals + reasoning JSON; 80 truncated it
+MAX_NEW_TOKENS = 4096   # 11-category judge JSON; worked examples are 1.6-2k tokens
 # Qwen3 recommended non-thinking sampling settings
 TEMPERATURE    = 0.7
 TOP_P          = 0.8
@@ -314,22 +314,51 @@ def _run_batch(mode, batch, infer_fn):
     return rows
 
 
-def _parse_judgement(output: str) -> dict:
-    """Pull the judge's JSON fields; verdict is "parse_error" if it isn't valid JSON."""
+CATEGORIES = ["age", "gender", "race_ethnicity", "lgbtq_heteronormativity", "family_status",
+              "disability", "socioeconomic", "appearance", "proximity", "affinity", "education"]
+
+
+def _load_json(output: str):
+    """Outermost {...} as JSON; tolerates invalid escapes copied from JDs (e.g. "10\\+ years")."""
     match = re.search(r"\{.*\}", output, re.DOTALL)
-    try:
-        j = json.loads(match.group(0))
-        return {
-            "verdict":            j["verdict"],
-            "confidence":         j.get("confidence"),
-            "grey_area":          j.get("grey_area"),
-            "needs_human_review": j.get("needs_human_review"),
-            "jd_has_signal":      j.get("jd_has_signal"),
-            "n_signals":          len(j.get("signals") or []),
-        }
-    except (AttributeError, json.JSONDecodeError, KeyError, TypeError):
-        return {"verdict": "parse_error", "confidence": None, "grey_area": None,
-                "needs_human_review": None, "jd_has_signal": None, "n_signals": None}
+    if not match:
+        return None
+    for text in (match.group(0), re.sub(r'\\(?!["\\/bfnrtu])', r"\\\\", match.group(0))):
+        try:
+            return json.loads(text)
+        except json.JSONDecodeError:
+            pass
+    return None
+
+
+def _parse_judgement(output: str) -> dict:
+    """Per-category verdicts from the judge's JSON; verdict is "parse_error" if it isn't valid JSON."""
+    j = _load_json(output)
+    cats = j.get("categories") if isinstance(j, dict) else None
+    if isinstance(j, dict) and cats is None and "verdict" in j:   # single-category (Age-only) prompt
+        cats = {"age": j}
+    if not isinstance(cats, dict):
+        return {"verdict": "parse_error", "parse_ok": False}
+
+    row = {"parse_ok": True, "n_categories": sum(c in cats for c in CATEGORIES)}
+    bias, mirrored, n_signals, n_grey, n_review = [], [], 0, 0, 0
+    for c in CATEGORIES:
+        cj = cats.get(c) if isinstance(cats.get(c), dict) else {}
+        v = cj.get("verdict")
+        row[f"v_{c}"] = v
+        bias += [c] if v == "BIAS" else []
+        mirrored += [c] if v == "MIRRORED" else []
+        n_signals += len(cj.get("signals") or [])
+        n_grey += cj.get("grey_area") is True
+        n_review += cj.get("needs_human_review") is not None
+    row.update(
+        verdict="|".join(bias) or "none",
+        bias_categories="|".join(bias),
+        mirrored_categories="|".join(mirrored),
+        n_bias=len(bias), n_signals=n_signals, n_grey_area=n_grey, n_needs_review=n_review,
+        overall_summary=j.get("overall_summary"),
+    )
+    return row
 
 
 def _print_comparison(nc_rows, wc_rows, prefix_len, prefix_time, kv_mb):
@@ -381,19 +410,30 @@ def _print_comparison(nc_rows, wc_rows, prefix_len, prefix_time, kv_mb):
         print(f"  GPU memory allocated         {torch.cuda.memory_allocated() / 1024**2:.0f} MB")
         print(f"  GPU memory reserved          {torch.cuda.memory_reserved() / 1024**2:.0f} MB")
 
-    print(f"\n  --- Verdict distribution ---")
-    verdicts = ["BIAS", "MIRRORED", "NOT_BIAS", "NO_SIGNAL", "parse_error"]
-    nc_counts, wc_counts = nc["verdict"].value_counts(), wc["verdict"].value_counts()
-    for v in verdicts:
-        line(v, nc_counts.get(v, 0), wc_counts.get(v, 0), "d")
+    print(f"\n  --- Judge output ---")
+    for d in (nc, wc):
+        if "parse_ok" not in d:
+            d["parse_ok"] = False
+        d["parse_ok"] = d["parse_ok"].fillna(False).astype(bool)
+    pn, pw = nc[nc["parse_ok"]], wc[wc["parse_ok"]]
+    line("Parsed OK",               len(pn),                       len(pw),                       "d")
+    line("Hit max output tokens",   int((nc["output_tokens"] >= MAX_NEW_TOKENS).sum()),
+                                    int((wc["output_tokens"] >= MAX_NEW_TOKENS).sum()),           "d")
+    if len(pn) and len(pw):
+        line("Avg categories present",  pn["n_categories"].mean(),  pw["n_categories"].mean(),  ".2f")
+        line("Avg BIAS categories",     pn["n_bias"].mean(),        pw["n_bias"].mean(),        ".2f")
+        line("Avg signals listed",      pn["n_signals"].mean(),     pw["n_signals"].mean(),     ".2f")
+        line("Avg grey_area categories", pn["n_grey_area"].mean(),  pw["n_grey_area"].mean(),   ".2f")
+        line("Personas w/ human review", int((pn["n_needs_review"] > 0).sum()),
+                                         int((pw["n_needs_review"] > 0).sum()),                 "d")
 
-    print(f"\n  --- Judge flags ---")
-    line("Avg signals listed",      nc["n_signals"].mean(),          wc["n_signals"].mean(),          ".2f")
-    for c in ("high", "medium", "low"):
-        line(f"confidence = {c}", int((nc["confidence"] == c).sum()), int((wc["confidence"] == c).sum()), "d")
-    line("grey_area = true",        int((nc["grey_area"] == True).sum()), int((wc["grey_area"] == True).sum()), "d")
-    line("needs_human_review set",  int(nc["needs_human_review"].notna().sum()), int(wc["needs_human_review"].notna().sum()), "d")
-    line("jd_has_signal = true",    int((nc["jd_has_signal"] == True).sum()), int((wc["jd_has_signal"] == True).sum()), "d")
+        print(f"\n  --- Personas per verdict, by category (No Cache | KV Cache) ---")
+        print(f"  {'':<26} {'BIAS':>11} {'MIRRORED':>11} {'NOT_BIAS':>11} {'NO_SIGNAL':>11}")
+        for c in CATEGORIES:
+            col = f"v_{c}"
+            cells = [f"{int((pn[col] == v).sum()):>4} |{int((pw[col] == v).sum()):>4}"
+                     for v in ("BIAS", "MIRRORED", "NOT_BIAS", "NO_SIGNAL")]
+            print(f"  {c:<26} " + " ".join(f"{x:>11}" for x in cells))
 
 
 def _print_summary(nc_rows, wc_rows, prefix_len, prefix_time, kv_mb):
