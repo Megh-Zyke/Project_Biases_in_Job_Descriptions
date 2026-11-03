@@ -367,4 +367,8 @@ adjudication:
   enabled: true
   adjudicator_users:
   - shrujaya_adj
+  - megh
+  - meghanandgejjela
+  - sruths_adj
   min_annotations: 2
+  show_all_items: true

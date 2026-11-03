@@ -9,9 +9,11 @@ shared; this rebuilds a user_state.json per annotator from them (labels and
 spans; the CSV carries no timing data) and writes config_adjudication.yaml,
 which is config.yaml pointed at the new output directory with adjudication on.
 
-A source ending in .json is a live user_state.json and is preferred when you
-have it: an export is a snapshot from the last timer tick, so it can miss the
-final answer given before the server stopped.
+Each annotator's CSV is taken as their final answers. A source ending in .json
+is read as a user_state.json instead (all three matched their CSVs on 2026-11-02).
+
+A verdict whose category the annotator did not tick is dropped: Sruthi's server
+showed every verdict question, so she answered hundreds that never applied.
 
 Never touches annotation_output_adjudication/adjudication/ (the decisions).
 """
@@ -26,15 +28,17 @@ TASK = os.path.abspath(os.path.dirname(__file__))
 CONFIG = os.path.join(TASK, "config.yaml")
 ADJ_CONFIG = os.path.join(TASK, "config_adjudication.yaml")
 OUT = "annotation_output_adjudication/"
-ADJUDICATOR = "shrujaya_adj"
+# Logins that can open /adjudicate. Kept out of the comparison, so never an annotator's
+# own login. Decisions are entered by record_decisions.py; the others only view.
+ADJUDICATORS = ["shrujaya_adj", "megh", "meghanandgejjela", "sruths_adj"]
 
-# annotator -> live user_state.json where it is committed, else their export.
-# Rows for other users in a CSV are ignored: Sruthi's also holds a stale copy of
-# meghss's first 10 items and a test login "Sruths".
+# annotator -> their CSV export. Rows for other users are ignored:
+# Sruthi_annotations.csv also holds a stale copy of meghss's first 10 items and a
+# test login "Sruths".
 SOURCES = {
-    "meghss": "annotation_output_300/meghss/user_state.json",
+    "meghss": "annotation_output_300/exports/csv/annotations.csv",
     "sruths@umich.edu": "annotation_output_300/exports/csv/Sruthi_annotations.csv",
-    "shrujaya": "annotation_output_300/shrujaya/user_state.json",
+    "shrujaya": "annotation_output_300/exports/csv/annotations_shrujaya.csv",
 }
 
 
@@ -68,6 +72,17 @@ def from_state(path):
     return state["instance_id_to_label_to_value"], state["instance_id_to_span_to_value"]
 
 
+def drop_unticked_verdicts(labels, gate):
+    """Remove verdicts whose category is not ticked in bias_categories; returns how many."""
+    dropped = 0
+    for iid, pairs in labels.items():
+        ticked = {k["name"] for k, _ in pairs if k["schema"] == "bias_categories"}
+        keep = [(k, v) for k, v in pairs if k["schema"] not in gate or gate[k["schema"]] in ticked]
+        dropped += len(pairs) - len(keep)
+        labels[iid] = [list(kv) for kv in keep]
+    return dropped
+
+
 def user_state(user, labels, spans, item_order):
     order = [i for i in item_order if i in labels]
     return {
@@ -89,8 +104,9 @@ def write_config(config):
     config["output_annotation_dir"] = OUT
     config["adjudication"] = {
         "enabled": True,
-        "adjudicator_users": [ADJUDICATOR],  # kept out of the comparison, so not an annotator
+        "adjudicator_users": ADJUDICATORS,
         "min_annotations": 2,
+        "show_all_items": True,  # every item has some disagreement, so list all 70
     }
     config["export_annotation_format"] = ["csv", "adjudication"]
     with open(ADJ_CONFIG, "w") as f:
@@ -112,6 +128,11 @@ def main():
     with open(CONFIG) as f:
         config = yaml.safe_load(f)
     schemes = {s["name"] for s in config["annotation_schemes"]}
+    gate = {}  # verdict scheme -> the category whose tick shows it
+    for s in config["annotation_schemes"]:
+        cond = (s.get("display_logic") or {}).get("show_when", [{}])[0]
+        if cond.get("schema") == "bias_categories" and "value" in cond:
+            gate[s["name"]] = cond["value"]
     with open(os.path.join(TASK, config["data_files"][0])) as f:
         item_order = [json.loads(line)[config["item_properties"]["id_key"]] for line in f]
 
@@ -120,14 +141,16 @@ def main():
         labels, spans = from_state(path) if path.endswith(".json") else from_csv(path, user, schemes)
         if not labels:
             raise SystemExit(f"{path}: no rows for user {user!r}")
+        dropped = drop_unticked_verdicts(labels, gate)
         out_dir = os.path.join(TASK, OUT, user)
         os.makedirs(out_dir, exist_ok=True)
         with open(os.path.join(out_dir, "user_state.json"), "w") as f:
             json.dump(user_state(user, labels, spans, item_order), f)
-        print(f"{user}: {len(labels)} items, {sum(map(len, spans.values()))} spans  <- {os.path.relpath(path, TASK)}")
+        print(f"{user}: {len(labels)} items, {sum(map(len, spans.values()))} spans, "
+              f"{dropped} unticked verdicts dropped  <- {os.path.relpath(path, TASK)}")
 
     write_config(config)
-    print(f"wrote {os.path.relpath(ADJ_CONFIG, TASK)}; adjudicator login: {ADJUDICATOR}")
+    print(f"wrote {os.path.relpath(ADJ_CONFIG, TASK)}; adjudicator logins: {', '.join(ADJUDICATORS)}")
 
 
 if __name__ == "__main__":

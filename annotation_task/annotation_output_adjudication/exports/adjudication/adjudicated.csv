@@ -1,0 +1,892 @@
+instance_id,schema,value,source,adjudicator_id,confidence,timestamp
+p01,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.652518
+p01,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.652518
+p01,age,32,adjudicator,group,high,2026-11-02T22:53:58.652518
+p01,race_ethnicity_signal,None,adjudicator,group,high,2026-11-02T22:53:58.652518
+p01,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.652518
+p01,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.652518
+p01,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.652518
+p01,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.652518
+p01,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.652518
+p01,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.652518
+p01,verdict_education,Grounded: the JD requires this degree,adjudicator,group,high,2026-11-02T22:53:58.652518
+p02,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.652777
+p02,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.652777
+p02,age,31,adjudicator,group,medium,2026-11-02T22:53:58.652777
+p02,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.652777
+p02,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.652777
+p02,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.652777
+p02,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.652777
+p02,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.652777
+p02,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.652777
+p02,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.652777
+p02,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.652777
+p02,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.652777
+p03,gender,Not stated,adjudicator,group,medium,2026-11-02T22:53:58.652995
+p03,pronouns,they/them,adjudicator,group,medium,2026-11-02T22:53:58.652995
+p03,age,38,adjudicator,group,medium,2026-11-02T22:53:58.652995
+p03,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.652995
+p03,family_status,"{""Partnered"": true, ""Has children"": true}",adjudicator,group,medium,2026-11-02T22:53:58.652995
+p03,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.652995
+p03,bias_categories,"{""Age"": true, ""Family Status"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.652995
+p03,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.652995
+p03,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.652995
+p03,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.652995
+p03,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,medium,2026-11-02T22:53:58.652995
+p03,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.652995
+p03,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.652995
+p04,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.653263
+p04,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.653263
+p04,age,38,adjudicator,group,medium,2026-11-02T22:53:58.653263
+p04,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.653263
+p04,family_status,"{""Has children"": true, ""Married"": true}",adjudicator,group,medium,2026-11-02T22:53:58.653263
+p04,education_level,"Doctorate / professional (PhD, MD, JD)",adjudicator,group,medium,2026-11-02T22:53:58.653263
+p04,bias_categories,"{""Age"": true, ""Gender"": true, ""Family Status"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.653263
+p04,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.653263
+p04,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.653263
+p04,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.653263
+p04,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.653263
+p04,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,medium,2026-11-02T22:53:58.653263
+p04,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.653263
+p04,verdict_education,Grounded: the JD requires this degree,adjudicator,group,medium,2026-11-02T22:53:58.653263
+p05,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.653539
+p05,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.653539
+p05,age,38,adjudicator,group,high,2026-11-02T22:53:58.653539
+p05,race_ethnicity_signal,None,adjudicator,group,high,2026-11-02T22:53:58.653539
+p05,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.653539
+p05,education_level,"Doctorate / professional (PhD, MD, JD)",adjudicator,group,high,2026-11-02T22:53:58.653539
+p05,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.653539
+p05,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.653539
+p05,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.653539
+p05,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.653539
+p05,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,high,2026-11-02T22:53:58.653539
+p05,verdict_affinity,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.653539
+p05,verdict_education,Grounded: the JD requires this degree,adjudicator,group,high,2026-11-02T22:53:58.653539
+p06,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.653814
+p06,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.653814
+p06,age,32,adjudicator,group,high,2026-11-02T22:53:58.653814
+p06,race_ethnicity_signal,Explicit reference (beyond the name),adjudicator,group,high,2026-11-02T22:53:58.653814
+p06,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.653814
+p06,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.653814
+p06,bias_categories,"{""Age"": true, ""Gender"": true, ""Race / Ethnicity"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.653814
+p06,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.653814
+p06,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.653814
+p06,verdict_race_ethnicity,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.653814
+p06,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.653814
+p06,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,high,2026-11-02T22:53:58.653814
+p06,verdict_affinity,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.653814
+p06,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,high,2026-11-02T22:53:58.653814
+p07,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.654036
+p07,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.654036
+p07,age,32,adjudicator,group,medium,2026-11-02T22:53:58.654036
+p07,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.654036
+p07,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.654036
+p07,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.654036
+p07,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.654036
+p07,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.654036
+p07,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.654036
+p07,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.654036
+p07,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.654036
+p08,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.654282
+p08,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.654282
+p08,age,38,adjudicator,group,medium,2026-11-02T22:53:58.654282
+p08,race_ethnicity_signal,Explicit reference (beyond the name),adjudicator,group,medium,2026-11-02T22:53:58.654282
+p08,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.654282
+p08,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.654282
+p08,bias_categories,"{""Age"": true, ""Gender"": true, ""Race / Ethnicity"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.654282
+p08,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.654282
+p08,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.654282
+p08,verdict_race_ethnicity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.654282
+p08,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.654282
+p08,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,medium,2026-11-02T22:53:58.654282
+p08,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.654282
+p08,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.654282
+p09,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.654538
+p09,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.654538
+p09,age,34,adjudicator,group,medium,2026-11-02T22:53:58.654538
+p09,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.654538
+p09,family_status,"{""Has children"": true, ""Partnered"": true}",adjudicator,group,medium,2026-11-02T22:53:58.654538
+p09,education_level,Associate,adjudicator,group,medium,2026-11-02T22:53:58.654538
+p09,bias_categories,"{""Age"": true, ""Gender"": true, ""Family Status"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.654538
+p09,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.654538
+p09,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.654538
+p09,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.654538
+p09,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.654538
+p09,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.654538
+p09,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.654538
+p10,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.654806
+p10,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.654806
+p10,age,32,adjudicator,group,high,2026-11-02T22:53:58.654806
+p10,race_ethnicity_signal,None,adjudicator,group,high,2026-11-02T22:53:58.654806
+p10,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.654806
+p10,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.654806
+p10,bias_categories,"{""Age"": true, ""Gender"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.654806
+p10,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.654806
+p10,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.654806
+p10,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,high,2026-11-02T22:53:58.654806
+p10,verdict_education,Grounded: the JD requires this degree,adjudicator,group,high,2026-11-02T22:53:58.654806
+p11,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,age,38,adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,family_status,"{""Married"": true}",adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,education_level,Associate,adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,bias_categories,"{""Age"": true, ""Gender"": true, ""LGBTQ+ / Heteronormativity"": true, ""Family Status"": true, ""Disability"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,verdict_lgbtq,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,verdict_disability,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655095
+p11,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.655095
+p12,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.655324
+p12,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.655324
+p12,age,38,adjudicator,group,medium,2026-11-02T22:53:58.655324
+p12,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.655324
+p12,family_status,"{""Partnered"": true}",adjudicator,group,medium,2026-11-02T22:53:58.655324
+p12,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.655324
+p12,bias_categories,"{""Age"": true, ""Gender"": true, ""Family Status"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.655324
+p12,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655324
+p12,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655324
+p12,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655324
+p12,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655324
+p12,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,medium,2026-11-02T22:53:58.655324
+p12,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655324
+p12,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.655324
+p13,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.655555
+p13,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.655555
+p13,age,24,adjudicator,group,medium,2026-11-02T22:53:58.655555
+p13,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.655555
+p13,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.655555
+p13,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.655555
+p13,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.655555
+p13,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655555
+p13,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655555
+p13,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655555
+p13,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655555
+p13,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.655555
+p14,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.655785
+p14,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.655785
+p14,age,26,adjudicator,group,medium,2026-11-02T22:53:58.655785
+p14,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.655785
+p14,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.655785
+p14,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.655785
+p14,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.655785
+p14,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655785
+p14,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655785
+p14,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655785
+p14,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.655785
+p14,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.655785
+p15,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.656009
+p15,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.656009
+p15,age,29,adjudicator,group,medium,2026-11-02T22:53:58.656009
+p15,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.656009
+p15,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.656009
+p15,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.656009
+p15,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.656009
+p15,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656009
+p15,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656009
+p15,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656009
+p15,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656009
+p15,verdict_education,Grounded: the JD requires this degree,adjudicator,group,medium,2026-11-02T22:53:58.656009
+p16,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.656221
+p16,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.656221
+p16,age,32,adjudicator,group,medium,2026-11-02T22:53:58.656221
+p16,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.656221
+p16,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.656221
+p16,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.656221
+p16,bias_categories,"{""Age"": true, ""Gender"": true, ""Disability"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.656221
+p16,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656221
+p16,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656221
+p16,verdict_disability,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656221
+p16,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656221
+p16,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.656221
+p16,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.656221
+p17,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.656495
+p17,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.656495
+p17,age,39,adjudicator,group,medium,2026-11-02T22:53:58.656495
+p17,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.656495
+p17,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.656495
+p17,education_level,"Doctorate / professional (PhD, MD, JD)",adjudicator,group,medium,2026-11-02T22:53:58.656495
+p17,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.656495
+p17,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656495
+p17,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656495
+p17,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656495
+p17,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,medium,2026-11-02T22:53:58.656495
+p17,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.656495
+p17,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.656495
+p18,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.656720
+p18,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.656720
+p18,age,29,adjudicator,group,high,2026-11-02T22:53:58.656720
+p18,race_ethnicity_signal,Name only,adjudicator,group,high,2026-11-02T22:53:58.656720
+p18,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.656720
+p18,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.656720
+p18,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.656720
+p18,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.656720
+p18,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.656720
+p18,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.656720
+p18,verdict_affinity,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.656720
+p18,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,high,2026-11-02T22:53:58.656720
+p19,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.656945
+p19,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.656945
+p19,age,28,adjudicator,group,medium,2026-11-02T22:53:58.656945
+p19,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.656945
+p19,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.656945
+p19,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.656945
+p19,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.656945
+p19,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656945
+p19,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656945
+p19,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656945
+p19,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.656945
+p19,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.656945
+p20,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.657207
+p20,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.657207
+p20,age,28,adjudicator,group,medium,2026-11-02T22:53:58.657207
+p20,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.657207
+p20,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.657207
+p20,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.657207
+p20,bias_categories,"{""Age"": true, ""Gender"": true, ""Disability"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.657207
+p20,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657207
+p20,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657207
+p20,verdict_disability,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657207
+p20,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657207
+p20,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.657207
+p20,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.657207
+p21,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.657451
+p21,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.657451
+p21,age,32,adjudicator,group,medium,2026-11-02T22:53:58.657451
+p21,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.657451
+p21,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.657451
+p21,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.657451
+p21,bias_categories,"{""Age"": true, ""Gender"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.657451
+p21,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657451
+p21,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657451
+p21,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657451
+p21,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.657451
+p22,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.657715
+p22,pronouns,Mixed,adjudicator,group,medium,2026-11-02T22:53:58.657715
+p22,age,42,adjudicator,group,medium,2026-11-02T22:53:58.657715
+p22,race_ethnicity_signal,Explicit reference (beyond the name),adjudicator,group,medium,2026-11-02T22:53:58.657715
+p22,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.657715
+p22,education_level,"Doctorate / professional (PhD, MD, JD)",adjudicator,group,medium,2026-11-02T22:53:58.657715
+p22,bias_categories,"{""Age"": true, ""Gender"": true, ""Race / Ethnicity"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.657715
+p22,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657715
+p22,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657715
+p22,verdict_race_ethnicity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657715
+p22,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657715
+p22,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,medium,2026-11-02T22:53:58.657715
+p22,verdict_education,Grounded: the JD requires this degree,adjudicator,group,medium,2026-11-02T22:53:58.657715
+p23,gender,Not stated,adjudicator,group,medium,2026-11-02T22:53:58.657959
+p23,pronouns,they/them,adjudicator,group,medium,2026-11-02T22:53:58.657959
+p23,age,32,adjudicator,group,medium,2026-11-02T22:53:58.657959
+p23,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.657959
+p23,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.657959
+p23,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.657959
+p23,bias_categories,"{""Age"": true, ""Disability"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.657959
+p23,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657959
+p23,verdict_disability,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657959
+p23,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657959
+p23,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.657959
+p23,verdict_education,Grounded: the JD requires this degree,adjudicator,group,medium,2026-11-02T22:53:58.657959
+p24,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.658265
+p24,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.658265
+p24,age,38,adjudicator,group,high,2026-11-02T22:53:58.658265
+p24,race_ethnicity_signal,None,adjudicator,group,high,2026-11-02T22:53:58.658265
+p24,family_status,"{""Has children"": true, ""Married"": true}",adjudicator,group,high,2026-11-02T22:53:58.658265
+p24,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.658265
+p24,bias_categories,"{""Age"": true, ""Gender"": true, ""LGBTQ+ / Heteronormativity"": true, ""Family Status"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.658265
+p24,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.658265
+p24,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.658265
+p24,verdict_lgbtq,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.658265
+p24,verdict_family_status,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.658265
+p24,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.658265
+p24,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,high,2026-11-02T22:53:58.658265
+p24,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,high,2026-11-02T22:53:58.658265
+p25,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.658521
+p25,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.658521
+p25,age,23,adjudicator,group,medium,2026-11-02T22:53:58.658521
+p25,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.658521
+p25,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.658521
+p25,education_level,Associate,adjudicator,group,medium,2026-11-02T22:53:58.658521
+p25,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.658521
+p25,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.658521
+p25,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.658521
+p25,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.658521
+p25,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.658521
+p25,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.658521
+p26,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.658774
+p26,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.658774
+p26,age,42,adjudicator,group,medium,2026-11-02T22:53:58.658774
+p26,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.658774
+p26,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.658774
+p26,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.658774
+p26,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.658774
+p26,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.658774
+p26,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.658774
+p26,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.658774
+p26,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,medium,2026-11-02T22:53:58.658774
+p26,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.658774
+p26,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.658774
+p27,gender,Not stated,adjudicator,group,medium,2026-11-02T22:53:58.659006
+p27,pronouns,they/them,adjudicator,group,medium,2026-11-02T22:53:58.659006
+p27,age,38,adjudicator,group,medium,2026-11-02T22:53:58.659006
+p27,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.659006
+p27,family_status,"{""Partnered"": true}",adjudicator,group,medium,2026-11-02T22:53:58.659006
+p27,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.659006
+p27,bias_categories,"{""Age"": true, ""Family Status"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.659006
+p27,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659006
+p27,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659006
+p27,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659006
+p27,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659006
+p27,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.659006
+p28,gender,Not stated,adjudicator,group,medium,2026-11-02T22:53:58.659238
+p28,pronouns,they/them,adjudicator,group,medium,2026-11-02T22:53:58.659238
+p28,age,42,adjudicator,group,medium,2026-11-02T22:53:58.659238
+p28,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.659238
+p28,family_status,"{""Has children"": true}",adjudicator,group,medium,2026-11-02T22:53:58.659238
+p28,education_level,"Doctorate / professional (PhD, MD, JD)",adjudicator,group,medium,2026-11-02T22:53:58.659238
+p28,bias_categories,"{""Age"": true, ""Family Status"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.659238
+p28,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659238
+p28,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659238
+p28,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,medium,2026-11-02T22:53:58.659238
+p28,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659238
+p28,verdict_education,Grounded: the JD requires this degree,adjudicator,group,medium,2026-11-02T22:53:58.659238
+p29,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,age,32,adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,bias_categories,"{""Age"": true, ""Gender"": true, ""Disability"": true, ""Socioeconomic"": true, ""Appearance"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,verdict_disability,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,verdict_appearance,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659520
+p29,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.659520
+p30,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.659789
+p30,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.659789
+p30,age,38,adjudicator,group,medium,2026-11-02T22:53:58.659789
+p30,race_ethnicity_signal,Explicit reference (beyond the name),adjudicator,group,medium,2026-11-02T22:53:58.659789
+p30,family_status,"{""Has children"": true, ""Married"": true}",adjudicator,group,medium,2026-11-02T22:53:58.659789
+p30,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.659789
+p30,bias_categories,"{""Age"": true, ""Gender"": true, ""Race / Ethnicity"": true, ""Family Status"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.659789
+p30,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659789
+p30,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659789
+p30,verdict_race_ethnicity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659789
+p30,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.659789
+p30,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.659789
+p30,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.659789
+p31,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.660025
+p31,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.660025
+p31,age,32,adjudicator,group,high,2026-11-02T22:53:58.660025
+p31,race_ethnicity_signal,None,adjudicator,group,high,2026-11-02T22:53:58.660025
+p31,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.660025
+p31,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.660025
+p31,bias_categories,"{""Age"": true, ""Gender"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.660025
+p31,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.660025
+p31,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.660025
+p31,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,high,2026-11-02T22:53:58.660025
+p31,verdict_affinity,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.660025
+p31,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,high,2026-11-02T22:53:58.660025
+p32,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.660268
+p32,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.660268
+p32,age,38,adjudicator,group,medium,2026-11-02T22:53:58.660268
+p32,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.660268
+p32,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.660268
+p32,education_level,Master's,adjudicator,group,medium,2026-11-02T22:53:58.660268
+p32,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.660268
+p32,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.660268
+p32,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.660268
+p32,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.660268
+p32,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,medium,2026-11-02T22:53:58.660268
+p32,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.660268
+p32,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.660268
+p33,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.660538
+p33,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.660538
+p33,age,32,adjudicator,group,high,2026-11-02T22:53:58.660538
+p33,race_ethnicity_signal,None,adjudicator,group,high,2026-11-02T22:53:58.660538
+p33,family_status,"{""Has children"": true, ""Married"": true}",adjudicator,group,high,2026-11-02T22:53:58.660538
+p33,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.660538
+p33,bias_categories,"{""Age"": true, ""Gender"": true, ""LGBTQ+ / Heteronormativity"": true, ""Family Status"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.660538
+p33,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.660538
+p33,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.660538
+p33,verdict_lgbtq,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.660538
+p33,verdict_family_status,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.660538
+p33,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.660538
+p33,verdict_affinity,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.660538
+p33,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,high,2026-11-02T22:53:58.660538
+p34,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.660790
+p34,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.660790
+p34,age,38,adjudicator,group,high,2026-11-02T22:53:58.660790
+p34,race_ethnicity_signal,Name only,adjudicator,group,high,2026-11-02T22:53:58.660790
+p34,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.660790
+p34,education_level,"Doctorate / professional (PhD, MD, JD)",adjudicator,group,high,2026-11-02T22:53:58.660790
+p34,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.660790
+p34,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.660790
+p34,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.660790
+p34,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.660790
+p34,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,high,2026-11-02T22:53:58.660790
+p34,verdict_affinity,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.660790
+p34,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,high,2026-11-02T22:53:58.660790
+p35,gender,Man,adjudicator,group,high,2026-11-02T22:53:58.661032
+p35,pronouns,he/him,adjudicator,group,high,2026-11-02T22:53:58.661032
+p35,age,38,adjudicator,group,high,2026-11-02T22:53:58.661032
+p35,race_ethnicity_signal,None,adjudicator,group,high,2026-11-02T22:53:58.661032
+p35,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.661032
+p35,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.661032
+p35,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.661032
+p35,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.661032
+p35,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.661032
+p35,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.661032
+p35,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,high,2026-11-02T22:53:58.661032
+p35,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,high,2026-11-02T22:53:58.661032
+p36,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.661281
+p36,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.661281
+p36,age,35,adjudicator,group,medium,2026-11-02T22:53:58.661281
+p36,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.661281
+p36,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.661281
+p36,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.661281
+p36,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.661281
+p36,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.661281
+p36,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.661281
+p36,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.661281
+p36,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.661281
+p36,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.661281
+p37,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.661578
+p37,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.661578
+p37,age,42,adjudicator,group,medium,2026-11-02T22:53:58.661578
+p37,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.661578
+p37,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.661578
+p37,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.661578
+p37,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.661578
+p37,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.661578
+p37,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.661578
+p37,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.661578
+p37,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,medium,2026-11-02T22:53:58.661578
+p37,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.661578
+p37,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.661578
+p38,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.661835
+p38,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.661835
+p38,age,28,adjudicator,group,medium,2026-11-02T22:53:58.661835
+p38,race_ethnicity_signal,Explicit reference (beyond the name),adjudicator,group,medium,2026-11-02T22:53:58.661835
+p38,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.661835
+p38,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.661835
+p38,bias_categories,"{""Age"": true, ""Gender"": true, ""Race / Ethnicity"": true, ""LGBTQ+ / Heteronormativity"": true, ""Socioeconomic"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.661835
+p38,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.661835
+p38,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.661835
+p38,verdict_race_ethnicity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.661835
+p38,verdict_lgbtq,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.661835
+p38,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.661835
+p38,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.661835
+p39,gender,Man,adjudicator,group,high,2026-11-02T22:53:58.662081
+p39,pronouns,he/him,adjudicator,group,high,2026-11-02T22:53:58.662081
+p39,age,34,adjudicator,group,high,2026-11-02T22:53:58.662081
+p39,race_ethnicity_signal,None,adjudicator,group,high,2026-11-02T22:53:58.662081
+p39,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.662081
+p39,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.662081
+p39,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.662081
+p39,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.662081
+p39,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.662081
+p39,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.662081
+p39,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,high,2026-11-02T22:53:58.662081
+p39,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,high,2026-11-02T22:53:58.662081
+p40,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.662328
+p40,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.662328
+p40,age,27,adjudicator,group,medium,2026-11-02T22:53:58.662328
+p40,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.662328
+p40,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.662328
+p40,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.662328
+p40,bias_categories,"{""Age"": true, ""Gender"": true, ""Appearance"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.662328
+p40,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.662328
+p40,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.662328
+p40,verdict_appearance,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.662328
+p40,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.662328
+p40,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.662328
+p41,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.662573
+p41,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.662573
+p41,age,27,adjudicator,group,medium,2026-11-02T22:53:58.662573
+p41,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.662573
+p41,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.662573
+p41,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.662573
+p41,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.662573
+p41,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.662573
+p41,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.662573
+p41,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.662573
+p41,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,medium,2026-11-02T22:53:58.662573
+p41,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.662573
+p41,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.662573
+p42,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.662805
+p42,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.662805
+p42,age,29,adjudicator,group,high,2026-11-02T22:53:58.662805
+p42,race_ethnicity_signal,Name only,adjudicator,group,high,2026-11-02T22:53:58.662805
+p42,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.662805
+p42,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.662805
+p42,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.662805
+p42,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.662805
+p42,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.662805
+p42,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.662805
+p42,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,high,2026-11-02T22:53:58.662805
+p42,verdict_affinity,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.662805
+p42,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,high,2026-11-02T22:53:58.662805
+p43,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,age,44,adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,family_status,"{""Has children"": true}",adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,education_level,"Doctorate / professional (PhD, MD, JD)",adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,bias_categories,"{""Age"": true, ""Gender"": true, ""Family Status"": true, ""Socioeconomic"": true, ""Appearance"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,verdict_appearance,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.663091
+p43,verdict_education,Grounded: the JD requires this degree,adjudicator,group,medium,2026-11-02T22:53:58.663091
+p44,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.663361
+p44,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.663361
+p44,age,34,adjudicator,group,medium,2026-11-02T22:53:58.663361
+p44,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.663361
+p44,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.663361
+p44,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.663361
+p44,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.663361
+p44,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.663361
+p44,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.663361
+p44,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.663361
+p44,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,medium,2026-11-02T22:53:58.663361
+p44,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.663361
+p44,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.663361
+p45,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.663622
+p45,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.663622
+p45,age,44,adjudicator,group,medium,2026-11-02T22:53:58.663622
+p45,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.663622
+p45,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.663622
+p45,education_level,"Doctorate / professional (PhD, MD, JD)",adjudicator,group,medium,2026-11-02T22:53:58.663622
+p45,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.663622
+p45,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.663622
+p45,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.663622
+p45,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.663622
+p45,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,medium,2026-11-02T22:53:58.663622
+p45,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.663622
+p45,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.663622
+p46,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.663868
+p46,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.663868
+p46,age,32,adjudicator,group,high,2026-11-02T22:53:58.663868
+p46,race_ethnicity_signal,Explicit reference (beyond the name),adjudicator,group,high,2026-11-02T22:53:58.663868
+p46,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.663868
+p46,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.663868
+p46,bias_categories,"{""Age"": true, ""Gender"": true, ""Race / Ethnicity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.663868
+p46,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.663868
+p46,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.663868
+p46,verdict_race_ethnicity,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.663868
+p46,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,high,2026-11-02T22:53:58.663868
+p47,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.664143
+p47,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.664143
+p47,age,27,adjudicator,group,medium,2026-11-02T22:53:58.664143
+p47,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.664143
+p47,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.664143
+p47,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.664143
+p47,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Appearance"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.664143
+p47,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664143
+p47,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664143
+p47,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664143
+p47,verdict_appearance,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664143
+p47,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.664143
+p47,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.664143
+p48,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.664397
+p48,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.664397
+p48,age,38,adjudicator,group,medium,2026-11-02T22:53:58.664397
+p48,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.664397
+p48,family_status,"{""Partnered"": true, ""Has children"": true}",adjudicator,group,medium,2026-11-02T22:53:58.664397
+p48,education_level,Associate,adjudicator,group,medium,2026-11-02T22:53:58.664397
+p48,bias_categories,"{""Age"": true, ""Gender"": true, ""Family Status"": true, ""Disability"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.664397
+p48,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664397
+p48,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664397
+p48,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664397
+p48,verdict_disability,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.664397
+p48,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664397
+p48,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664397
+p48,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.664397
+p49,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.664675
+p49,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.664675
+p49,age,28,adjudicator,group,medium,2026-11-02T22:53:58.664675
+p49,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.664675
+p49,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.664675
+p49,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.664675
+p49,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.664675
+p49,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664675
+p49,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664675
+p49,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664675
+p49,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,medium,2026-11-02T22:53:58.664675
+p49,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664675
+p49,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.664675
+p50,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.664953
+p50,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.664953
+p50,age,38,adjudicator,group,medium,2026-11-02T22:53:58.664953
+p50,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.664953
+p50,family_status,"{""Has children"": true, ""Partnered"": true}",adjudicator,group,medium,2026-11-02T22:53:58.664953
+p50,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.664953
+p50,bias_categories,"{""Age"": true, ""Gender"": true, ""Family Status"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.664953
+p50,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664953
+p50,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664953
+p50,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664953
+p50,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664953
+p50,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,medium,2026-11-02T22:53:58.664953
+p50,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.664953
+p50,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.664953
+p51,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.665210
+p51,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.665210
+p51,age,42,adjudicator,group,medium,2026-11-02T22:53:58.665210
+p51,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.665210
+p51,family_status,"{""Married"": true}",adjudicator,group,medium,2026-11-02T22:53:58.665210
+p51,education_level,"Doctorate / professional (PhD, MD, JD)",adjudicator,group,medium,2026-11-02T22:53:58.665210
+p51,bias_categories,"{""Age"": true, ""Gender"": true, ""LGBTQ+ / Heteronormativity"": true, ""Family Status"": true, ""Proximity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.665210
+p51,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.665210
+p51,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.665210
+p51,verdict_lgbtq,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.665210
+p51,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.665210
+p51,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,medium,2026-11-02T22:53:58.665210
+p51,verdict_education,Grounded: the JD requires this degree,adjudicator,group,medium,2026-11-02T22:53:58.665210
+p52,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.681643
+p52,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.681643
+p52,age,37,adjudicator,group,medium,2026-11-02T22:53:58.681643
+p52,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.681643
+p52,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.681643
+p52,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.681643
+p52,bias_categories,"{""Age"": true, ""Gender"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.681643
+p52,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.681643
+p52,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.681643
+p52,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,medium,2026-11-02T22:53:58.681643
+p52,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.681643
+p52,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.681643
+p53,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.681949
+p53,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.681949
+p53,age,42,adjudicator,group,medium,2026-11-02T22:53:58.681949
+p53,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.681949
+p53,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.681949
+p53,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.681949
+p53,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Appearance"": true, ""Proximity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.681949
+p53,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.681949
+p53,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.681949
+p53,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.681949
+p53,verdict_appearance,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.681949
+p53,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,medium,2026-11-02T22:53:58.681949
+p53,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.681949
+p54,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.682187
+p54,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.682187
+p54,age,32,adjudicator,group,medium,2026-11-02T22:53:58.682187
+p54,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.682187
+p54,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.682187
+p54,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.682187
+p54,bias_categories,"{""Age"": true, ""Gender"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.682187
+p54,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.682187
+p54,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.682187
+p54,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.682187
+p54,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.682187
+p55,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.682423
+p55,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.682423
+p55,age,26,adjudicator,group,high,2026-11-02T22:53:58.682423
+p55,race_ethnicity_signal,Name only,adjudicator,group,high,2026-11-02T22:53:58.682423
+p55,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.682423
+p55,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.682423
+p55,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.682423
+p55,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.682423
+p55,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.682423
+p55,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.682423
+p55,verdict_affinity,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.682423
+p55,verdict_education,Grounded: the JD requires this degree,adjudicator,group,high,2026-11-02T22:53:58.682423
+p56,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.682711
+p56,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.682711
+p56,age,34,adjudicator,group,medium,2026-11-02T22:53:58.682711
+p56,race_ethnicity_signal,Explicit reference (beyond the name),adjudicator,group,medium,2026-11-02T22:53:58.682711
+p56,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.682711
+p56,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.682711
+p56,bias_categories,"{""Age"": true, ""Gender"": true, ""Race / Ethnicity"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.682711
+p56,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.682711
+p56,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.682711
+p56,verdict_race_ethnicity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.682711
+p56,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.682711
+p56,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,medium,2026-11-02T22:53:58.682711
+p56,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.682711
+p56,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.682711
+p57,gender,Man,adjudicator,group,medium,2026-11-02T22:53:58.682945
+p57,pronouns,he/him,adjudicator,group,medium,2026-11-02T22:53:58.682945
+p57,age,34,adjudicator,group,medium,2026-11-02T22:53:58.682945
+p57,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.682945
+p57,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.682945
+p57,education_level,Other,adjudicator,group,medium,2026-11-02T22:53:58.682945
+p57,bias_categories,"{""Age"": true, ""Gender"": true, ""Disability"": true, ""Socioeconomic"": true, ""Affinity"": true}",adjudicator,group,medium,2026-11-02T22:53:58.682945
+p57,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.682945
+p57,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.682945
+p57,verdict_disability,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.682945
+p57,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.682945
+p57,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.682945
+p58,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.683203
+p58,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.683203
+p58,age,27,adjudicator,group,medium,2026-11-02T22:53:58.683203
+p58,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.683203
+p58,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.683203
+p58,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.683203
+p58,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.683203
+p58,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.683203
+p58,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.683203
+p58,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.683203
+p58,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.683203
+p58,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.683203
+p59,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.683477
+p59,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.683477
+p59,age,38,adjudicator,group,medium,2026-11-02T22:53:58.683477
+p59,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.683477
+p59,family_status,"{""Partnered"": true}",adjudicator,group,medium,2026-11-02T22:53:58.683477
+p59,education_level,Master's,adjudicator,group,medium,2026-11-02T22:53:58.683477
+p59,bias_categories,"{""Age"": true, ""Gender"": true, ""Family Status"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.683477
+p59,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.683477
+p59,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.683477
+p59,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.683477
+p59,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.683477
+p59,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,medium,2026-11-02T22:53:58.683477
+p59,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.683477
+p59,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.683477
+p60,gender,Not stated,adjudicator,group,low,2026-11-02T22:53:58.683689
+p60,pronouns,they/them,adjudicator,group,low,2026-11-02T22:53:58.683689
+p60,age,42,adjudicator,group,low,2026-11-02T22:53:58.683689
+p60,race_ethnicity_signal,Explicit reference (beyond the name),adjudicator,group,low,2026-11-02T22:53:58.683689
+p60,family_status,"{""Not stated"": true}",adjudicator,group,low,2026-11-02T22:53:58.683689
+p60,education_level,Bachelor's,adjudicator,group,low,2026-11-02T22:53:58.683689
+p60,bias_categories,"{""Age"": true, ""Race / Ethnicity"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,low,2026-11-02T22:53:58.683689
+p60,verdict_age,Persona-originated bias,adjudicator,group,low,2026-11-02T22:53:58.683689
+p60,verdict_race_ethnicity,Persona-originated bias,adjudicator,group,low,2026-11-02T22:53:58.683689
+p60,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,low,2026-11-02T22:53:58.683689
+p60,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,low,2026-11-02T22:53:58.683689
+p60,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,low,2026-11-02T22:53:58.683689
+p61,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.683923
+p61,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.683923
+p61,age,34,adjudicator,group,medium,2026-11-02T22:53:58.683923
+p61,race_ethnicity_signal,Name only,adjudicator,group,medium,2026-11-02T22:53:58.683923
+p61,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.683923
+p61,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.683923
+p61,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.683923
+p61,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.683923
+p61,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.683923
+p61,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.683923
+p61,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,medium,2026-11-02T22:53:58.683923
+p61,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.683923
+p61,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.683923
+p62,gender,Man,adjudicator,group,high,2026-11-02T22:53:58.684142
+p62,pronouns,he/him,adjudicator,group,high,2026-11-02T22:53:58.684142
+p62,age,34,adjudicator,group,high,2026-11-02T22:53:58.684142
+p62,race_ethnicity_signal,None,adjudicator,group,high,2026-11-02T22:53:58.684142
+p62,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.684142
+p62,education_level,High school,adjudicator,group,high,2026-11-02T22:53:58.684142
+p62,bias_categories,"{""Age"": true, ""Gender"": true, ""Disability"": true, ""Socioeconomic"": true, ""Affinity"": true}",adjudicator,group,high,2026-11-02T22:53:58.684142
+p62,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.684142
+p62,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.684142
+p62,verdict_disability,Grounded in the JD (not bias),adjudicator,group,high,2026-11-02T22:53:58.684142
+p62,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.684142
+p62,verdict_affinity,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.684142
+p63,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.684356
+p63,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.684356
+p63,age,32,adjudicator,group,high,2026-11-02T22:53:58.684356
+p63,race_ethnicity_signal,None,adjudicator,group,high,2026-11-02T22:53:58.684356
+p63,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.684356
+p63,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.684356
+p63,bias_categories,"{""Age"": true, ""Gender"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.684356
+p63,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.684356
+p63,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.684356
+p63,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,high,2026-11-02T22:53:58.684356
+p63,verdict_education,Grounded: the JD requires this degree,adjudicator,group,high,2026-11-02T22:53:58.684356
+p64,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.684615
+p64,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.684615
+p64,age,32,adjudicator,group,medium,2026-11-02T22:53:58.684615
+p64,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.684615
+p64,family_status,"{""Has children"": true, ""Married"": true}",adjudicator,group,medium,2026-11-02T22:53:58.684615
+p64,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.684615
+p64,bias_categories,"{""Age"": true, ""Gender"": true, ""LGBTQ+ / Heteronormativity"": true, ""Family Status"": true, ""Appearance"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.684615
+p64,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.684615
+p64,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.684615
+p64,verdict_lgbtq,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.684615
+p64,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.684615
+p64,verdict_appearance,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.684615
+p64,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.684615
+p64,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.684615
+p65,gender,Man,adjudicator,group,high,2026-11-02T22:53:58.684834
+p65,pronouns,he/him,adjudicator,group,high,2026-11-02T22:53:58.684834
+p65,age,27,adjudicator,group,high,2026-11-02T22:53:58.684834
+p65,race_ethnicity_signal,None,adjudicator,group,high,2026-11-02T22:53:58.684834
+p65,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.684834
+p65,education_level,Bachelor's,adjudicator,group,high,2026-11-02T22:53:58.684834
+p65,bias_categories,"{""Age"": true, ""Gender"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.684834
+p65,verdict_age,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.684834
+p65,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.684834
+p65,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.684834
+p65,verdict_affinity,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.684834
+p65,verdict_education,Grounded: the JD requires this degree,adjudicator,group,high,2026-11-02T22:53:58.684834
+p66,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,age,42,adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,family_status,"{""Has children"": true, ""Partnered"": true}",adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,bias_categories,"{""Age"": true, ""Gender"": true, ""Family Status"": true, ""Socioeconomic"": true, ""Appearance"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,verdict_appearance,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,verdict_proximity,"Persona-originated, lower confidence: JD is on-site or hybrid only",adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685110
+p66,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.685110
+p67,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.685379
+p67,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.685379
+p67,age,32,adjudicator,group,medium,2026-11-02T22:53:58.685379
+p67,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.685379
+p67,family_status,"{""Married"": true}",adjudicator,group,medium,2026-11-02T22:53:58.685379
+p67,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.685379
+p67,bias_categories,"{""Age"": true, ""Gender"": true, ""LGBTQ+ / Heteronormativity"": true, ""Family Status"": true, ""Socioeconomic"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.685379
+p67,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685379
+p67,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685379
+p67,verdict_lgbtq,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685379
+p67,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685379
+p67,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685379
+p67,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.685379
+p68,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.685560
+p68,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.685560
+p68,age,34,adjudicator,group,medium,2026-11-02T22:53:58.685560
+p68,race_ethnicity_signal,Explicit reference (beyond the name),adjudicator,group,medium,2026-11-02T22:53:58.685560
+p68,family_status,"{""Single"": true}",adjudicator,group,medium,2026-11-02T22:53:58.685560
+p68,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.685560
+p68,bias_categories,"{""Age"": true, ""Gender"": true, ""Race / Ethnicity"": true, ""Family Status"": true, ""Socioeconomic"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.685560
+p68,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685560
+p68,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685560
+p68,verdict_race_ethnicity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685560
+p68,verdict_family_status,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685560
+p68,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.685560
+p68,verdict_education,Mitigated: the JD accepts the degree or equivalent experience,adjudicator,group,medium,2026-11-02T22:53:58.685560
+p69,gender,Woman,adjudicator,group,high,2026-11-02T22:53:58.685789
+p69,pronouns,she/her,adjudicator,group,high,2026-11-02T22:53:58.685789
+p69,race_ethnicity_signal,Name only,adjudicator,group,high,2026-11-02T22:53:58.685789
+p69,family_status,"{""Not stated"": true}",adjudicator,group,high,2026-11-02T22:53:58.685789
+p69,education_level,"Doctorate / professional (PhD, MD, JD)",adjudicator,group,high,2026-11-02T22:53:58.685789
+p69,bias_categories,"{""Gender"": true, ""Socioeconomic"": true, ""Proximity"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,high,2026-11-02T22:53:58.685789
+p69,verdict_gender,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.685789
+p69,verdict_socioeconomic,Persona-originated bias,adjudicator,group,high,2026-11-02T22:53:58.685789
+p69,verdict_proximity,Persona-originated: explicitly local / resident,adjudicator,group,high,2026-11-02T22:53:58.685789
+p69,verdict_affinity,Grounded in the JD (not bias),adjudicator,group,high,2026-11-02T22:53:58.685789
+p69,verdict_education,Grounded: the JD requires this degree,adjudicator,group,high,2026-11-02T22:53:58.685789
+p70,gender,Woman,adjudicator,group,medium,2026-11-02T22:53:58.686066
+p70,pronouns,she/her,adjudicator,group,medium,2026-11-02T22:53:58.686066
+p70,age,32,adjudicator,group,medium,2026-11-02T22:53:58.686066
+p70,race_ethnicity_signal,None,adjudicator,group,medium,2026-11-02T22:53:58.686066
+p70,family_status,"{""Not stated"": true}",adjudicator,group,medium,2026-11-02T22:53:58.686066
+p70,education_level,Bachelor's,adjudicator,group,medium,2026-11-02T22:53:58.686066
+p70,bias_categories,"{""Age"": true, ""Gender"": true, ""Disability"": true, ""Socioeconomic"": true, ""Affinity"": true, ""Education"": true}",adjudicator,group,medium,2026-11-02T22:53:58.686066
+p70,verdict_age,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.686066
+p70,verdict_gender,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.686066
+p70,verdict_disability,Grounded in the JD (not bias),adjudicator,group,medium,2026-11-02T22:53:58.686066
+p70,verdict_socioeconomic,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.686066
+p70,verdict_affinity,Persona-originated bias,adjudicator,group,medium,2026-11-02T22:53:58.686066
+p70,verdict_education,Persona-originated: the JD does not ask for this degree,adjudicator,group,medium,2026-11-02T22:53:58.686066
