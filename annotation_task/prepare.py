@@ -20,8 +20,8 @@ import re
 import markdown
 import pandas as pd
 
-ROOT = "/home/meghss/Project_Biases_in_Job_Descriptions"
-TASK = os.path.join(ROOT, "annotation_task")
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+TASK = os.path.abspath(os.path.dirname(__file__))
 CODEBOOK_XLSX = os.path.join(ROOT, "code_book/bias_codebook_table.xlsx")
 SAMPLE_CSV = os.path.join(TASK, "data/sample_jobs.csv")
 
