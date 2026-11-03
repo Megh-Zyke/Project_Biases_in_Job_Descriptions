@@ -3,3 +3,4 @@ logs/
 *.out
 /code_book
 __pycache__
+.nfs*
