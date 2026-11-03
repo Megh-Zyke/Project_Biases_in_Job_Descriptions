@@ -21,6 +21,10 @@ instance_display:
   resizable: false
 
 base_css: static/study.css
+# Generated layout plus a script that hides a verdict question when its category is unticked
+# (Potato 2.9.4 only re-runs display_logic on tick). Used as-is, so after editing
+# annotation_schemes, copy the new layouts/task_layout.html over it and re-append the <script>.
+task_layout: layouts/task_layout_custom.html
 media_directory: media
 annotation_codebook_url: media/codebook.html
 annotation_instructions: >-
