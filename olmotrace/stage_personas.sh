@@ -9,7 +9,8 @@
 #SBATCH --chdir=/shared/5/shrujaya/olmo_stages
 #SBATCH --output=/shared/5/shrujaya/olmo_stages/logs/%x-%A_%a.out
 # Persona generation for one OLMo-2-13B training stage per array task.
-# Submit: sbatch --gres=gpu:A6000:1 --array=0-2%3 --export=ALL,PROJ_DIR=/home/shrujaya/Project_Biases_in_Job_Descriptions stage_personas.sh
+# Submit (as run: 3 personas per JD): sbatch --gres=gpu:A6000:1 --array=0-2%3 --export=ALL,PROJ_DIR=/home/shrujaya/Project_Biases_in_Job_Descriptions,N=3 stage_personas.sh
+# Then copy out/personas_{base,sft,dpo}.csv to olmotrace/results/stages/ for stage_compare.py
 # Smoke test: add END=2 N=2 OUT_SUFFIX=_smoke to --export
 set -euo pipefail
 

@@ -3,7 +3,7 @@
 Reads olmotrace/results/* and writes one self-contained HTML page (data
 embedded as JSON). Re-run after any tracing script finishes.
 
-Usage: python olmotrace/build_page.py OUT.html
+Usage: python olmotrace/build_page.py OUT_DIR/index.html (publish with why.html from build_why.py)
 """
 import ast
 import html
