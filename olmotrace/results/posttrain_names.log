@@ -1,0 +1,13 @@
+sft train-00005-of-00006.parquet
+sft train-00004-of-00006.parquet
+sft train-00003-of-00006.parquet
+sft train-00002-of-00006.parquet
+sft train-00000-of-00006.parquet
+sft train-00001-of-00006.parquet
+dpo train-00002-of-00006.parquet
+dpo train-00000-of-00006.parquet
+dpo train-00003-of-00006.parquet
+dpo train-00001-of-00006.parquet
+dpo train-00005-of-00006.parquet
+dpo train-00004-of-00006.parquet
+POST EXIT 0

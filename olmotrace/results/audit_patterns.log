@@ -1,0 +1,147 @@
+Default candidate                    Emily Carter
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+Default candidate                    Emily Tran
+Default candidate                    Evelyn Carter
+Default candidate                    Elena Martinez
+Default candidate                    Alexis Rivera
+Default candidate                    Emily Johnson
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+Default candidate                    Jennifer Smith
+Asian surname, Anglo first name      Emily Chen
+Asian surname, Anglo first name      Emily Patel
+Asian surname, Anglo first name      Mei Chen
+Asian surname, Anglo first name      Priya Patel
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+Asian surname, Anglo first name      Linh Tran
+Anonymised names                     <PRESIDIO_ANONYMIZED_PERSON>
+Opposite-sex spouse, two children    her husband and two children
+Opposite-sex spouse, two children    his wife and two children
+Opposite-sex spouse, two children    her husband
+Opposite-sex spouse, two children    her wife
+Opposite-sex spouse, two children    his wife
+Opposite-sex spouse, two children    his husband
+Stock phrases                        Meet 
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+Stock phrases                        a passion for
+Stock phrases                        meticulous
+Stock phrases                        thrives
+Stock phrases                        known for her
+Stock phrases                        a stone's throw from
+Stock phrases                        hailing from
+Stock phrases                        the vibrant city of
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+Stock phrases                        a testament to her
+Lifestyle                            cozy apartment
+Lifestyle                            loft apartment
+Home city                            Austin, Texas
+Home city                            San Francisco
+Prestige training                    classically trained in French
+age 22: 787478 / 6479
+age 23: 729154 / 5100
+age 24: 627451 / 4906
+age 25: 786677 / 6443
+age 26: 546523 / 5064
+age 27: 513884 / 3539
+age 28: 504986 / 4841
+age 29: 445877 / 3201
+age 30: 735617 / 6807
+age 31: 324752 / 1917
+age 32: 385173 / 3287
+age 33: 302457 / 2004
+age 34: 292772 / 1764
+age 35: 447232 / 3832
+age 36: 262278 / 1515
+age 37: 259465 / 1596
+age 38: 251648 / 2356
+age 39: 212817 / 1664
+age 40: 570367 / 3586
+age 41: 190884 / 1238
+age 42: 231322 / 2498
+age 43: 194762 / 1389
+age 44: 174496 / 1556
+age 45: 294699 / 1275
+age 46: 167528 / 1054
+age 47: 164501 / 813
+age 48: 158281 / 694
+age 49: 140655 / 1263
+age 50: 448806 / 2083
+age 51: 140641 / 868
+age 52: 162046 / 867
+age 53: 145689 / 639
+age 54: 131312 / 1326
+age 55: 207148 / 990
+                             card                       pattern  control  persona_share  pretrain_count  posttrain_count  pretrain_per_B_tokens  posttrain_per_B_tokens  posttrain_enrichment                                                                   posttrain_sources
+                Default candidate                  Emily Carter    False          0.074            4915              297                  1.074                   8.420                 7.838 {'olmo-2-1124-13b-preference-mix': 2, 'dolmino': 3, 'tulu-3-sft-olmo-2-mixture': 1}
+                Default candidate                    Emily Tran    False          0.042             470               15                  0.103                   0.425                 4.140               {'tulu-3-sft-olmo-2-mixture': 3, 'olmo-2-1124-13b-preference-mix': 3}
+                Default candidate                 Evelyn Carter    False          0.033            2135              169                  0.467                   4.791                10.268 {'dolmino': 2, 'tulu-3-sft-olmo-2-mixture': 1, 'olmo-2-1124-13b-preference-mix': 3}
+                Default candidate                Elena Martinez    False          0.028            3790              288                  0.828                   8.165                 9.857 {'tulu-3-sft-olmo-2-mixture': 3, 'olmo-2-1124-13b-preference-mix': 1, 'dolmino': 2}
+                Default candidate                 Alexis Rivera    False          0.022            1116                4                  0.244                   0.113                 0.465                                                                      {'dolmino': 4}
+                Default candidate                 Emily Johnson     True          0.001           15440               88                  3.375                   2.495                 0.739                                      {'tulu-3-sft-olmo-2-mixture': 4, 'dolmino': 2}
+                Default candidate                Jennifer Smith     True          0.000           49927              660                 10.912                  18.711                 1.715                                                                      {'dolmino': 6}
+  Asian surname, Anglo first name                    Emily Chen    False          0.011            7492               70                  1.637                   1.984                 1.212 {'dolmino': 1, 'tulu-3-sft-olmo-2-mixture': 1, 'olmo-2-1124-13b-preference-mix': 4}
+  Asian surname, Anglo first name                   Emily Patel    False          0.000             182                0                  0.040                   0.000                 0.000                                                                                  {}
+  Asian surname, Anglo first name                      Mei Chen     True          0.000            8404               19                  1.837                   0.539                 0.293                                                                      {'dolmino': 6}
+  Asian surname, Anglo first name                   Priya Patel     True          0.000            2253                7                  0.492                   0.198                 0.403                                 {'olmo-2-1124-13b-preference-mix': 5, 'dolmino': 1}
+  Asian surname, Anglo first name                     Linh Tran     True          0.000            2426               12                  0.530                   0.340                 0.642                                                                      {'dolmino': 6}
+                 Anonymised names  <PRESIDIO_ANONYMIZED_PERSON>    False          0.215               0             1006                  0.000                  28.520                   NaN               {'olmo-2-1124-13b-preference-mix': 3, 'tulu-3-sft-olmo-2-mixture': 3}
+Opposite-sex spouse, two children  her husband and two children    False          0.001           74914              378                 16.373                  10.716                 0.655                                                                      {'dolmino': 6}
+Opposite-sex spouse, two children     his wife and two children    False          0.000          236258             3145                 51.636                  89.159                 1.727                                                                      {'dolmino': 6}
+Opposite-sex spouse, two children                   her husband    False          0.009        61070001           571825              13347.246               16210.989                 1.215                                                                      {'dolmino': 6}
+Opposite-sex spouse, two children                      her wife     True          0.000          631819             1301                138.088                  36.883                 0.267                                 {'dolmino': 5, 'olmo-2-1124-13b-preference-mix': 1}
+Opposite-sex spouse, two children                      his wife    False          0.001        99557684          1100277              21758.980               31192.372                 1.434                                                                      {'dolmino': 6}
+Opposite-sex spouse, two children                   his husband     True          0.000          683822             1873                149.454                  53.099                 0.355                                                                      {'dolmino': 6}
+                    Stock phrases                         Meet     False          0.719        17360495            55549               3794.249                1574.790                 0.415                                                                      {'dolmino': 6}
+                    Stock phrases                 a passion for    False          0.148         5637058            19623               1232.016                 556.303                 0.452                                 {'dolmino': 5, 'olmo-2-1124-13b-preference-mix': 1}
+                    Stock phrases                    meticulous    False          0.471         5992658            45153               1309.734                1280.068                 0.977                                 {'olmo-2-1124-13b-preference-mix': 1, 'dolmino': 5}
+                    Stock phrases                       thrives    False          0.443         5544696            11423               1211.829                 323.837                 0.267                                 {'dolmino': 5, 'olmo-2-1124-13b-preference-mix': 1}
+                    Stock phrases                 known for her    False          0.542         2735915            96591                597.952                2738.313                 4.579                                                                      {'dolmino': 6}
+                    Stock phrases          a stone's throw from    False          0.012          244320             1213                 53.398                  34.388                 0.644                                                                      {'dolmino': 6}
+                    Stock phrases                  hailing from    False          0.302          978055             4546                213.760                 128.877                 0.603                                 {'dolmino': 5, 'olmo-2-1124-13b-preference-mix': 1}
+                    Stock phrases           the vibrant city of    False          0.306           16602              287                  3.628                   8.136                 2.242 {'tulu-3-sft-olmo-2-mixture': 2, 'dolmino': 3, 'olmo-2-1124-13b-preference-mix': 1}
+                    Stock phrases            a testament to her    False          0.276          111831             1738                 24.441                  49.272                 2.016 {'olmo-2-1124-13b-preference-mix': 3, 'tulu-3-sft-olmo-2-mixture': 1, 'dolmino': 2}
+                        Lifestyle                cozy apartment    False          0.149           33290              350                  7.276                   9.922                 1.364 {'tulu-3-sft-olmo-2-mixture': 1, 'dolmino': 3, 'olmo-2-1124-13b-preference-mix': 2}
+                        Lifestyle                loft apartment    False          0.048           78481              540                 17.153                  15.309                 0.893                                                                      {'dolmino': 6}
+                        Home city                 Austin, Texas    False          0.160         2005964            12663                438.416                 358.991                 0.819                                                                      {'dolmino': 6}
+                        Home city                 San Francisco    False          0.129        54334186           350380              11875.090                9933.120                 0.836                                                                      {'dolmino': 6}
+                Prestige training classically trained in French    False          0.000             876                0                  0.191                   0.000                 0.000                                                                                  {}
+ age  pretrain_count  posttrain_count  persona_count
+  22          787478             6479             28
+  23          729154             5100             18
+  24          627451             4906             12
+  25          786677             6443             12
+  26          546523             5064              7
+  27          513884             3539             29
+  28          504986             4841            194
+  29          445877             3201             61
+  30          735617             6807             28
+  31          324752             1917             10
+  32          385173             3287            521
+  33          302457             2004             54
+  34          292772             1764            117
+  35          447232             3832            360
+  36          262278             1515             80
+  37          259465             1596             78
+  38          251648             2356            191
+  39          212817             1664             10
+  40          570367             3586             12
+  41          190884             1238              3
+  42          231322             2498             47
+  43          194762             1389              7
+  44          174496             1556              4
+  45          294699             1275             30
+  46          167528             1054              0
+  47          164501              813              2
+  48          158281              694              2
+  49          140655             1263              0
+  50          448806             2083              0
+  51          140641              868              0
+  52          162046              867              0
+  53          145689              639              0
+  54          131312             1326              0
+  55          207148              990              0
+EXIT 0

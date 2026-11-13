@@ -1,0 +1,5 @@
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 1495.75it/s]
+done allenai/tulu-3-sft-olmo-2-mixture /shared/4/models/hub/datasets--allenai--tulu-3-sft-olmo-2-mixture/snapshots/2d335ef93d9ad35e718e201c2aabefa08032a3d3
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files:  29%|██▊       | 2/7 [00:12<00:31,  6.30s/it]Fetching 7 files:  43%|████▎     | 3/7 [00:54<01:24, 21.09s/it]Fetching 7 files: 100%|██████████| 7/7 [00:54<00:00,  7.77s/it]
+done allenai/olmo-2-1124-13b-preference-mix /shared/4/models/hub/datasets--allenai--olmo-2-1124-13b-preference-mix/snapshots/24b135e41f3534f116cefb9f76aa34f1de63931c
+DL EXIT 0

@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Why OLMo Does It</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column in three routes (copied, nudged, emergent), then the experiments that would test them. Same type and neutrals as OLMo Pattern Sources; blue = pretraining, orange = post-training, purple = other models' writing, ink = OLMo itself. */
+:root{
+  --bg:#f6f7f9; --surface:#ffffff; --ink:#18202b; --ink-2:#4a5463; --ink-3:#7a8494; --rule:#dfe3ea; --grid:#eceff3;
+  --accent:#1f5f8b; --pre:#2a78d6; --post:#eb6834; --synth:#b5468f; --muted:#cfd6df; --olmo:#18202b;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12161c; --surface:#1a2029; --ink:#e8ecf1; --ink-2:#b2bac6; --ink-3:#8590a0; --rule:#2c3440; --grid:#252c36;
+  --accent:#7fb3dc; --pre:#3987e5; --post:#d95926; --synth:#c65c9f; --muted:#3a4350; --olmo:#e8ecf1; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161c; --surface:#1a2029; --ink:#e8ecf1; --ink-2:#b2bac6; --ink-3:#8590a0; --rule:#2c3440; --grid:#252c36;
+  --accent:#7fb3dc; --pre:#3987e5; --post:#d95926; --synth:#c65c9f; --muted:#3a4350; --olmo:#e8ecf1; color-scheme:dark}
+*{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+[hidden]{display:none!important}
+img{max-width:100%}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--body);margin:0}
+.wrap{max-width:980px;margin:0 auto;padding-block:36px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2{font-family:var(--display);font-weight:600;text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(1.9rem,5vw,2.6rem)}
+h2{font-size:1.45rem;margin:52px 0 6px;scroll-margin-top:16px}
+h3{font:600 .95rem/1.35 var(--body);margin:0}
+p{margin:0;max-width:72ch}
+a{color:var(--accent)}
+.tabs{display:flex;flex-wrap:wrap;gap:2px 4px;margin:0 0 22px;border-bottom:1px solid var(--rule)}
+.tabs a{padding:8px 12px 7px;font:500 .8rem/1.3 var(--mono);color:var(--ink-2);text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs a:hover{color:var(--ink)}
+.tabs a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+.eyebrow{font:500 .72rem/1.4 var(--mono);margin-bottom:6px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.lede{margin-top:12px;color:var(--ink-2);font-size:1.02rem}
+.cap{color:var(--ink-2);font-size:.9rem;margin-top:4px}
+.small{font-size:.8rem;color:var(--ink-3)}
+.routes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:10px;margin-top:24px}
+.route{display:flex;flex-direction:column;gap:8px;background:var(--surface);border:1px solid var(--rule);border-top:4px solid var(--c);border-radius:6px;padding:14px 16px;color:inherit;text-decoration:none;min-width:0}
+.route:hover,.route:focus-visible{border-color:var(--ink-3);border-top-color:var(--c)}
+.route .k{font:500 .7rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.route h3{font:600 1.15rem/1.25 var(--display)}
+.route ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.route li{font:.74rem var(--mono);padding:3px 7px;border-radius:3px;background:color-mix(in srgb,var(--c) 16%,transparent);color:var(--ink)}
+.route .how{font-size:.84rem;color:var(--ink-2);margin-top:auto}
+.verdict{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-top:8px;font-size:.9rem;color:var(--ink-2)}
+.chip{display:inline-block;font:600 .72rem/1.25 var(--mono);padding:5px 8px;border-radius:3px;color:var(--ink);background:color-mix(in srgb,var(--c) 22%,transparent)}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:16px 18px;margin-top:14px;min-width:0}
+.card .cap{margin-bottom:8px}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:14px}
+.pair .card{margin-top:14px}
+.chart{overflow-x:auto}
+.chart svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--mono);fill:var(--ink-2)}
+svg .lbl{fill:var(--ink);font-size:11px}
+svg .ax{fill:var(--ink-3);font-size:10px}
+svg .val{fill:var(--ink);font-size:11px;font-weight:500;paint-order:stroke;stroke:var(--surface);stroke-width:4px;stroke-linejoin:round}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font:.72rem var(--mono);color:var(--ink-3);margin-top:8px}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:10px;margin-top:14px}
+.stat{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:12px 14px;min-width:0}
+.stat b{display:block;font:600 1.9rem/1 var(--display);margin-bottom:6px;font-variant-numeric:tabular-nums}
+.stat span{font-size:.84rem;color:var(--ink-2)}
+.notes{margin:10px 0 0;padding-left:18px;display:grid;gap:8px;font-size:.88rem;color:var(--ink-2)}
+.notes b{color:var(--ink)}
+.smalls{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:10px;margin-top:12px}
+.smalls>div{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:12px 14px 8px;min-width:0}
+.smalls h3{font-size:.86rem}
+.smalls svg{display:block;width:100%;height:auto}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);font:.78rem/1.35 var(--body);padding:6px 9px;border-radius:4px;max-width:280px;z-index:20}
+footer{margin-top:52px;padding-top:16px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--ink-3)}
+footer p{max-width:85ch;margin-top:8px}
+code{font-family:var(--mono);font-size:.9em}
+@media (max-width:640px){
+  .chart svg{min-width:600px}
+  .pair .chart svg{min-width:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<nav class="tabs" aria-label="Pages"><a href="./">Where the patterns come from</a><a aria-current="page" href="why.html">Why OLMo does it</a></nav>
+  <div class="eyebrow">Biases in Job Descriptions · OLMo-2-13B-Instruct</div>
+  <h1>Why OLMo Writes These Personas</h1>
+  <p class="lede">Almost every one of OLMo's persona habits appears in a single step: supervised fine-tuning (SFT). Some are copied from the AI models that wrote the SFT data. Others are leanings the base model already had, which SFT turns into defaults. Preference tuning only nudges a few.</p>
+
+  <div class="routes">
+    <a class="route" href="#copied" style="--c:var(--synth)"><span class="k">Route 1</span><h3>Copied from other models</h3><ul><li>Emily Carter</li><li>Elena</li><li>PRESIDIO placeholder</li></ul><span class="how" id="r1"></span></a>
+    <a class="route" href="#nudged" style="--c:var(--post)"><span class="k">Route 2</span><h3>Nudged by preference tuning</h3><ul><li>Austin</li><li>Elena</li></ul><span class="how" id="r2"></span></a>
+    <a class="route" href="#emergent" style="--c:var(--olmo)"><span class="k">Route 3</span><h3>Amplified by fine-tuning</h3><ul><li>age 32</li><li>80%+ women</li></ul><span class="how" id="r3"></span></a>
+  </div>
+
+  <h2 id="copied">1 · Copied from the models that wrote its data</h2>
+  <div class="verdict"><span class="chip" style="--c:var(--synth)">Distillation</span><span>Much of OLMo's SFT and DPO data was written by GPT-4o, Qwen, Gemma and others. Their favourite names came with it.</span></div>
+  <div class="pair">
+    <div class="card"><h3>“Emily Carter” is a GPT-4o habit</h3><p class="cap">Mentions per million words of DPO answers, by the model that wrote them.</p><div class="chart" id="cEC"></div></div>
+    <div class="card"><h3>Most writer models over-use “Elena”</h3><p class="cap">Mentions per million words of DPO answers. Dashed line: pretraining web text. Orange: at least 3× web text.</p><div class="chart" id="cEL"></div></div>
+  </div>
+  <div class="card"><h3>Where the names enter supervised fine-tuning</h3><p class="cap">Mentions per million words in each part of the Tulu 3 SFT mixture. PersonaHub was written by GPT-4o.</p><div class="chart" id="cSFT"></div><p class="small" id="gsm" style="margin-top:6px"></p><div class="legend"><span><span class="sw" style="background:var(--synth)"></span>Emily Carter</span><span><span class="sw" style="background:var(--post)"></span>Elena</span></div></div>
+  <div class="card"><h3>The same habits in your persona audit</h3><p class="cap">Share of personas mentioning each name, same job-description prompt.</p><div class="chart" id="cCross"></div><div class="legend"><span><span class="sw" style="background:var(--synth)"></span>Emily Carter</span><span><span class="sw" style="background:var(--post)"></span>Elena</span></div></div>
+  <div class="stats" id="phStats"></div>
+
+  <h2 id="nudged">2 · Nudged by preference tuning</h2>
+  <div class="verdict"><span class="chip" style="--c:var(--post)">DPO</span><span>Each DPO pair has a chosen and a rejected answer to the same prompt, rated by a GPT-4o judge. Chosen answers are longer, so any specific detail wins about 55% of the time. The question is whether a term beats that baseline.</span></div>
+  <div class="card"><h3>How often the answer using the term was the chosen one</h3><p class="cap">Pairs where only one of the two answers uses the term. Bars: 95% interval; p from Fisher's exact test against the baseline.</p><div class="chart" id="cPref"></div><p class="small" id="sheNote" style="margin-top:6px"></p><div class="legend"><span><span class="sw" style="background:var(--post)"></span>term</span><span><span class="sw" style="background:var(--muted)"></span>matching baseline</span><span>dashed: 50%</span></div></div>
+
+  <h2 id="emergent">3 · Amplified by fine-tuning</h2>
+  <div class="verdict"><span class="chip" style="--c:var(--olmo)">SFT amplifies</span><span>No training data is as skewed as OLMo's output. The base model already leans this way, and SFT turns the lean into a default (section 4).</span></div>
+  <div class="pair">
+    <div class="card"><h3>Share of she/her, from data to OLMo</h3><p class="cap">She/her vs he/his. Data rows count all text; OLMo rows count personas.</p><div class="chart" id="cShe"></div></div>
+    <div class="card"><h3>Share of ages that are 32</h3><p class="cap">Among “N-year-old” mentions. Data rows use the roles OLMo writes most.</p><div class="chart" id="cAge"></div></div>
+  </div>
+
+  <h2 id="stages">4 · What each training stage adds</h2>
+  <div class="verdict"><span class="chip" style="--c:var(--accent)">Checkpoint experiment</span><span id="stageVerdict"></span></div>
+  <p class="cap" id="stageCap"></p>
+  <div class="smalls" id="cStages"></div>
+  <div class="legend"><span><span class="sw" style="background:var(--pre)"></span>base (pretraining only)</span><span><span class="sw" style="background:var(--post)"></span>after SFT, after DPO</span><span><span class="sw" style="background:var(--olmo)"></span>Instruct (after RLVR), your original run</span><span>bars: 95% interval</span></div>
+
+  <h2 id="limits">5 · Limitations and possible extensions</h2>
+  <p class="cap">The evidence supports the claims above as attribution: where each pattern comes from and at which stage it appears. These are the limits on that, and what would tighten it.</p>
+  <div class="pair">
+    <div class="card"><h3>Limitations</h3><ul class="notes">
+      <li>The base model got a plain completion prompt; SFT, DPO and Instruct got the chat prompt. Part of the base-to-SFT jump could come from the format, though hardly all of 67% → 92% women.</li>
+      <li>SFT amplifies the gender and age skews, but we can't say which part of SFT does it: imitating particular subsets (the synthetic math problems are 70% she/her) or fine-tuning collapsing onto the most likely answer.</li>
+      <li>The name evidence is correlational. Four sources agree, but no experiment removes the names from the data.</li>
+      <li>Names, ages and gender are detected with text patterns. Pronoun shares in the data count all text, not only personas.</li>
+      <li>infini-gram counts exact matches, and its later-stage counts mix mid-training, SFT and DPO.</li>
+      <li>About 15% of base-model completions only echoed the prompt and were dropped. The base model's age-32 share rests on 410 personas, its surname pairing on 24, and later stages mention spouses too rarely (6–30 times) to test same-sex spouses.</li>
+    </ul></div>
+    <div class="card"><h3>Possible extensions</h3><ul class="notes">
+      <li><b>Prompt the teacher models.</b> Run the persona prompt on GPT-4o and Gemma-2-27B to show their defaults directly. Needs an OpenAI API key; Gemma runs on one A6000.</li>
+      <li><b>Swap the names in the SFT data.</b> Fine-tune a small OLMo 2 base with PersonaHub and GSM8K names randomised. A causal test of the copying route; takes days.</li>
+      <li><b>Fine-tune on parts of SFT.</b> Train with and without the synthetic math subsets to find what amplifies the gender and age skews. Also days.</li>
+    </ul></div>
+  </div>
+
+  <footer>
+    <p>Builds on <a href="./">where the patterns come from</a> and the <a href="https://claude.ai/artifact/Qp5soKajBcSbCCLud2gBB3">Persona Pattern Audit</a>.</p>
+    <p id="method"></p>
+  </footer>
+</div>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+const D=/*DATA*/{};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pct=(v,d=0)=>(v*100).toFixed(d)+"%";
+const num=v=>v>=100?Math.round(v).toLocaleString():v>=10?v.toFixed(0):v>=1?v.toFixed(1):v>=0.01?v.toFixed(2):v>0?v.toPrecision(1):"0";
+
+// Horizontal bars on a linear scale; rows: {label, value, color, text?, dim?}
+function hbar(rows,{W=440,lw=150,rh=24,max,ref,refLabel,fmt=num}={}){
+  const vw=56,x0=lw,x1=W-vw,H=rows.length*rh+(ref!=null?22:6);
+  max=max||Math.max(...rows.map(r=>r.value),ref||0);
+  const sx=v=>x0+(x1-x0)*v/max;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img">`;
+  rows.forEach((r,i)=>{const y=i*rh+4;
+    s+=`<g data-tip="${esc(r.tip||r.label+': '+fmt(r.value))}"><rect x="0" y="${y}" width="${W}" height="${rh}" fill="transparent"/>`;
+    s+=`<text class="lbl" x="${x0-8}" y="${y+rh/2+4}" text-anchor="end" style="${r.dim?'fill:var(--ink-3)':''}">${esc(r.label)}</text>`;
+    s+=`<rect x="${x0}" y="${y+5}" width="${Math.max(sx(r.value)-x0,r.value>0?2:0)}" height="${rh-10}" rx="2" fill="${r.color}"/>`;
+    s+=`<text class="val" x="${Math.max(sx(r.value)-x0,r.value>0?2:0)+x0+6}" y="${y+rh/2+4}">${r.text??fmt(r.value)}</text></g>`});
+  if(ref!=null){const x=sx(ref),yb=rows.length*rh+4;
+    s+=`<line x1="${x}" x2="${x}" y1="2" y2="${yb}" stroke="var(--pre)" stroke-dasharray="4 3" stroke-width="1.5"/><text class="ax" x="${x}" y="${yb+13}" text-anchor="${x>W-120?'end':'middle'}" style="fill:var(--pre)">${esc(refLabel)}</text>`}
+  return s+"</svg>";
+}
+
+// Grouped bars: rows {label, a, b}; two series
+function gbar(rows,{W=920,lw=300,rh=34,fmt=num,pc=false}={}){
+  const vw=60,x0=lw,x1=W-vw,H=rows.length*rh+4,max=Math.max(...rows.flatMap(r=>[r.a,r.b]));
+  const sx=v=>x0+(x1-x0)*v/max;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img">`;
+  rows.forEach((r,i)=>{const y=i*rh+4;
+    s+=`<text class="lbl" x="${x0-10}" y="${y+rh/2+3}" text-anchor="end">${esc(r.label)}</text>`;
+    [[r.a,"var(--synth)",y+5],[r.b,"var(--post)",y+rh/2]].forEach(([v,c,yy])=>{const w=Math.max(sx(v)-x0,v>0?2:0);
+      s+=`<rect x="${x0}" y="${yy}" width="${w}" height="${rh/2-6}" rx="2" fill="${c}"/><text class="ax" x="${x0+w+6}" y="${yy+rh/2-8}" style="fill:var(--ink-2)">${pc?pct(v,1):fmt(v)}</text>`})});
+  return s+"</svg>";
+}
+
+// Route 1 ------------------------------------------------------------
+const M=D.models;
+{const top=[...M].sort((a,b)=>b.emily_carter-a.emily_carter).slice(0,7);
+ const rest=M.length-top.length;
+ const rows=top.map(m=>({label:m.model,value:m.emily_carter,color:m.model==="gpt-4o"?"var(--synth)":"var(--muted)",tip:`${m.model}: ${num(m.emily_carter)} per million words over ${m.responses.toLocaleString()} answers`}));
+ rows.push({label:`${rest} other models`,value:Math.max(...[...M].sort((a,b)=>b.emily_carter-a.emily_carter).slice(7).map(m=>m.emily_carter)),color:"var(--muted)",dim:true,text:"≤ "+num(Math.max(...[...M].sort((a,b)=>b.emily_carter-a.emily_carter).slice(7).map(m=>m.emily_carter)))});
+ rows.push({label:"pretraining web text",value:D.pre_rate["Emily Carter"],color:"var(--pre)",text:num(D.pre_rate["Emily Carter"])});
+ $("cEC").innerHTML=hbar(rows);}
+{const s=[...M].sort((a,b)=>b.elena-a.elena),top=s.slice(0,8);
+ const hot=v=>v>=3*D.pre_rate.Elena?"var(--post)":"var(--muted)";
+ const rows=top.map(m=>({label:m.model,value:m.elena,color:hot(m.elena)}));
+ const low=s.slice(-3);
+ low.forEach(m=>rows.push({label:m.model,value:m.elena,color:"var(--muted)",dim:true}));
+ $("cEL").innerHTML=hbar(rows,{ref:D.pre_rate.Elena,refLabel:"pretraining "+num(D.pre_rate.Elena)});}
+$("cSFT").innerHTML=gbar(D.sft.map(g=>({label:g.group,a:g.emily_carter,b:g.elena})));
+$("cCross").innerHTML=gbar(D.cross.map(r=>({label:r.model,a:r.emily_carter,b:r.elena})),{lw:160,rh:30,pc:true});
+{const P=D.placeholder;
+ $("phStats").innerHTML=`<div class="stat"><b>${P.sft_assistant.toLocaleString()}</b><span>PRESIDIO placeholders inside <em>answers</em> in WildChat SFT data. Scrubbing names left the token where a name belongs.</span></div><div class="stat"><b>${P.dpo_chosen} vs ${P.dpo_rejected}</b><span>placeholders in chosen vs rejected DPO answers. Preference tuning did not push it.</span></div><div class="stat"><b>${pct(D.olmo.n_placeholder/D.olmo.n)}</b><span>of OLMo's personas use the placeholder instead of a name.</span></div>`;}
+
+// Route 2 ------------------------------------------------------------
+{const W=920,lw=200,rh=46,x0=lw,x1=W-130,lo=.40,hi=.76,H=D.pref.length*rh+30;
+ const sx=v=>x0+(x1-x0)*(v-lo)/(hi-lo);
+ let s=`<svg viewBox="0 0 ${W} ${H}" role="img">`;
+ for(let t=.4;t<=.751;t+=.05){s+=`<line x1="${sx(t)}" x2="${sx(t)}" y1="4" y2="${H-22}" stroke="var(--grid)"/><text class="ax" x="${sx(t)}" y="${H-8}" text-anchor="middle">${Math.round(t*100)}%</text>`}
+ s+=`<line x1="${sx(.5)}" x2="${sx(.5)}" y1="4" y2="${H-22}" stroke="var(--ink-3)" stroke-dasharray="4 4"/>`;
+ D.pref.forEach((r,i)=>{const y=i*rh+8,yt=y+12,yc=y+28;
+   const diff=r.p<.05&&r.t.rate>r.c.rate;
+   s+=`<text class="lbl" x="${x0-10}" y="${yt+4}" text-anchor="end" style="font-weight:600">${esc(r.test)}</text><text class="ax" x="${x0-10}" y="${yc+4}" text-anchor="end">${esc(r.comp)}</text>`;
+   [[r.t,yt,"var(--post)"],[r.c,yc,"var(--ink-3)"]].forEach(([v,yy,c])=>{
+     s+=`<g data-tip="${esc(pct(v.rate,1)+' chosen ('+v.k.toLocaleString()+' of '+v.n.toLocaleString()+' pairs)')}"><line x1="${sx(Math.max(v.ci[0],lo))}" x2="${sx(Math.min(v.ci[1],hi))}" y1="${yy}" y2="${yy}" stroke="${c}" stroke-width="2"/><circle cx="${sx(v.rate)}" cy="${yy}" r="5" fill="${c}"/></g>`});
+   s+=`<text x="${x1+14}" y="${yt+4}" style="font-size:11px;font-weight:600;fill:${diff?'var(--post)':'var(--ink-3)'}">${pct(r.t.rate)} vs ${pct(r.c.rate)}</text><text class="ax" x="${x1+14}" y="${yc+4}">${diff?'favoured, p='+(r.p<.001?r.p.toExponential(0):r.p.toFixed(3)):'no clear edge'}</text>`});
+ $("cPref").innerHTML=s+"</svg>";}
+
+// Route 3 ------------------------------------------------------------
+{const S=D.she,O=D.olmo;
+ const rows=[
+  {label:"pretraining text",value:S.pre,color:"var(--pre)"},
+  {label:"SFT data, all",value:S.sft_all,color:"var(--post)"},
+  ...D.sft.filter(g=>/Human|GSM8K/.test(g.group)).map(g=>({label:g.group.replace("Synthetic GSM8K word problems","SFT synthetic GSM8K").replace("Human-written data","SFT human-written"),value:g.she_share,color:"var(--post)",dim:true})),
+  {label:"DPO chosen answers",value:S.dpo_chosen,color:"var(--post)"},
+  {label:"DPO rejected answers",value:S.dpo_rejected,color:"var(--post)",dim:true},
+  {label:"OLMo, no name",value:O.placeholder,color:"var(--olmo)"},
+  {label:"OLMo, named",value:O.named,color:"var(--olmo)"}];
+ $("cShe").innerHTML=hbar(rows,{max:1,fmt:v=>pct(v),lw:170});}
+{const A=D.ages,O=D.olmo;
+ const rows=[
+  {label:"pretraining, by role",value:A.pre32,color:"var(--pre)"},
+  {label:"post-training, by role",value:A.post32,color:"var(--post)"},
+  {label:"DPO chosen answers",value:A.dpo_chosen32,color:"var(--post)"},
+  {label:"DPO rejected answers",value:A.dpo_rejected32,color:"var(--post)",dim:true},
+  {label:"OLMo personas",value:O.age32,color:"var(--olmo)"}];
+ $("cAge").innerHTML=hbar(rows,{max:.3,fmt:v=>pct(v,1),lw:170});}
+
+{const g=D.sft.find(x=>/GSM8K/.test(x.group));$("gsm").textContent=`Not shown: “Emily” on its own appears ${Math.round(g.emily).toLocaleString()} times per million words in the synthetic GSM8K word problems, ${Math.round(g.emily_x_pre)}× web text.`;}
+$("sheNote").textContent=`The she/her edge is small and does not add up to more women overall: chosen answers are ${pct(D.she.dpo_chosen)} she/her, rejected ${pct(D.she.dpo_rejected)}.`;
+// Checkpoint experiment: stage-by-stage small multiples
+if(D.stages){const R=D.stages.rows,P=D.stages.progress,ST=["base","sft","dpo","instruct"],SL={base:"Base",sft:"SFT",dpo:"DPO",instruct:"Instruct"};
+ const col={base:"var(--pre)",sft:"var(--post)",dpo:"var(--post)",instruct:"var(--olmo)"};
+ const M=[["Emily Carter","Emily Carter"],["Elena","Elena"],["PRESIDIO placeholder","PRESIDIO placeholder"],["Austin","Austin"],["women (of gendered personas)","Women (of gendered personas)"],["age 32 (of personas with an age)","Age 32 (of personas with an age)"],["Asian surname","Asian surname"],["Anglo first name (of Asian surnames)","Anglo first name (of Asian surnames)"],["same-sex spouse (of spouse mentions)","Same-sex spouse (of spouse mentions)"],["the vibrant city of","“the vibrant city of”"],["bustling","“bustling”"],["passion for","“passion for”"]];
+ $("cStages").innerHTML=M.map(([m,title])=>{const pts=ST.map(s=>R.find(r=>r.stage===s&&r.measure===m));
+   const max=Math.max(.05,...pts.filter(Boolean).map(p=>p.hi))*1.1,W=280,H=150,x0=34,x1=W-12,y0=H-22,y1=14;
+   const sx=i=>x0+(x1-x0)*(i+.5)/4,sy=v=>y0-(y0-y1)*v/max;
+   let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title)} by training stage">`;
+   const step=[.01,.02,.05,.1,.2,.25,.5].find(v=>v>=max/2.5)||.5;
+   for(let t=0;t<=max;t+=step)s+=`<line x1="${x0}" x2="${x1}" y1="${sy(t)}" y2="${sy(t)}" stroke="var(--grid)"/><text class="ax" x="${x0-4}" y="${sy(t)+3}" text-anchor="end">${Math.round(t*100)}%</text>`;
+   pts.forEach((p,i)=>{const q=pts[i+1];if(p&&q)s+=`<line x1="${sx(i)}" y1="${sy(p.share)}" x2="${sx(i+1)}" y2="${sy(q.share)}" stroke="var(--muted)" stroke-width="2"/>`});
+   pts.forEach((p,i)=>{const st=ST[i],part=P[st]<300;
+     s+=`<text class="ax" x="${sx(i)}" y="${H-6}" text-anchor="middle">${SL[st]}</text>`;
+     if(!p){s+=`<text class="ax" x="${sx(i)}" y="${(y0+y1)/2}" text-anchor="middle" style="font-style:italic">running</text>`;return}
+     s+=`<g data-tip="${esc(SL[st]+': '+pct(p.share,1)+' ('+p.k+' of '+p.n+')'+(part?' · partial run, '+P[st]+' of 300 job descriptions':''))}"><line x1="${sx(i)}" x2="${sx(i)}" y1="${sy(p.lo)}" y2="${sy(p.hi)}" stroke="${col[st]}" stroke-width="2"/><circle cx="${sx(i)}" cy="${sy(p.share)}" r="5" fill="${part?'var(--surface)':col[st]}" stroke="${col[st]}" stroke-width="2"/><text class="val" x="${sx(i)+8}" y="${sy(p.share)-6}">${pct(p.share)}</text></g>`});
+   return `<div><h3>${esc(title)}</h3>${s}</svg></div>`}).join("");
+ const done=ST.filter(s=>P[s]>=300).length,partial=ST.filter(s=>P[s]>0&&P[s]<300),missing=ST.filter(s=>!P[s]);
+ $("stageCap").textContent=`Same prompt and sampling as your original run, 3 personas per job description for base, SFT and DPO (10 for Instruct). Base completions that only echoed the prompt are dropped. `+(partial.length||missing.length?`Still running: ${[...partial.map(s=>SL[s]+' ('+P[s]+' of 300 job descriptions, hollow dots)'),...missing.map(s=>SL[s])].join(', ')}.`:'All four stages complete.');
+ $("stageVerdict").textContent=D.stages.verdict||"Most patterns arrive at SFT. The base model has none of the borrowed names or the placeholder and weaker gender and age skews; after SFT they match the final model, and so does the stock phrasing (“the vibrant city of”: 0% → 32%). Two were already in the base model: Anglo first names for Asian surnames (23 of 24) and no same-sex spouses (0 of 106).";}
+else{$("cStages").innerHTML='<p class="small">Running.</p>'}
+
+$("r1").textContent=`GPT-4o writes “Emily Carter” ${Math.round(M.find(m=>m.model==="gpt-4o").emily_carter/Math.max(...M.filter(m=>m.model!=="gpt-4o").map(m=>m.emily_carter)))}× more than any other model in the DPO data.`;
+{const g=(st,m)=>(D.stages?.rows||[]).find(r=>r.stage===st&&r.measure===m);
+ const au=[g("sft","Austin"),g("dpo","Austin")],el=[g("sft","Elena"),g("dpo","Elena")],w=[g("base","women (of gendered personas)"),g("sft","women (of gendered personas)")],ag=[g("base","age 32 (of personas with an age)"),g("sft","age 32 (of personas with an age)")];
+ $("r2").textContent=au.every(Boolean)?`DPO raises Austin from ${pct(au[0].share)} to ${pct(au[1].share)} and Elena from ${pct(el[0].share)} to ${pct(el[1].share)}.`:`DPO chose the answer mentioning Austin ${pct(D.pref[0].t.rate)} of the time, vs ${pct(D.pref[0].c.rate)} for other cities.`;
+ $("r3").textContent=w.every(Boolean)?`The base model writes ${pct(w[0].share)} women and ${pct(ag[0].share)} age 32. After SFT: ${pct(w[1].share)} and ${pct(ag[1].share)}.`:`32 is ${pct(D.olmo.age32)} of OLMo's ages but about ${pct(D.ages.pre32)} in any data.`;}
+$("method").innerHTML=`SFT: <code>allenai/tulu-3-sft-olmo-2-mixture</code> (939k conversations). DPO: <code>allenai/olmo-2-1124-13b-preference-mix</code> (${D.n_pairs.toLocaleString()} pairs, with the model that wrote each answer). Pretraining counts from infini-gram, put on a per-word scale at 1.33 tokens per word. Pronoun counts cover all text, not only personas. The DPO win rates compare pairs where exactly one answer uses the term. Scripts: <code>olmotrace/posttrain_names.py</code>, <code>placeholder_sources.py</code>, <code>age_mode.py</code>, <code>build_why.py</code>.`;
+
+// Tooltips
+const tip=$("tip");
+document.addEventListener("mousemove",e=>{const g=e.target.closest("[data-tip]");if(!g){tip.hidden=true;return}
+  tip.textContent=g.dataset.tip;tip.hidden=false;
+  const x=Math.min(e.clientX+12,innerWidth-tip.offsetWidth-8),y=e.clientY+14+tip.offsetHeight>innerHeight?e.clientY-tip.offsetHeight-8:e.clientY+14;
+  tip.style.left=x+"px";tip.style.top=y+"px"});
+if(location.hash){const el=document.getElementById(location.hash.slice(1));if(el)el.scrollIntoView()}
+</script>
+</body>
+</html>

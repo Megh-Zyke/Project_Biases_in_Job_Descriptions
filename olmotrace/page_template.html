@@ -1,0 +1,304 @@
+<title>OLMo Pattern Sources</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; a summary table, then one section per audit pattern with expandable training-data excerpts. Same type and neutrals as the Persona Pattern Audit; blue = pretraining, orange = later training stages. */
+:root{
+  --bg:#f6f7f9; --surface:#ffffff; --ink:#18202b; --ink-2:#4a5463; --ink-3:#7a8494; --rule:#dfe3ea; --grid:#eceff3;
+  --accent:#1f5f8b; --pre:#2a78d6; --post:#eb6834; --synth:#b5468f; --dpo:#d4a017; --muted:#cfd6df; --mark:#ffe7a8;
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12161c; --surface:#1a2029; --ink:#e8ecf1; --ink-2:#b2bac6; --ink-3:#8590a0; --rule:#2c3440; --grid:#252c36;
+  --accent:#7fb3dc; --pre:#3987e5; --post:#d95926; --synth:#c65c9f; --dpo:#c99a1e; --muted:#3a4350; --mark:#5a4a1c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161c; --surface:#1a2029; --ink:#e8ecf1; --ink-2:#b2bac6; --ink-3:#8590a0; --rule:#2c3440; --grid:#252c36;
+  --accent:#7fb3dc; --pre:#3987e5; --post:#d95926; --synth:#c65c9f; --dpo:#c99a1e; --muted:#3a4350; --mark:#5a4a1c; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--body);margin:0}
+.wrap{max-width:980px;margin:0 auto;padding-block:36px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2{font-family:var(--display);font-weight:600;text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(1.9rem,5vw,2.6rem)}
+h2{font-size:1.35rem;margin:44px 0 6px}
+h3{font:600 1rem/1.35 var(--body);margin:0}
+p{margin:0;max-width:72ch}
+a{color:var(--accent)}
+.tabs{display:flex;flex-wrap:wrap;gap:2px 4px;margin:0 0 22px;border-bottom:1px solid var(--rule)}
+.tabs a{padding:8px 12px 7px;font:500 .8rem/1.3 var(--mono);color:var(--ink-2);text-decoration:none;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs a:hover{color:var(--ink)}
+.tabs a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+.eyebrow{font:500 .72rem/1.4 var(--mono);margin-bottom:6px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.lede{margin-top:12px;color:var(--ink-2);font-size:1.02rem}
+.scope{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:16px;font:.8rem var(--mono);color:var(--ink-2)}
+.scope b{font:600 1.3rem/1 var(--display);color:var(--ink);margin-right:6px}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px;margin-top:20px}
+.how>div{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:12px 14px;font-size:.86rem;color:var(--ink-2);min-width:0}
+.how b{color:var(--ink)}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.sec-cap{color:var(--ink-2);font-size:.9rem;margin-top:2px}
+.tablebox{overflow-x:auto;margin-top:12px;background:var(--surface);border:1px solid var(--rule);border-radius:6px}
+table{border-collapse:collapse;width:100%;font-size:.86rem}
+th{font:500 .7rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:10px 12px;border-bottom:1px solid var(--rule);white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid var(--grid);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:.8rem;white-space:nowrap}
+.chip{display:inline-block;font:600 .68rem/1.25 var(--mono);padding:3px 7px;border-radius:3px;color:var(--ink);max-width:100%}
+.chip.post{background:color-mix(in srgb,var(--post) 24%,transparent)}
+.chip.synth{background:color-mix(in srgb,var(--synth) 24%,transparent)}
+.chip.pre{background:color-mix(in srgb,var(--pre) 22%,transparent)}
+.chip.model{background:var(--grid);color:var(--ink-2)}
+.chip.both{background:linear-gradient(90deg,color-mix(in srgb,var(--pre) 24%,transparent),color-mix(in srgb,var(--post) 28%,transparent))}
+.verdict{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-top:8px;font-size:.88rem;color:var(--ink-2)}
+.verdict .chip{font-size:.74rem;padding:5px 8px}
+.vsrc{display:block;margin-top:5px;font-size:.76rem;color:var(--ink-3)}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:10px;margin-top:12px}
+.rules>div{font-size:.82rem;color:var(--ink-2);min-width:0}
+.rules .chip{margin-bottom:6px}
+.rules b{color:var(--ink)}
+.ctl{font:.68rem var(--mono);color:var(--ink-3);margin-left:6px}
+.pat{font-family:var(--mono);font-size:.82rem}
+details{border-top:1px solid var(--grid)}
+details:first-of-type{border-top:0}
+summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:minmax(0,1.6fr) repeat(4,minmax(0,.8fr));gap:8px;align-items:center;padding:10px 12px}
+summary::-webkit-details-marker{display:none}
+summary:hover{background:var(--grid)}
+summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+summary .pat::before{content:"▸";display:inline-block;width:14px;color:var(--ink-3);transition:transform .15s}
+details[open] summary .pat::before{transform:rotate(90deg)}
+.phead{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(4,minmax(0,.8fr));gap:8px;padding:10px 12px;border-bottom:1px solid var(--rule);font:500 .68rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.phead span:not(:first-child),summary span:not(:first-child){text-align:right;font-variant-numeric:tabular-nums}
+.m{font-family:var(--mono);font-size:.8rem}
+.docs{display:grid;gap:8px;padding:2px 12px 14px 26px}
+.doc{border-left:3px solid var(--pre);padding:6px 10px;background:color-mix(in srgb,var(--grid) 55%,transparent);border-radius:0 4px 4px 0;font-size:.82rem;color:var(--ink-2);min-width:0;overflow-wrap:anywhere}
+.doc.post{border-left-color:var(--post)}
+.doc.synth{border-left-color:var(--synth)}
+.doc .src{display:flex;gap:8px;flex-wrap:wrap;font:.7rem var(--mono);color:var(--ink-3);margin-bottom:3px}
+.doc .src b{color:var(--ink-2);font-weight:500}
+mark{background:var(--mark);color:var(--ink);padding:0 2px;border-radius:2px}
+.note{font-size:.78rem;color:var(--ink-3);padding:0 12px 10px 26px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:16px 18px;margin-top:12px;min-width:0}
+.chart{overflow-x:auto}
+.chart svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--mono);fill:var(--ink-2)}
+svg .lbl{fill:var(--ink);font-size:11px}
+svg .ax{fill:var(--ink-3);font-size:10px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font:.72rem var(--mono);color:var(--ink-3);margin-top:8px}
+.find{margin-top:10px;font-size:.92rem}
+.find li{margin:4px 0}
+.pending{border:1px dashed var(--rule);border-radius:6px;padding:14px 16px;color:var(--ink-3);font-size:.88rem;margin-top:12px}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);font:.78rem/1.35 var(--body);padding:6px 9px;border-radius:4px;max-width:280px;z-index:20}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--ink-3)}
+footer p{max-width:85ch;margin-top:8px}
+code{font-family:var(--mono);font-size:.9em}
+.key{display:flex;gap:8px 20px;flex-wrap:wrap;margin-top:14px;font:.76rem var(--mono);color:var(--ink-2)}
+.tally{display:flex;gap:2px;height:30px;border-radius:4px;overflow:hidden;margin-top:22px;font:600 .72rem/30px var(--mono)}
+.tally>a{color:var(--ink);text-decoration:none;padding:0 10px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.tally>a.post{background:color-mix(in srgb,var(--post) 34%,var(--surface))}
+.tally>a.pre{background:color-mix(in srgb,var(--pre) 30%,var(--surface))}
+.tally>a.both{background:linear-gradient(90deg,color-mix(in srgb,var(--pre) 30%,var(--surface)),color-mix(in srgb,var(--post) 34%,var(--surface)))}
+.tally>a.model{background:var(--grid);color:var(--ink-2)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,160px),1fr));gap:10px;margin-top:10px}
+.tile{display:flex;flex-direction:column;align-items:flex-start;gap:4px;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px 12px;color:inherit;text-decoration:none;min-width:0;transition:border-color .15s}
+.tile:hover,.tile:focus-visible{border-color:var(--ink-3)}
+.tile .big{font:600 2.3rem/1 var(--display);color:var(--ink);margin-top:10px}
+.tile .lab{font-size:.86rem;line-height:1.35;color:var(--ink-2);overflow-wrap:anywhere}
+.tile .ev{align-self:stretch;overflow-wrap:anywhere;font:.72rem/1.4 var(--mono);color:var(--ink-3);margin-top:auto;padding-top:8px;border-top:1px solid var(--grid)}
+.tile .lab+.ev{margin-top:auto}
+.tile>.lab{margin-bottom:10px}
+details.more{border-top:0;margin-top:8px}
+details.more>summary{display:inline-block;padding:4px 0;font:500 .76rem var(--mono);color:var(--accent)}
+details.more>summary::before{content:"▸ "}
+details.more[open]>summary::before{content:"▾ "}
+details.more>summary:hover{background:none;text-decoration:underline}
+.untr{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.untr span{font:.78rem var(--mono);padding:6px 9px;border:1px dashed var(--rule);border-radius:4px;color:var(--ink-2);cursor:help}
+@media (max-width:640px){
+  .tally{height:auto;flex-wrap:wrap;border-radius:0;gap:4px}
+  .tally>a{flex:1 1 auto!important;border-radius:3px;line-height:28px}
+  .chart svg{min-width:620px}
+  .chart[style*="max-width"] svg{min-width:0}
+  .tile .big{font-size:1.9rem}
+  summary,.phead{grid-template-columns:minmax(0,1fr) auto auto}
+  summary span:nth-child(3),summary span:nth-child(4),.phead span:nth-child(3),.phead span:nth-child(4){display:none}
+}
+@media (prefers-reduced-motion:reduce){summary .pat::before{transition:none}}
+</style>
+
+<div class="wrap">
+<nav class="tabs" aria-label="Pages"><a aria-current="page" href="./">Where the patterns come from</a><a href="why.html">Why OLMo does it</a></nav>
+<div class="eyebrow">Biases in Job Descriptions · OLMo-2-13B-Instruct</div>
+<h1>OLMo Pattern Sources</h1>
+<p class="lede">Where the OLMo patterns in the <a id="audit-link" href="#">Persona Pattern Audit</a> come from in OLMo's own training data.</p>
+<div class="key"><span><span class="sw" style="background:var(--pre)"></span>Pretraining · 4.58T tokens</span><span><span class="sw" style="background:var(--post)"></span>Post-training · 35B tokens (mid-training, SFT, DPO)</span><span>Rates per billion tokens</span></div>
+<div class="tally" id="tally"></div>
+<div class="tiles" id="summary"></div>
+<details class="more"><summary>How verdicts are decided</summary>
+<div class="rules">
+  <div><span class="chip post">Post-training</span><br>Rare or absent in pretraining; 3×+ more frequent per token after it.</div>
+  <div><span class="chip pre">Pretraining</span><br>Present in pretraining at similar or higher rates.</div>
+  <div><span class="chip both">Pretraining, amplified</span><br>In pretraining or the base model's output, pushed further the same way after it.</div>
+</div>
+<p class="sec-cap" style="margin-top:8px">Post-training covers mid-training (Dolmino), Tulu 3 SFT and DPO; exact-match counts can't split them further. The checkpoint experiment on the <a href="why.html#stages">Why OLMo does it</a> tab does.</p>
+</details>
+
+<div id="sections"></div>
+
+<h2>Not traceable by exact match</h2>
+<div class="untr" id="untraceable"></div>
+
+<footer>
+<p>Why these patterns happen: <a href="why.html">Why OLMo does it</a>.</p>
+<p>Counts from the public <a href="https://infini-gram.io" target="_blank" rel="noopener">infini-gram</a> index of OLMo-2-13B-Instruct's full training data, the engine behind Ai2's <a href="https://playground.allenai.org" target="_blank" rel="noopener">OLMoTrace</a>. Example documents are evenly spaced through the matches; explicit ones are hidden. A match shows the text was in the training data, not that it caused an output. Scripts: <code>olmotrace/</code> in the project repo.</p>
+</footer>
+</div>
+<div class="tip" id="tip" hidden></div>
+
+<script>
+const DATA=/*DATA*/null;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
+const pct=v=>v==null?"–":(v*100<1&&v>0?(v*100).toFixed(1):Math.round(v*100))+"%";
+const fmt=n=>n>=1e6?(n/1e6).toFixed(1)+"M":n>=1e4?Math.round(n/1e3)+"k":n.toLocaleString();
+const perB=v=>v>=100?Math.round(v).toLocaleString():v>=1?v.toFixed(1):v>0?v.toFixed(2):"0";
+$("audit-link").href=DATA.audit_url;
+
+function ratio(pre,post){
+  if(!pre&&!post)return '<span class="chip model">not in data</span>';
+  if(!pre)return '<span class="chip post">later stages only</span>';
+  const r=(post/DATA.post_tokens)/(pre/DATA.pre_tokens);
+  const cls=r>=3?"post":r<=1/3?"pre":"model";
+  return `<span class="chip ${cls}">×${r>=10?Math.round(r):r.toFixed(1)}</span>`;
+}
+const srcClass=s=>/PersonaHub|Tulu|DPO/.test(s)?"synth":"";
+function docHtml(d){
+  const cls=d.stage==="pre"?"":(srcClass(d.source)||"post");
+  return `<div class="doc ${cls}"><div class="src"><b>${d.stage==="pre"?"Pretraining":"Later stage"}</b><span>${esc(d.source)}</span>${d.url?`<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.url.replace(/^https?:\/\/(www\.)?/,"").slice(0,60))}</a>`:""}</div>${d.text}</div>`;
+}
+
+// Summary rows are written from the results; see SUMMARY in build notes
+const SUMMARY=/*SUMMARY*/[];
+const ORDER=["post","both","pre","model"],VNAME={post:"post-training",both:"amplified",pre:"pretraining",model:"OLMo's own"};
+const sorted=[...SUMMARY].sort((a,b)=>ORDER.indexOf(a.cls)-ORDER.indexOf(b.cls));
+$("tally").innerHTML=ORDER.map(c=>{const n=SUMMARY.filter(s=>s.cls===c).length;if(!n)return "";const first=sorted.find(s=>s.cls===c);
+  return `<a class="${c}" href="#${first.id}" style="flex:${n}" data-tip="${n} finding${n>1?"s":""}: ${VNAME[c]}">${n} ${VNAME[c]}</a>`}).join("");
+$("summary").innerHTML=sorted.map(s=>`<a class="tile" href="#${s.id}"><span class="chip ${s.cls}">${esc(s.verdict)}</span><span class="big">${esc(s.big)}</span><span class="lab">${esc(s.label)}</span><span class="ev">${esc(s.evidence)}</span></a>`).join("");
+$("untraceable").innerHTML=/*UNTRACEABLE*/[].map(u=>`<span data-tip="${esc(u[1])}">${esc(u[0])}</span>`).join("");
+
+function patternTable(rows){
+  return `<div class="tablebox"><div class="phead"><span>Text</span><span>OLMo personas</span><span>Pretraining /B</span><span>Later /B</span><span>Later vs pre</span></div>`+
+  rows.map(p=>`<details><summary><span class="pat">${esc(p.pattern)}${p.label?`<span class="ctl">${esc(p.label)}</span>`:p.control?'<span class="ctl">comparison</span>':''}</span><span class="m">${pct(p.persona)}</span><span class="m" title="${p.pre.toLocaleString()} matches">${perB(p.pre_rate)}</span><span class="m" title="${p.post.toLocaleString()} matches">${perB(p.post_rate)}</span><span>${ratio(p.pre,p.post)}</span></summary>
+  <div class="docs">${p.docs.length?p.docs.map(docHtml).join(""):'<div class="note">No matching documents.</div>'}</div>${p.hidden?`<div class="note">${p.hidden} explicit document${p.hidden>1?"s":""} hidden.</div>`:""}</details>`).join("")+`</div>`;
+}
+
+function rateChart(rows){
+  const W=920,rh=26,top=44,H=rows.length*rh+top+6,lx=232,bx0=244,bx1=364,dx0=410,dx1=W-80;
+  // Rows with no persona share (traced spans) use the bar column for longer labels
+  const noP=rows.every(p=>p.persona==null),maxLab=noP?52:26;
+  const rates=rows.flatMap(p=>[p.pre_rate,p.post_rate]).filter(v=>v>0);
+  const lo=Math.floor(Math.log10(Math.min(...rates))),hi=Math.ceil(Math.log10(Math.max(...rates)));
+  const sx=v=>dx0+(dx1-dx0)*(Math.log10(v)-lo)/Math.max(hi-lo,1);
+  const tick=e=>e>=4?`${10**(e-3)}k`:e>=0?String(10**e):String(10**e);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Rate per billion tokens, pretraining vs post-training">`;
+  s+=`${noP?'':`<text class="ax" x="${bx0}" y="11" style="fill:var(--ink-2);font-weight:500">OLMo personas</text>`}<text class="ax" x="${(dx0+dx1)/2}" y="11" text-anchor="middle" style="fill:var(--ink-2);font-weight:500">rate per billion tokens (log scale)</text><text class="ax" x="${W-4}" y="11" text-anchor="end" style="fill:var(--ink-2);font-weight:500">change</text>`;
+  for(let e=lo;e<=hi;e++){s+=`<line x1="${sx(10**e)}" x2="${sx(10**e)}" y1="${top-10}" y2="${H-4}" stroke="var(--grid)"/><text class="ax" x="${sx(10**e)}" y="${top-16}" text-anchor="middle">${tick(e)}</text>`}
+  rows.forEach((p,i)=>{const y=top+i*rh+rh/2,lab=p.pattern.length>maxLab?p.pattern.slice(0,maxLab-1)+"…":p.pattern,dim=p.control;
+    const r=p.pre?(p.post_rate/p.pre_rate):null,rt=!p.pre&&!p.post?"–":!p.pre?"post only":!p.post?"pre only":`×${r>=10?Math.round(r):r.toFixed(1)}`,rc=!p.pre&&p.post||r>=3?"var(--post)":r!=null&&r<=1/3?"var(--pre)":"var(--ink-2)";
+    s+=`<g data-tip="${esc(p.pattern+(p.label?' ('+p.label+')':dim?' (comparison)':'')+' · pretraining '+p.pre.toLocaleString()+' matches, post-training '+p.post.toLocaleString())}"><rect x="0" y="${y-rh/2}" width="${W}" height="${rh}" fill="transparent"/>
+    <text class="lbl" x="${noP?0:lx}" y="${y+4}" text-anchor="${noP?'start':'end'}" style="${dim?'fill:var(--ink-3)':''}">${esc(lab)}</text>`;
+    if(p.persona!=null){const w=(bx1-bx0)*p.persona;s+=`<rect x="${bx0}" y="${y-5}" width="${bx1-bx0}" height="10" rx="2" fill="var(--grid)"/><rect x="${bx0}" y="${y-5}" width="${Math.max(w,p.persona>0?1.5:0)}" height="10" rx="2" fill="var(--ink-2)"/><text class="ax" x="${bx1+4}" y="${y+3}">${pct(p.persona)}</text>`}
+    const a=p.pre?sx(p.pre_rate):dx0-6,b=p.post?sx(p.post_rate):dx0-6;
+    s+=`<line x1="${a}" x2="${b}" y1="${y}" y2="${y}" stroke="var(--muted)" stroke-width="3"/>`;
+    s+=p.pre?`<circle cx="${a}" cy="${y}" r="5" fill="var(--pre)"/>`:`<circle cx="${a}" cy="${y}" r="4" fill="none" stroke="var(--pre)" stroke-width="1.5"/>`;
+    s+=p.post?`<circle cx="${b}" cy="${y}" r="5" fill="var(--post)"/>`:`<circle cx="${b}" cy="${y}" r="4" fill="none" stroke="var(--post)" stroke-width="1.5"/>`;
+    s+=`<text x="${W-4}" y="${y+4}" text-anchor="end" style="font-size:11px;font-weight:600;fill:${rc}">${rt}</text></g>`});
+  return s+"</svg>";
+}
+const docsFold=(rows,label="Show training documents")=>`<details class="more"><summary>${label}</summary>${patternTable(rows)}</details>`;
+
+function nameSourceChart(){
+  const rows=(DATA.name_sources||[]).filter(r=>r.n>0);if(!rows.length)return "";
+  const cats=[["PersonaHub synthetic (mid-training)","--synth"],["Tulu 3 SFT","--post"],["OLMo 2 preference (DPO)","--dpo"],["Dolmino mid-training (other)","--muted"]];
+  const W=920,rh=26,x0=150,x1=W-150,H=rows.length*rh+8;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Source datasets of later-stage documents per name">`;
+  rows.forEach((r,i)=>{const y=i*rh+4;let x=x0;const ctl=/Sarah Johnson|Jennifer Smith/.test(r.name);
+    s+=`<text class="lbl" x="${x0-8}" y="${y+14}" text-anchor="end" style="${ctl?'fill:var(--ink-3)':''}">${esc(r.name)}</text>`;
+    cats.forEach(([c,col])=>{const v=r.sources[c]||0;if(!v)return;const w=(x1-x0)*v/r.n;
+      s+=`<rect x="${x}" y="${y+4}" width="${Math.max(w-1.5,1)}" height="14" fill="var(${col})" data-tip="${esc(r.name+' · '+c+': '+v+' of '+r.n+' sampled')}"/>`;x+=w});
+    const synth=((r.sources["PersonaHub synthetic (mid-training)"]||0)+(r.sources["Tulu 3 SFT"]||0)+(r.sources["OLMo 2 preference (DPO)"]||0))/r.n;
+    s+=`<text x="${x1+8}" y="${y+15}" style="font-size:11px">${Math.round(synth*100)}% persona/chat</text>`});
+  return s+"</svg>";
+}
+
+function nameContextTable(){
+  const rows=DATA.name_contexts;if(!rows)return "";
+  const ctxs=[...new Set(rows.map(r=>r.context))];
+  const names=["Emily","Evelyn","Elena","Ava","Alexis","Amelia","Amara","Elara","Sarah","Jennifer","Maria","Michael","David"];
+  const share=(ctx,name,k)=>{const rs=rows.filter(r=>r.context===ctx);const tot=rs.reduce((a,r)=>a+r[k],0);const r=rs.find(r=>r.name===name);return r&&tot?r[k]/tot:null};
+  return `<div class="tablebox"><table><thead><tr><th>Name</th>${ctxs.map(c=>`<th class="num">“${esc(c.replace("{n}","…"))}”<br>pre → later</th>`).join("")}</tr></thead><tbody>`+
+  names.map(n=>`<tr><td>${n}${["Sarah","Jennifer","Maria","Michael","David"].includes(n)?'<span class="ctl">comparison</span>':''}</td>${ctxs.map(c=>{const a=share(c,n,"pretrain_count"),b=share(c,n,"posttrain_count");
+    return `<td class="num">${pct(a)} → <b style="color:${b>a*2&&b>.01?'var(--post)':'inherit'}">${pct(b)}</b></td>`}).join("")}</tr>`).join("")+`</tbody></table></div>`;
+}
+
+function agesChart(){
+  const A=DATA.ages;if(!A)return "";
+  const norm=k=>{const t=A.reduce((a,r)=>a+r[k],0);return A.map(r=>r[k]/t)};
+  const S=[["OLMo personas","--ink",norm("persona_count")],["Pretraining","--pre",norm("pretrain_count")],["Later stages","--post",norm("posttrain_count")]];
+  const W=920,H=260,x0=40,x1=W-12,y0=H-26,mx=Math.max(...S.flatMap(s=>s[2])),sx=i=>x0+(x1-x0)*i/(A.length-1),sy=v=>y0-(y0-12)*v/mx;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Share of each age">`;
+  [0,mx/2,mx].forEach(t=>s+=`<line x1="${x0}" x2="${x1}" y1="${sy(t)}" y2="${sy(t)}" stroke="var(--grid)"/><text class="ax" x="${x0-6}" y="${sy(t)+3}" text-anchor="end">${Math.round(t*100)}%</text>`);
+  A.forEach((r,i)=>{if(r.age%2===0)s+=`<text class="ax" x="${sx(i)}" y="${H-8}" text-anchor="middle" style="${[28,32,34,38,42].includes(r.age)?'fill:var(--ink);font-weight:500':''}">${r.age}</text>`});
+  S.forEach(([n,c,v])=>{s+=`<polyline fill="none" stroke="var(${c})" stroke-width="${n==="OLMo personas"?2.2:1.8}" points="${v.map((y,i)=>sx(i)+","+sy(y)).join(" ")}"/>`;
+    v.forEach((y,i)=>s+=`<circle cx="${sx(i)}" cy="${sy(y)}" r="${n==="OLMo personas"?3:2.2}" fill="var(${c})" data-tip="${esc(n+' · age '+A[i].age+': '+(y*100).toFixed(1)+'%')}"/>`)});
+  return s+"</svg>";
+}
+
+function genderChart(){
+  const G=(DATA.gender||[]).filter(r=>r.pretrain_female_share!=null&&(r.pretrain_female+r.pretrain_male)>=20);if(G.length<5)return "";
+  const W=620,H=380,x0=46,x1=W-14,y0=H-34,y1=10,sx=v=>x0+(x1-x0)*v,sy=v=>y0-(y0-y1)*v;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Share of women by role">`;
+  [0,.25,.5,.75,1].forEach(t=>{s+=`<line x1="${sx(t)}" x2="${sx(t)}" y1="${y1}" y2="${y0}" stroke="var(--grid)"/><line x1="${x0}" x2="${x1}" y1="${sy(t)}" y2="${sy(t)}" stroke="var(--grid)"/><text class="ax" x="${sx(t)}" y="${y0+14}" text-anchor="middle">${t*100}%</text><text class="ax" x="${x0-6}" y="${sy(t)+3}" text-anchor="end">${t*100}%</text>`});
+  s+=`<line x1="${sx(0)}" y1="${sy(0)}" x2="${sx(1)}" y2="${sy(1)}" stroke="var(--ink-3)" stroke-dasharray="4 4"/>`;
+  s+=`<text class="ax" x="${(x0+x1)/2}" y="${H-4}" text-anchor="middle">women in pretraining text about the role</text>`;
+  s+=`<text class="ax" transform="translate(12 ${(y0+y1)/2}) rotate(-90)" text-anchor="middle">women in OLMo's personas</text>`;
+  G.forEach(r=>{const n=r.pretrain_female+r.pretrain_male;
+    s+=`<circle cx="${sx(r.pretrain_female_share)}" cy="${sy(r.persona_female_share)}" r="${Math.min(3+Math.sqrt(n)/8,9)}" fill="var(--accent)" fill-opacity=".7" stroke="var(--surface)" data-tip="${esc(r.role+': '+Math.round(r.persona_female_share*100)+'% women in OLMo personas, '+Math.round(r.pretrain_female_share*100)+'% in '+n.toLocaleString()+' pretraining mentions')}"/>`});
+  return s+"</svg>";
+}
+
+function spanSection(){
+  const P=DATA.spans;
+  if(!P||!P.length)return `<div class="pending">Still running; added when it finishes.</div>`;
+  const all=P.flatMap(p=>p.spans.map(s=>({...s,role:p.role})));
+  all.sort((a,b)=>b.n_tokens-a.n_tokens);
+  const seen=new Set(),uniq=all.filter(s=>!seen.has(s.text)&&seen.add(s.text));
+  const rows=uniq.slice(0,15).map(s=>({pattern:s.text,control:false,persona:null,pre:s.pretrain_count,post:s.posttrain_count,pre_rate:s.pretrain_count/DATA.pre_tokens*1e9,post_rate:s.posttrain_count/DATA.post_tokens*1e9,docs:s.docs,hidden:s.hidden}));
+  return `<div class="card"><div class="tiles" style="margin:0 0 10px"><div><span class="big" style="font:600 2rem/1 var(--display)">${P.length}</span><div class="sec-cap">personas traced</div></div><div><span class="big" style="font:600 2rem/1 var(--display)">${Math.round(P.reduce((a,p)=>a+p.coverage,0)/P.length*100)}%</span><div class="sec-cap">of tokens in 6+ token verbatim matches</div></div></div><div class="chart">${rateChart(rows)}</div></div>`+docsFold(rows);
+}
+
+// Sections, one per audit card. Text comes from SECTIONS (written from the results)
+const SECTIONS=/*SECTIONS*/[];
+$("sections").innerHTML=SECTIONS.map(sec=>{
+  const all=DATA.patterns||[];
+  // A section either lists its patterns in order (e.g. matched pairs) or takes every pattern from its audit cards
+  const rows=sec.patterns?sec.patterns.map(n=>({...all.find(p=>p.pattern===n),label:(sec.labels||{})[n]})).filter(p=>p.pattern):all.filter(p=>(sec.cards||[]).includes(p.card));
+  const extra=[].concat(sec.extra||[]);
+  const v=SUMMARY.find(r=>r.id===sec.id);
+  let body=`<h2 id="${sec.id}">${esc(sec.title)}</h2>${v?`<div class="verdict"><span class="chip ${v.cls}">${esc(v.verdict)}</span><span>${esc(v.why)}</span></div>`:""}${sec.cap?`<p class="sec-cap" style="margin-top:6px">${sec.cap}</p>`:""}`;
+  if(extra.includes("names"))body+=`<div class="card"><h3>Where the names appear after pretraining</h3><p class="sec-cap">Source of 20 sampled post-training documents per name. Grey: comparison names.</p><div class="chart">${nameSourceChart()}</div><div class="legend"><span><span class="sw" style="background:var(--synth)"></span>PersonaHub synthetic</span><span><span class="sw" style="background:var(--post)"></span>Tulu 3 SFT</span><span><span class="sw" style="background:var(--dpo)"></span>DPO preference data</span><span><span class="sw" style="background:var(--muted)"></span>other mid-training (mostly web)</span></div></div>`;
+  if(extra.includes("contexts"))body+=`<details class="more"><summary>First names in character introductions (“Meet …”, “named …”)</summary><p class="sec-cap" style="margin:6px 0">Each name's share of the phrase among 13 names, pretraining → post-training. Orange: at least doubled.</p>${nameContextTable()}</details>`;
+  if(extra.includes("ages"))body+=`<div class="card"><h3>Share of “a N-year-old” by age</h3><div class="chart">${agesChart()}</div><div class="legend"><span><span class="sw" style="background:var(--ink)"></span>OLMo personas</span><span><span class="sw" style="background:var(--pre)"></span>pretraining</span><span><span class="sw" style="background:var(--post)"></span>later stages</span></div></div>`;
+  if(extra.includes("gender")){const g=genderChart();body+=g?`<div class="card"><h3>Share of women by role</h3><p class="sec-cap">One dot per role. Dashed line: OLMo matches pretraining.</p><div class="chart" style="max-width:620px">${g}</div></div>`:`<div class="pending">Still running; added when it finishes.</div>`}
+  if(extra.includes("spans"))body+=spanSection();
+  if(rows.length)body+=`<div class="card"><div class="chart">${rateChart(rows)}</div><div class="legend"><span><span class="sw" style="background:var(--pre)"></span>pretraining</span><span><span class="sw" style="background:var(--post)"></span>post-training</span><span>hollow = 0 matches</span></div></div>`+docsFold(rows);
+  return body}).join("");
+
+// Sections are drawn by script, so jump to a linked section once they exist
+if(location.hash){const el=document.getElementById(location.hash.slice(1));if(el)el.scrollIntoView()}
+
+const tip=$("tip");
+document.addEventListener("pointermove",e=>{const t=e.target.closest("[data-tip]");if(!t){tip.hidden=true;return}tip.textContent=t.dataset.tip;tip.hidden=false;tip.style.left=Math.min(e.clientX+14,innerWidth-tip.offsetWidth-8)+"px";tip.style.top=(e.clientY+16)+"px"});
+</script>

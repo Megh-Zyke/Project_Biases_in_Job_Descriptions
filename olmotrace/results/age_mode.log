@@ -1,0 +1,15 @@
+software engineer pretraining mode: 28
+graphic designer pretraining mode: 28
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+UX designer pretraining mode: 27
+product manager pretraining mode: 28
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+financial analyst pretraining mode: 27
+registered nurse pretraining mode: 25
+woman pretraining mode: 23
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+man pretraining mode: 30
+AGE EXIT 0

@@ -1,0 +1,113 @@
+artifact               <PRESIDIO_ANONYMIZED_PERSON>
+artifact               <PRESIDIO_ANONYMIZED_EMAIL_ADDRESS>
+first name             Elena
+first name             Evelyn
+first name             Ava
+first name             Alexis
+first name             Amelia
+first name             Amara
+first name             Elara
+first name (control)   Jennifer
+first name (control)   Michael
+first name (control)   Sarah
+first name (control)   David
+surname                Rivera
+surname                Martinez
+surname                Carter
+surname                Tran
+surname                Vasquez
+surname (control)      Smith
+surname (control)      Johnson
+full name              Elena Martinez
+full name              Elena Rivera
+full name              Elena Vasquez
+full name              Alexis Rivera
+full name              Elena Rodriguez
+full name              Amelia Rivera
+full name              Ava Tran
+full name              Evelyn Carter
+full name              Amara Patel
+full name              Liam O'Connor
+full name (control)    Elara Voss
+full name (control)    Sarah Johnson
+full name (control)    Emily Johnson
+full name (control)    John Smith
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+full name (control)    Jennifer Smith
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+place                  Austin, Texas
+place                  San Jose, California
+place                  Seattle, Washington
+place                  Bethesda, Maryland
+place                  San Juan, Puerto Rico
+place (control)        New York City
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+place (control)        Los Angeles, California
+phrasing               Meet **
+phrasing               hailing from
+phrasing               the vibrant city of
+phrasing               whose journey began
+phrasing               born and raised in Austin, Texas
+phrasing               a 32-year-old software engineer
+phrasing               a 34-year-old
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+phrasing               growth mindset
+phrasing               a testament to her
+phrasing               a testament to his
+               group                             pattern  persona_share  pretrain_count  posttrain_count  pretrain_per_B_tokens  posttrain_per_B_tokens  posttrain_enrichment
+            artifact        <PRESIDIO_ANONYMIZED_PERSON>          0.215               0             1006                  0.000                  28.520                   inf
+            artifact <PRESIDIO_ANONYMIZED_EMAIL_ADDRESS>          0.000               0             1611                  0.000                  45.671                   inf
+          first name                               Elena          0.058         9152459            79487               2000.329                2253.422                 1.127
+          first name                              Evelyn          0.097         5169279           106537               1129.780                3020.277                 2.673
+          first name                                 Ava          0.039         5239894           554962               1145.213               15732.930                13.738
+          first name                              Alexis          0.026         7099982            63364               1551.747                1796.342                 1.158
+          first name                              Amelia          0.022         5937058           108958               1297.583                3088.912                 2.381
+          first name                               Amara          0.004         1166590             4903                254.966                 138.998                 0.545
+          first name                               Elara          0.017          116022            13900                 25.357                 394.059                15.540
+first name (control)                            Jennifer          0.001        24436608           360638               5340.780               10223.930                 1.914
+first name (control)                             Michael          0.002       159852532          1926484              34936.811               54614.980                 1.563
+first name (control)                               Sarah          0.026        58217931          3641937              12723.908              103247.323                 8.114
+first name (control)                               David          0.000       208536802          2261119              45577.076               64101.736                 1.406
+             surname                              Rivera          0.127         5722025            29179               1250.586                 827.212                 0.661
+             surname                            Martinez          0.057         9340417            49337               2041.409                1398.682                 0.685
+             surname                              Carter          0.117        35653510           248617               7792.307                7048.183                 0.905
+             surname                                Tran          0.074         6469501            22533               1413.952                 638.801                 0.452
+             surname                             Vasquez          0.010         1590554             8304                347.626                 235.415                 0.677
+   surname (control)                               Smith          0.003       119904053           850040              26205.811               24098.263                 0.920
+   surname (control)                             Johnson          0.015        79719860           561260              17423.294               15911.476                 0.913
+           full name                      Elena Martinez          0.022            3790              288                  0.828                   8.165                 9.857
+           full name                        Elena Rivera          0.008            1973               66                  0.431                   1.871                 4.339
+           full name                       Elena Vasquez          0.009             556               47                  0.122                   1.332                10.965
+           full name                       Alexis Rivera          0.017            1116                4                  0.244                   0.113                 0.465
+           full name                     Elena Rodriguez          0.007           10768              126                  2.353                   3.572                 1.518
+           full name                       Amelia Rivera          0.007            2700                0                  0.590                   0.000                 0.000
+           full name                            Ava Tran          0.008              33                0                  0.007                   0.000                 0.000
+           full name                       Evelyn Carter          0.026            2135              169                  0.467                   4.791                10.268
+           full name                         Amara Patel          0.003               1                2                  0.000                   0.057               259.425
+           full name                       Liam O'Connor          0.002            4008               32                  0.876                   0.907                 1.036
+ full name (control)                          Elara Voss          0.000               0               88                  0.000                   2.495                   inf
+ full name (control)                       Sarah Johnson          0.000           27316              378                  5.970                  10.716                 1.795
+ full name (control)                       Emily Johnson          0.001           15440               88                  3.375                   2.495                 0.739
+ full name (control)                          John Smith          0.000         1787660             8685                390.705                 246.216                 0.630
+ full name (control)                      Jennifer Smith          0.000           49927              660                 10.912                  18.711                 1.715
+               place                       Austin, Texas          0.190         2005964            12663                438.416                 358.991                 0.819
+               place                San Jose, California          0.050          425873             2931                 93.077                  83.093                 0.893
+               place                 Seattle, Washington          0.042          898472             9284                196.367                 263.197                 1.340
+               place                  Bethesda, Maryland          0.033          267484             1204                 58.460                  34.133                 0.584
+               place               San Juan, Puerto Rico          0.025          185092             1747                 40.453                  49.527                 1.224
+     place (control)                       New York City          0.045        46944245           516474              10259.970               14641.812                 1.427
+     place (control)             Los Angeles, California          0.007         1487282            23612                325.055                 669.390                 2.059
+            phrasing                             Meet **          0.146              40                2                  0.009                   0.057                 6.486
+            phrasing                        hailing from          0.327          978055             4546                213.760                 128.877                 0.603
+            phrasing                 the vibrant city of          0.310           16602              287                  3.628                   8.136                 2.242
+            phrasing                 whose journey began          0.004            1103                2                  0.241                   0.057                 0.235
+            phrasing    born and raised in Austin, Texas          0.001            1295               17                  0.283                   0.482                 1.703
+            phrasing     a 32-year-old software engineer          0.012             892                8                  0.195                   0.227                 1.163
+            phrasing                       a 34-year-old          0.047          292772             1764                 63.987                  50.009                 0.782
+            phrasing                      growth mindset          0.010         1220469             1298                266.741                  36.798                 0.138
+            phrasing                  a testament to her          0.255          111831             1738                 24.441                  49.272                 2.016
+            phrasing                  a testament to his          0.022          320233             2779                 69.989                  78.783                 1.126

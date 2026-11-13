@@ -1,0 +1,123 @@
+Meet Elena
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+Meet Ava
+Meet Evelyn
+Meet Alexis
+Meet Amelia
+Meet Amara
+Meet Elara
+Meet Sarah
+Meet Jennifer
+Meet Emily
+Meet Maria
+Meet Michael
+Meet David
+named Elena
+named Ava
+named Evelyn
+named Alexis
+named Amelia
+named Amara
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+named Elara
+named Sarah
+named Jennifer
+named Emily
+named Maria
+named Michael
+named David
+Elena grew up
+Ava grew up
+Evelyn grew up
+Alexis grew up
+Amelia grew up
+Amara grew up
+Elara grew up
+Sarah grew up
+Jennifer grew up
+Emily grew up
+Maria grew up
+Michael grew up
+David grew up
+Elena is a
+Ava is a
+Evelyn is a
+Alexis is a
+  infini-gram: {'message': 'Forbidden'}; retrying in 30s
+  infini-gram: {'message': 'Forbidden'}; retrying in 60s
+Amelia is a
+Amara is a
+Elara is a
+Sarah is a
+Jennifer is a
+Emily is a
+Maria is a
+Michael is a
+David is a
+Meet Elena Rodriguez
+Meet Elena Martinez
+Meet Elena Rivera
+Meet Elena Vasquez
+Meet Sarah Johnson
+Meet Emily Johnson
+    context            name     group                query  pretrain_count  posttrain_count  pretrain_share  posttrain_share
+   Meet {n}           Elena      olmo           Meet Elena             498                1           0.018            0.022
+   Meet {n}             Ava      olmo             Meet Ava             634                2           0.023            0.044
+   Meet {n}          Evelyn      olmo          Meet Evelyn             223                0           0.008            0.000
+   Meet {n}          Alexis      olmo          Meet Alexis             549                0           0.020            0.000
+   Meet {n}          Amelia      olmo          Meet Amelia             726                0           0.027            0.000
+   Meet {n}           Amara      olmo           Meet Amara              58                0           0.002            0.000
+   Meet {n}           Elara      olmo           Meet Elara               0                0           0.000            0.000
+   Meet {n}           Sarah   control           Meet Sarah            4770                7           0.175            0.156
+   Meet {n}        Jennifer   control        Meet Jennifer            1989                3           0.073            0.067
+   Meet {n}           Emily   control           Meet Emily            3122                6           0.115            0.133
+   Meet {n}           Maria   control           Meet Maria            1760                3           0.065            0.067
+   Meet {n}         Michael   control         Meet Michael            5645                6           0.207            0.133
+   Meet {n}           David   control           Meet David            7258               17           0.267            0.378
+  named {n}           Elena      olmo          named Elena           20279              450           0.013            0.018
+  named {n}             Ava      olmo            named Ava           24830              285           0.016            0.011
+  named {n}          Evelyn      olmo         named Evelyn           25433              918           0.017            0.037
+  named {n}          Alexis      olmo         named Alexis           22771              656           0.015            0.026
+  named {n}          Amelia      olmo         named Amelia           27050              261           0.018            0.010
+  named {n}           Amara      olmo          named Amara            3719               24           0.002            0.001
+  named {n}           Elara      olmo          named Elara             751              419           0.000            0.017
+  named {n}           Sarah   control          named Sarah          193195             5549           0.126            0.221
+  named {n}        Jennifer   control       named Jennifer           75479             2486           0.049            0.099
+  named {n}           Emily   control          named Emily           99610             3901           0.065            0.155
+  named {n}           Maria   control          named Maria          135868             2408           0.089            0.096
+  named {n}         Michael   control        named Michael          407170             3286           0.266            0.131
+  named {n}           David   control          named David          494255             4495           0.323            0.179
+{n} grew up           Elena      olmo        Elena grew up             626               80           0.018            0.072
+{n} grew up             Ava      olmo          Ava grew up             498                4           0.015            0.004
+{n} grew up          Evelyn      olmo       Evelyn grew up             396                0           0.012            0.000
+{n} grew up          Alexis      olmo       Alexis grew up             614                1           0.018            0.001
+{n} grew up          Amelia      olmo       Amelia grew up             837                2           0.025            0.002
+{n} grew up           Amara      olmo        Amara grew up             102                0           0.003            0.000
+{n} grew up           Elara      olmo        Elara grew up              66                5           0.002            0.005
+{n} grew up           Sarah   control        Sarah grew up            4799               15           0.141            0.014
+{n} grew up        Jennifer   control     Jennifer grew up            3849               87           0.113            0.079
+{n} grew up           Emily   control        Emily grew up            3214               11           0.095            0.010
+{n} grew up           Maria   control        Maria grew up            2711                4           0.080            0.004
+{n} grew up         Michael   control      Michael grew up            7665              884           0.225            0.800
+{n} grew up           David   control        David grew up            8633               12           0.254            0.011
+   {n} is a           Elena      olmo           Elena is a           22930              270           0.033            0.014
+   {n} is a             Ava      olmo             Ava is a           16944              215           0.025            0.011
+   {n} is a          Evelyn      olmo          Evelyn is a           11502              451           0.017            0.023
+   {n} is a          Alexis      olmo          Alexis is a           14183              122           0.021            0.006
+   {n} is a          Amelia      olmo          Amelia is a           16202              176           0.024            0.009
+   {n} is a           Amara      olmo           Amara is a            4161               33           0.006            0.002
+   {n} is a           Elara      olmo           Elara is a             392               37           0.001            0.002
+   {n} is a           Sarah   control           Sarah is a           95629             4046           0.140            0.208
+   {n} is a        Jennifer   control        Jennifer is a           35788              820           0.052            0.042
+   {n} is a           Emily   control           Emily is a           68891             2617           0.101            0.135
+   {n} is a           Maria   control           Maria is a           59742             1343           0.087            0.069
+   {n} is a         Michael   control         Michael is a          142830             3031           0.208            0.156
+   {n} is a           David   control           David is a          196247             6264           0.286            0.322
+   Meet {n} Elena Rodriguez full name Meet Elena Rodriguez               0                0             NaN              NaN
+   Meet {n}  Elena Martinez full name  Meet Elena Martinez               0                0             NaN              NaN
+   Meet {n}    Elena Rivera full name    Meet Elena Rivera               0                0             NaN              NaN
+   Meet {n}   Elena Vasquez full name   Meet Elena Vasquez               0                0             NaN              NaN
+   Meet {n}   Sarah Johnson full name   Meet Sarah Johnson              87                0             NaN              NaN
+   Meet {n}   Emily Johnson full name   Meet Emily Johnson               0                0             NaN              NaN
+EXIT 0

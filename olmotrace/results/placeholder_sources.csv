@@ -1,0 +1,17 @@
+data,source,side,count
+sft,tulu_v3.9_wildchat_100k,user,1516
+sft,tulu_v3.9_wildchat_100k,assistant,1485
+dpo,wildchat_v3.9_unused_on_policy_olmo2_13b,prompt,494
+dpo,wildchat_v3.9_used_on_policy_olmo2_13b,prompt,114
+dpo,wildchat_v3.9_unused_on_policy_olmo2_13b,chosen,89
+dpo,wildchat_v3.9_unused_on_policy_olmo2_13b,rejected,81
+dpo,sft_v3.9_used_on_policy_p1_olmo2_13b,prompt,68
+dpo,WildChat-prefs-280824_olmo2_13b,prompt,52
+dpo,wildchat_v3.9_used_on_policy_olmo2_13b,rejected,33
+dpo,WildChat-prefs-280824_olmo2_13b,chosen,29
+dpo,wildchat_v3.9_used_on_policy_olmo2_13b,chosen,22
+dpo,WildChat-prefs-280824_olmo2_13b,rejected,13
+dpo,sft_v3.9_used_on_policy_p1_olmo2_13b,chosen,12
+dpo,sft_v3.9_used_on_policy_p0_olmo2_13b,prompt,10
+dpo,sft_v3.9_used_on_policy_p1_olmo2_13b,rejected,7
+dpo,sft_v3.9_used_on_policy_p0_olmo2_13b,chosen,2
