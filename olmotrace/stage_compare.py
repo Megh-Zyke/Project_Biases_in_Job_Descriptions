@@ -26,6 +26,17 @@ def wilson(k, n, z=1.96):
     return c - h, c + h
 
 
+# Surname and heritage first-name lists from the Persona Pattern Audit
+ASIAN_SURNAMES = ("Patel Sharma Singh Gupta Kumar Reddy Iyer Rao Desai Shah Mehta Kapoor Nair Joshi Chopra Malhotra "
+                  "Verma Chen Lin Tran Nguyen Kim Lee Wang Zhang Li Liu Park Wu Zhao Huang Tanaka Yamamoto Le Pham").split()
+HERITAGE_FIRST = set(("Aisha Samira Arjun Priya Anika Raj Rohan Ananya Neha Ravi Vikram Meera Asha Kiran Dev Nikhil Sanjay "
+                      "Anjali Divya Leela Rahul Amit Sunita Pooja Riya Sana Ishaan Aarav Anand Nisha Deepa Kavya Tara Rani "
+                      "Mei Wei Hiroshi Mei-Ling Mei-Lin Jin Min Kenji Yuki Hana Ji-woo Soo Hyun Linh Thanh Mai Minh Jae "
+                      "Seo-yeon Akira Haruto Li Xiao Yan Hui Ming Ling Sakura Ren Jun Bao An Lan Kim Hoa").split())
+# Anywhere in the text: the base model writes "Name: Jane Smith" rather than opening with the name
+ASIAN_NAME = r"\b(?!(?:Dr|Mr|Ms|Mrs|Professor|Meet|The)\b)([A-Z][a-z]+(?:-[A-Za-z]+)?) (?:" + "|".join(ASIAN_SURNAMES) + r")\b"
+
+
 def measures(t):
     """Boolean series per measure, plus the subset each share is taken over."""
     she = t.str.count(r"\b(?:[Ss]he|[Hh]er|[Hh]ers)\b")
@@ -34,6 +45,11 @@ def measures(t):
     # The base model writes "Age: 28" or "John, 28," more often than "28-year-old"
     age = t.str.extract(r"\b(\d\d)[- ]year[- ]old|\b[Aa]ge:?\**\s*(\d\d)\b|^[A-Z][a-z]+(?: [A-Z][a-z]+)?, (\d\d),").bfill(axis=1)[0]
     aged = age.notna()
+    first = t.str.extract(ASIAN_NAME)[0]
+    asian = first.notna()
+    low = t.str.lower()
+    same_sex = low.str.contains(r"\bher wife\b|\bhis husband\b")
+    spouse = same_sex | low.str.contains(r"\bher husband\b|\bhis wife\b")
     return {
         "Emily Carter": (t.str.contains("Emily Carter"), None),
         "Elena": (t.str.contains(r"\bElena\b"), None),
@@ -43,6 +59,9 @@ def measures(t):
         "women (of gendered personas)": (she > he, gendered),
         "age 32 (of personas with an age)": (age == "32", aged),
         "states an age": (aged, None),
+        "Asian surname": (asian, None),
+        "Anglo first name (of Asian surnames)": (asian & ~first.isin(HERITAGE_FIRST), asian),
+        "same-sex spouse (of spouse mentions)": (same_sex, spouse),
     }
 
 

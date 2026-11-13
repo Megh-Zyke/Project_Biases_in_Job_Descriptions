@@ -31,26 +31,26 @@
    "finding": "Asian surnames with Anglo first names",
    "olmo": "Emily Tran 4%, Emily Chen 1%",
    "data": "Same surname, Asian vs Anglo first name: Emily Chen and Mei Chen equally common in pretraining; Emily Chen 3.7× as common after it",
-   "source": "Synthetic persona and chat data",
-   "cls": "post",
-   "verdict": "Post-training",
-   "why": "No Anglo preference in pretraining; it appears only after.",
+   "source": "Checkpoint experiment. The post-training data also shifts Emily Chen : Mei Chen from 1:1 to 3.7:1",
+   "cls": "both",
+   "verdict": "Pretraining, amplified",
+   "why": "The base model already gives Asian surnames Anglo first names (23 of 24); SFT makes these personas 6× more common.",
    "big": "99%",
    "label": "of Asian surnames get an Anglo first name",
-   "evidence": "Emily Chen : Mei Chen goes from 1:1 to 3.7:1"
+   "evidence": "base model 23 of 24 · Asian surnames 3% → 18% of personas after SFT"
   },
   {
    "id": "family",
    "finding": "Every spouse opposite-sex; men get the family",
    "olmo": "No same-sex spouses in the audit",
    "data": "Same-sex spouses ~1% of spouse mentions in pretraining, ~0.2% after it. “his wife and two children” 3× “her husband and two children” in pretraining, 8× after",
-   "source": "Mostly web and Q&A text in mid-training",
+   "source": "Mostly web and Q&A text in mid-training. The base model already writes no same-sex spouses",
    "cls": "both",
    "verdict": "Pretraining, amplified",
    "why": "Both skews start in pretraining and get 2.5–4× stronger after it.",
    "big": "0",
    "label": "same-sex spouses",
-   "evidence": "1% → 0.2% of spouse mentions in the data"
+   "evidence": "base model: 0 of 106 spouses same-sex · data 1% → 0.2%"
   },
   {
    "id": "phrases",

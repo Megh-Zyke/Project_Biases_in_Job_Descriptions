@@ -15,6 +15,9 @@ training stage do they appear? Results are published as the
 - **Everything appears at SFT.** Base → SFT: women 67% → 92% (of she/he personas), age 32 11% → 25%,
   Austin 5% → 17% (the base model prefers New York, 13%), and the names and placeholder go from 0 to their final rates. DPO only nudges Austin
   (17% → 21%) and Elena (2% → 4%); DPO and RLVR shrink the placeholder (37% → 22%).
+- **Already in the base model.** It gives Asian surnames Anglo first names (23 of 24) and writes no same-sex
+  spouses (0 of 106 spouse mentions). SFT keeps both and makes Asian-surname personas 6× more common
+  (3% → 18%).
 
 ## Scripts
 
@@ -66,7 +69,8 @@ strict causation.
 - infini-gram counts exact token matches, and later-stage counts (shard 11) mix Dolmino mid-training, SFT
   and DPO. The SFT and DPO datasets themselves separate those stages.
 - About 15% of base-model completions only echo the prompt; `stage_compare.py` drops them. The base model
-  also states an age less often, so its age-32 share rests on 410 personas.
+  also states an age less often, so its age-32 share rests on 410 personas, and its surname pairing on 24.
+  Later stages mention spouses only 6–30 times, too few to test same-sex spouses after SFT.
 
 ## Possible extensions
 
