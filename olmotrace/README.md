@@ -51,10 +51,28 @@ python olmotrace/build_why.py OUT_DIR/why.html      # "Why OLMo does it"
 `build_why.py` fills `why_template.html`. Publish `index.html` as the artifact page with `why.html`
 alongside it, so the tabs link to each other.
 
-## Caveats
+## Limitations
 
-- infini-gram counts exact token matches, and later-stage counts (shard 11) mix Dolmino mid-training,
-  SFT and DPO. The SFT and DPO datasets themselves separate those stages.
-- Pronoun shares in the data count all text, not only personas.
+The evidence supports attribution (where each pattern comes from and at which stage it appears), not
+strict causation.
+
+- The base model got a plain completion prompt; SFT, DPO and Instruct got the chat prompt. Part of the
+  base-to-SFT jump could come from the format, though hardly all of 67% → 92% women.
+- SFT amplifies the gender and age skews, but which part of SFT does it is open: imitating particular
+  subsets (the synthetic math problems are 70% she/her) or fine-tuning collapsing onto the most likely answer.
+- The name evidence is correlational. Four sources agree, but no experiment removes the names from the data.
+- Names, ages and gender are detected with regex patterns. Pronoun shares in the data count all text, not
+  only personas.
+- infini-gram counts exact token matches, and later-stage counts (shard 11) mix Dolmino mid-training, SFT
+  and DPO. The SFT and DPO datasets themselves separate those stages.
 - About 15% of base-model completions only echo the prompt; `stage_compare.py` drops them. The base model
   also states an age less often, so its age-32 share rests on 410 personas.
+
+## Possible extensions
+
+- **Prompt the teacher models.** Run the persona prompt on GPT-4o and Gemma-2-27B to show their defaults
+  directly. Needs an OpenAI API key; Gemma runs on one A6000.
+- **Swap the names in the SFT data.** Fine-tune a small OLMo 2 base with PersonaHub and GSM8K names
+  randomised. A causal test of the copying route; takes days.
+- **Fine-tune on parts of SFT.** Train with and without the synthetic math subsets to find what amplifies
+  the gender and age skews. Also days.

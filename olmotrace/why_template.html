@@ -69,27 +69,12 @@ svg .val{fill:var(--ink);font-size:11px;font-weight:500;paint-order:stroke;strok
 .stat{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:12px 14px;min-width:0}
 .stat b{display:block;font:600 1.9rem/1 var(--display);margin-bottom:6px;font-variant-numeric:tabular-nums}
 .stat span{font-size:.84rem;color:var(--ink-2)}
+.notes{margin:10px 0 0;padding-left:18px;display:grid;gap:8px;font-size:.88rem;color:var(--ink-2)}
+.notes b{color:var(--ink)}
 .smalls{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:10px;margin-top:12px}
 .smalls>div{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:12px 14px 8px;min-width:0}
 .smalls h3{font-size:.86rem}
 .smalls svg{display:block;width:100%;height:auto}
-.exps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:12px;margin-top:14px}
-.exp{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
-.exp .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
-.exp h3{font:600 1.1rem/1.25 var(--display)}
-.exp dl{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;margin:0;font-size:.86rem}
-.exp dt{font:500 .7rem/1.6 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
-.exp dd{margin:0;color:var(--ink-2);min-width:0}
-.cost{font:.72rem var(--mono);color:var(--ink-3);white-space:nowrap}
-.tablebox{overflow-x:auto;margin-top:12px;background:var(--surface);border:1px solid var(--rule);border-radius:6px}
-table{border-collapse:collapse;width:100%;font-size:.86rem}
-th{font:500 .7rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);text-align:left;padding:10px 12px;border-bottom:1px solid var(--rule);white-space:nowrap}
-td{padding:9px 12px;border-bottom:1px solid var(--grid);vertical-align:middle}
-tr:last-child td{border-bottom:0}
-td.c,th.c{text-align:center}
-.dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--c)}
-.q{font:600 .8rem var(--mono);color:var(--ink-3)}
-.dash{color:var(--muted)}
 .tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);font:.78rem/1.35 var(--body);padding:6px 9px;border-radius:4px;max-width:280px;z-index:20}
 footer{margin-top:52px;padding-top:16px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--ink-3)}
 footer p{max-width:85ch;margin-top:8px}
@@ -97,7 +82,6 @@ code{font-family:var(--mono);font-size:.9em}
 @media (max-width:640px){
   .chart svg{min-width:600px}
   .pair .chart svg{min-width:0}
-  .exp dl{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -138,32 +122,27 @@ code{font-family:var(--mono);font-size:.9em}
   </div>
 
   <h2 id="stages">4 · What each training stage adds</h2>
-  <div class="verdict"><span class="chip" style="--c:var(--accent)">Experiment A</span><span id="stageVerdict"></span></div>
+  <div class="verdict"><span class="chip" style="--c:var(--accent)">Checkpoint experiment</span><span id="stageVerdict"></span></div>
   <p class="cap" id="stageCap"></p>
   <div class="smalls" id="cStages"></div>
   <div class="legend"><span><span class="sw" style="background:var(--pre)"></span>base (pretraining only)</span><span><span class="sw" style="background:var(--post)"></span>after SFT, after DPO</span><span><span class="sw" style="background:var(--olmo)"></span>Instruct (after RLVR), your original run</span><span>bars: 95% interval</span></div>
 
-  <h2 id="experiments">5 · Further experiments</h2>
-  <p class="cap">Experiment A is done (section 4). B–D would test the remaining links.</p>
-  <div class="tablebox"><table id="predTable"></table></div>
-  <p class="small" style="margin-top:6px">What we predicted before running experiment A. Mostly right, except Austin: it arrives at SFT, and DPO only adds a little.</p>
-  <div class="exps">
-    <div class="exp"><div class="top"><h3>A · Checkpoint by checkpoint</h3><span class="cost">done · section 4</span></div>
-      <dl><dt>Run</dt><dd>Your <code>persona_generation.py</code> prompt on OLMo-2-1124-13B base, SFT and DPO, alongside the Instruct runs you have.</dd>
-      <dt>Tests</dt><dd>Which training stage introduces each pattern.</dd>
-      <dt>Found</dt><dd>Names, placeholder, Austin, the gender skew and age 32 all appear at SFT. DPO adds a little Austin and Elena and removes some placeholders.</dd></dl></div>
-    <div class="exp"><div class="top"><h3>B · Ask the judge</h3><span class="cost">CPU/API · a few hours</span></div>
-      <dl><dt>Run</dt><dd>Score pairs of personas that differ in one detail (name, gender, city, age) with GPT-4o as judge or an open reward model.</dd>
-      <dt>Tests</dt><dd>Whether the small DPO nudges toward Austin and Elena come from the judge's taste.</dd>
-      <dt>Predicts</dt><dd>Austin over other cities. Little or no gender or age preference.</dd></dl></div>
-    <div class="exp"><div class="top"><h3>C · Prompt the teachers</h3><span class="cost">API · under an hour</span></div>
-      <dl><dt>Run</dt><dd>Same prompt on GPT-4o and on Qwen2.5-32B and Gemma-2-27B, the largest writers of OLMo's DPO answers.</dd>
-      <dt>Tests</dt><dd>Whether OLMo's names are the teachers' own defaults.</dd>
-      <dt>Predicts</dt><dd>GPT-4o writes Emily Carter; Qwen and Gemma write Elena.</dd></dl></div>
-    <div class="exp"><div class="top"><h3>D · Swap the names in the data</h3><span class="cost">fine-tuning · days</span></div>
-      <dl><dt>Run</dt><dd>Fine-tune a small OLMo 2 base on the Tulu mixture twice: as released, and with PersonaHub and GSM8K names replaced by random ones.</dd>
-      <dt>Tests</dt><dd>Route 1 causally, not just by correlation.</dd>
-      <dt>Predicts</dt><dd>Emily Carter and Elena disappear from the swapped model's personas.</dd></dl></div>
+  <h2 id="limits">5 · Limitations and possible extensions</h2>
+  <p class="cap">The evidence supports the claims above as attribution: where each pattern comes from and at which stage it appears. These are the limits on that, and what would tighten it.</p>
+  <div class="pair">
+    <div class="card"><h3>Limitations</h3><ul class="notes">
+      <li>The base model got a plain completion prompt; SFT, DPO and Instruct got the chat prompt. Part of the base-to-SFT jump could come from the format, though hardly all of 67% → 92% women.</li>
+      <li>SFT amplifies the gender and age skews, but we can't say which part of SFT does it: imitating particular subsets (the synthetic math problems are 70% she/her) or fine-tuning collapsing onto the most likely answer.</li>
+      <li>The name evidence is correlational. Four sources agree, but no experiment removes the names from the data.</li>
+      <li>Names, ages and gender are detected with text patterns. Pronoun shares in the data count all text, not only personas.</li>
+      <li>infini-gram counts exact matches, and its later-stage counts mix mid-training, SFT and DPO.</li>
+      <li>About 15% of base-model completions only echoed the prompt and were dropped. The base model's age-32 share rests on 410 personas.</li>
+    </ul></div>
+    <div class="card"><h3>Possible extensions</h3><ul class="notes">
+      <li><b>Prompt the teacher models.</b> Run the persona prompt on GPT-4o and Gemma-2-27B to show their defaults directly. Needs an OpenAI API key; Gemma runs on one A6000.</li>
+      <li><b>Swap the names in the SFT data.</b> Fine-tune a small OLMo 2 base with PersonaHub and GSM8K names randomised. A causal test of the copying route; takes days.</li>
+      <li><b>Fine-tune on parts of SFT.</b> Train with and without the synthetic math subsets to find what amplifies the gender and age skews. Also days.</li>
+    </ul></div>
   </div>
 
   <footer>
@@ -261,14 +240,9 @@ $("cCross").innerHTML=gbar(D.cross.map(r=>({label:r.model,a:r.emily_carter,b:r.e
   {label:"OLMo personas",value:O.age32,color:"var(--olmo)"}];
  $("cAge").innerHTML=hbar(rows,{max:.3,fmt:v=>pct(v,1),lw:170});}
 
-// Prediction table for experiment A
-{const C=["Base","SFT","DPO","Instruct (RLVR)"];
- const R=[["Emily Carter, Elena",1,"var(--synth)"],["PRESIDIO placeholder",1,"var(--synth)"],["Austin",2,"var(--post)"],["80%+ women",null,"var(--olmo)"],["Age 32",null,"var(--olmo)"]];
- $("predTable").innerHTML=`<thead><tr><th>Pattern</th>${C.map(c=>`<th class="c">${c}</th>`).join("")}</tr></thead><tbody>${R.map(([p,k,c])=>`<tr><td>${p}</td>${C.map((_,i)=>`<td class="c">${k==null?(i===0?'<span class="dash">–</span>':'<span class="q">?</span>'):i<k?'<span class="dash">–</span>':`<span class="dot" style="--c:${c};opacity:${i===k?1:.35}"></span>`}</td>`).join("")}</tr>`).join("")}</tbody>`;}
-
 {const g=D.sft.find(x=>/GSM8K/.test(x.group));$("gsm").textContent=`Not shown: “Emily” on its own appears ${Math.round(g.emily).toLocaleString()} times per million words in the synthetic GSM8K word problems, ${Math.round(g.emily_x_pre)}× web text.`;}
 $("sheNote").textContent=`The she/her edge is small and does not add up to more women overall: chosen answers are ${pct(D.she.dpo_chosen)} she/her, rejected ${pct(D.she.dpo_rejected)}.`;
-// Experiment A: stage-by-stage small multiples
+// Checkpoint experiment: stage-by-stage small multiples
 if(D.stages){const R=D.stages.rows,P=D.stages.progress,ST=["base","sft","dpo","instruct"],SL={base:"Base",sft:"SFT",dpo:"DPO",instruct:"Instruct"};
  const col={base:"var(--pre)",sft:"var(--post)",dpo:"var(--post)",instruct:"var(--olmo)"};
  const M=[["Emily Carter","Emily Carter"],["Elena","Elena"],["PRESIDIO placeholder","PRESIDIO placeholder"],["Austin","Austin"],["women (of gendered personas)","Women (of gendered personas)"],["age 32 (of personas with an age)","Age 32 (of personas with an age)"]];
