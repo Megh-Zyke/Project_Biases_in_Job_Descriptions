@@ -57,13 +57,13 @@
    "finding": "Stock phrases: “Meet …”, “passion”, “meticulous”, “thrives”",
    "olmo": "In 15–72% of personas",
    "data": "Ordinary web phrasing at normal pretraining rates. A few story clichés are 2–5× more frequent after pretraining",
-   "source": "OLMo uses them far more often than any source",
-   "cls": "pre",
-   "verdict": "Pretraining",
-   "why": "Normal web phrasing at normal rates; OLMo's heavy use is its own.",
+   "source": "Checkpoint experiment: base model 0%, after SFT 32%",
+   "cls": "post",
+   "verdict": "Post-training",
+   "why": "Ordinary web phrasing, but the base model never writes it; it arrives at SFT with the rest of the assistant register.",
    "big": "31%",
    "label": "say “the vibrant city of”",
-   "evidence": "3.6 per billion pretraining tokens"
+   "evidence": "base model 0% → 32% after SFT · 3.6 per billion pretraining tokens"
   },
   {
    "id": "places",

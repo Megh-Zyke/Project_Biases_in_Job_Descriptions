@@ -62,6 +62,9 @@ def measures(t):
         "Asian surname": (asian, None),
         "Anglo first name (of Asian surnames)": (asian & ~first.isin(HERITAGE_FIRST), asian),
         "same-sex spouse (of spouse mentions)": (same_sex, spouse),
+        "the vibrant city of": (low.str.contains("vibrant city of"), None),
+        "bustling": (low.str.contains(r"\bbustling\b"), None),
+        "passion for": (low.str.contains("passion for"), None),
     }
 
 

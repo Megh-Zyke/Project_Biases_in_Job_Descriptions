@@ -12,9 +12,10 @@ training stage do they appear? Results are published as the
   models. Both enter through GPT-4o-written PersonaHub data in SFT.
 - **Privacy scrubbing.** `<PRESIDIO_ANONYMIZED_PERSON>` sits inside 1,485 assistant answers in the WildChat
   SFT subset, so OLMo learned to write it where a name goes.
-- **Everything appears at SFT.** Base → SFT: women 67% → 92% (of she/he personas), age 32 11% → 25%,
-  Austin 5% → 17% (the base model prefers New York, 13%), and the names and placeholder go from 0 to their final rates. DPO only nudges Austin
-  (17% → 21%) and Elena (2% → 4%); DPO and RLVR shrink the placeholder (37% → 22%).
+- **Most patterns appear at SFT.** Base → SFT: women 67% → 92% (of she/he personas), age 32 11% → 25%,
+  Austin 5% → 17% (the base model prefers New York, 13%), and "the vibrant city of" 0% → 32%. The names
+  and the placeholder go from 0 to their final rates. DPO only nudges Austin (17% → 21%) and Elena
+  (2% → 4%); DPO and RLVR shrink the placeholder (37% → 22%).
 - **Already in the base model.** It gives Asian surnames Anglo first names (23 of 24) and writes no same-sex
   spouses (0 of 106 spouse mentions). SFT keeps both and makes Asian-surname personas 6× more common
   (3% → 18%).

@@ -245,7 +245,7 @@ $("sheNote").textContent=`The she/her edge is small and does not add up to more 
 // Checkpoint experiment: stage-by-stage small multiples
 if(D.stages){const R=D.stages.rows,P=D.stages.progress,ST=["base","sft","dpo","instruct"],SL={base:"Base",sft:"SFT",dpo:"DPO",instruct:"Instruct"};
  const col={base:"var(--pre)",sft:"var(--post)",dpo:"var(--post)",instruct:"var(--olmo)"};
- const M=[["Emily Carter","Emily Carter"],["Elena","Elena"],["PRESIDIO placeholder","PRESIDIO placeholder"],["Austin","Austin"],["women (of gendered personas)","Women (of gendered personas)"],["age 32 (of personas with an age)","Age 32 (of personas with an age)"],["Asian surname","Asian surname"],["Anglo first name (of Asian surnames)","Anglo first name (of Asian surnames)"],["same-sex spouse (of spouse mentions)","Same-sex spouse (of spouse mentions)"]];
+ const M=[["Emily Carter","Emily Carter"],["Elena","Elena"],["PRESIDIO placeholder","PRESIDIO placeholder"],["Austin","Austin"],["women (of gendered personas)","Women (of gendered personas)"],["age 32 (of personas with an age)","Age 32 (of personas with an age)"],["Asian surname","Asian surname"],["Anglo first name (of Asian surnames)","Anglo first name (of Asian surnames)"],["same-sex spouse (of spouse mentions)","Same-sex spouse (of spouse mentions)"],["the vibrant city of","“the vibrant city of”"],["bustling","“bustling”"],["passion for","“passion for”"]];
  $("cStages").innerHTML=M.map(([m,title])=>{const pts=ST.map(s=>R.find(r=>r.stage===s&&r.measure===m));
    const max=Math.max(.05,...pts.filter(Boolean).map(p=>p.hi))*1.1,W=280,H=150,x0=34,x1=W-12,y0=H-22,y1=14;
    const sx=i=>x0+(x1-x0)*(i+.5)/4,sy=v=>y0-(y0-y1)*v/max;
@@ -260,7 +260,7 @@ if(D.stages){const R=D.stages.rows,P=D.stages.progress,ST=["base","sft","dpo","i
    return `<div><h3>${esc(title)}</h3>${s}</svg></div>`}).join("");
  const done=ST.filter(s=>P[s]>=300).length,partial=ST.filter(s=>P[s]>0&&P[s]<300),missing=ST.filter(s=>!P[s]);
  $("stageCap").textContent=`Same prompt and sampling as your original run, 3 personas per job description for base, SFT and DPO (10 for Instruct). Base completions that only echoed the prompt are dropped. `+(partial.length||missing.length?`Still running: ${[...partial.map(s=>SL[s]+' ('+P[s]+' of 300 job descriptions, hollow dots)'),...missing.map(s=>SL[s])].join(', ')}.`:'All four stages complete.');
- $("stageVerdict").textContent=D.stages.verdict||"Most patterns arrive at SFT. The base model has none of the borrowed names or the placeholder and weaker gender and age skews; after SFT they match the final model. Two were already in the base model: Anglo first names for Asian surnames (23 of 24) and no same-sex spouses (0 of 106).";}
+ $("stageVerdict").textContent=D.stages.verdict||"Most patterns arrive at SFT. The base model has none of the borrowed names or the placeholder and weaker gender and age skews; after SFT they match the final model, and so does the stock phrasing (“the vibrant city of”: 0% → 32%). Two were already in the base model: Anglo first names for Asian surnames (23 of 24) and no same-sex spouses (0 of 106).";}
 else{$("cStages").innerHTML='<p class="small">Running.</p>'}
 
 $("r1").textContent=`GPT-4o writes “Emily Carter” ${Math.round(M.find(m=>m.model==="gpt-4o").emily_carter/Math.max(...M.filter(m=>m.model!=="gpt-4o").map(m=>m.emily_carter)))}× more than any other model in the DPO data.`;
