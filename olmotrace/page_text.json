@@ -70,39 +70,39 @@
    "finding": "Home city: Austin",
    "olmo": "16% of personas, against 4.5% for New York City",
    "data": "New York City is 23× as frequent as “Austin, Texas” in both stages",
-   "source": "",
-   "cls": "model",
-   "verdict": "OLMo's own",
-   "why": "The data favours New York 23 to 1; OLMo reverses it.",
+   "source": "Appears at SFT in the checkpoint experiment",
+   "cls": "post",
+   "verdict": "Post-training",
+   "why": "The base model favours New York (13% vs 5%); after SFT, Austin leads 17% to 8%.",
    "big": "16%",
    "label": "live in Austin, Texas",
-   "evidence": "New York City is 23× more common in the data"
+   "evidence": "base model: New York 13%, Austin 5%"
   },
   {
    "id": "gender",
    "finding": "Mostly women, with the stereotype gradient intact",
    "olmo": "80% she/her (92% of she/he personas); fewest women in engineering roles",
    "data": "“she/he is a [role]” is 32% women in pretraining and 15% after it. The ranking of roles carries over weakly (ρ = 0.33)",
-   "source": "The ranking of roles does trace to pretraining",
-   "cls": "model",
-   "verdict": "OLMo's own",
-   "why": "Both stages lean male; only the ranking of roles follows pretraining.",
+   "source": "Checkpoint experiment: base model 67% women, 92% after SFT",
+   "cls": "both",
+   "verdict": "Pretraining, amplified",
+   "why": "The base model already writes 67% women; SFT pushes it to 92%.",
    "big": "80%",
    "label": "of personas are women",
-   "evidence": "32% in pretraining, 15% after"
+   "evidence": "of she/he personas: base model 67%, after SFT 92%"
   },
   {
    "id": "ages",
    "finding": "Ages bunch on 32, 35, 28, 38",
    "olmo": "27% of personas are 32",
    "data": "“a 32-year-old” is ~3% of age mentions; training text favours round ages",
-   "source": "",
-   "cls": "model",
-   "verdict": "OLMo's own",
-   "why": "The data clusters on round ages; OLMo on 32, 35, 28, 38.",
+   "source": "Checkpoint experiment: base model 11%, 25% after SFT",
+   "cls": "both",
+   "verdict": "Pretraining, amplified",
+   "why": "The base model already over-picks 32 (11%); SFT more than doubles it.",
    "big": "27%",
    "label": "of personas are 32",
-   "evidence": "~3% of ages in the training data"
+   "evidence": "of personas with an age: base model 11%, after SFT 25%"
   }
  ],
  "sections": [

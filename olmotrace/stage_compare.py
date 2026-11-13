@@ -1,8 +1,9 @@
 """Compare persona patterns across OLMo-2-1124-13B training stages.
 
-Base, SFT and DPO personas come from stage_personas.py; Instruct (after RLVR)
-is the original run in personas_300/olmo_personas.csv. Each measure is the
-share of personas showing the pattern, with a 95% Wilson interval.
+Base, SFT and DPO personas come from stage_personas.py (copied into
+results/stages/); Instruct (after RLVR) is the original run in
+personas_300/olmo_personas.csv. Each measure is the share of personas showing
+the pattern, with a 95% Wilson interval.
 Output: results/stage_compare.csv
 """
 import math
@@ -11,7 +12,8 @@ from pathlib import Path
 import pandas as pd
 
 HERE = Path(__file__).resolve().parent
-STAGE_OUT = Path("/shared/5/shrujaya/olmo_stages/out")
+# Copies of the stage_personas.sh outputs (written to /shared/5/shrujaya/olmo_stages/out)
+STAGE_OUT = HERE / "results" / "stages"
 STAGES = [("base", STAGE_OUT / "personas_base.csv"), ("sft", STAGE_OUT / "personas_sft.csv"),
           ("dpo", STAGE_OUT / "personas_dpo.csv"), ("instruct", HERE.parent / "personas_300" / "olmo_personas.csv")]
 

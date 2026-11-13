@@ -1,8 +1,8 @@
-"""Build the "Why OLMo Writes These Personas" page from the post-training analyses.
+"""Build the "Why OLMo does it" tab (why.html) of the OLMo Pattern Sources artifact.
 
 Reads results/posttrain_*.csv, placeholder_sources.csv, age_mode.csv and the
 persona CSVs, and injects the numbers into why_template.html.
-Usage: python olmotrace/build_why.py OUT.html
+Usage: python olmotrace/build_why.py OUT_DIR/why.html
 """
 import json
 import math
@@ -160,7 +160,7 @@ def stages():
         return None
     progress = {}
     for st in ["base", "sft", "dpo"]:
-        f = Path(f"/shared/5/shrujaya/olmo_stages/out/personas_{st}.csv")
+        f = RES / "stages" / f"personas_{st}.csv"
         progress[st] = int(pd.read_csv(f).row_index.nunique()) if f.exists() else 0
     progress["instruct"] = 300
     return {"rows": pd.read_csv(path).to_dict("records"), "progress": progress}
