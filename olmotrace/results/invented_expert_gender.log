@@ -1,0 +1,22 @@
+female Emily 68329 3133
+female Sarah 132566 784
+female Elena 16274 2254
+female Evelyn 16593 958
+female Jennifer 180059 470
+female Maria 102830 372
+female Lisa 153310 542
+female Amelia 8670 272
+male Michael 1215078 3428
+male David 1526400 8658
+male James 1097417 7142
+male John 2073839 14757
+male Robert 1348951 8236
+male Alex 215022 5081
+male Mark 642044 2214
+male Daniel 479234 1574
+        pretrain_count  posttrain_count
+gender                                 
+female          678631             8785
+male           8597985            51090
+female share: pretrain 0.073 later 0.147
+EXIT 0

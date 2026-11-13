@@ -1,0 +1,59 @@
+context,name,group,query,pretrain_count,posttrain_count,pretrain_share,posttrain_share
+Meet {n},Elena,olmo,Meet Elena,498,1,0.018287309048178612,0.022222222222222223
+Meet {n},Ava,olmo,Meet Ava,634,2,0.023281433607520562,0.044444444444444446
+Meet {n},Evelyn,olmo,Meet Evelyn,223,0,0.008188895417156287,0.0
+Meet {n},Alexis,olmo,Meet Alexis,549,0,0.020160105757931843,0.0
+Meet {n},Amelia,olmo,Meet Amelia,726,0,0.02665981198589894,0.0
+Meet {n},Amara,olmo,Meet Amara,58,0,0.0021298472385428906,0.0
+Meet {n},Elara,olmo,Meet Elara,0,0,0.0,0.0
+Meet {n},Sarah,control,Meet Sarah,4770,7,0.17516157461809637,0.15555555555555556
+Meet {n},Jennifer,control,Meet Jennifer,1989,3,0.07303907168037603,0.06666666666666667
+Meet {n},Emily,control,Meet Emily,3122,6,0.11464453584018801,0.13333333333333333
+Meet {n},Maria,control,Meet Maria,1760,3,0.06462984723854288,0.06666666666666667
+Meet {n},Michael,control,Meet Michael,5645,6,0.20729289071680376,0.13333333333333333
+Meet {n},David,control,Meet David,7258,17,0.2665246768507638,0.37777777777777777
+named {n},Elena,olmo,named Elena,20279,450,0.013250697525499703,0.01790118545628133
+named {n},Ava,olmo,named Ava,24830,285,0.01622441045210107,0.01133741745564484
+named {n},Evelyn,olmo,named Evelyn,25433,918,0.016618422514228213,0.03651841833081391
+named {n},Alexis,olmo,named Alexis,22771,656,0.014879019347756484,0.026095950354045667
+named {n},Amelia,olmo,named Amelia,27050,261,0.017675002123613934,0.010382687564643169
+named {n},Amara,olmo,named Amara,3719,24,0.0024300677596199713,0.0009547298910016707
+named {n},Elara,olmo,named Elara,751,419,0.0004907181735613333,0.01666799268040417
+named {n},Sarah,control,named Sarah,193195,5549,0.12623741350357093,0.2207415068820113
+named {n},Jennifer,control,named Jennifer,75479,2486,0.04931946341176548,0.09889410454292306
+named {n},Emily,control,named Emily,99610,3901,0.06508713351324155,0.15518338769989656
+named {n},Maria,control,named Maria,135868,2408,0.0887788239752746,0.09579123239716764
+named {n},Michael,control,named Michael,407170,3286,0.26605288778823977,0.13071843424297877
+named {n},David,control,named David,494255,4495,0.322955939911527,0.17881295250218793
+{n} grew up,Elena,olmo,Elena grew up,626,80,0.01840635107321376,0.07239819004524888
+{n} grew up,Ava,olmo,Ava grew up,498,4,0.014642752131725964,0.0036199095022624436
+{n} grew up,Evelyn,olmo,Evelyn grew up,396,0,0.011643634225227874,0.0
+{n} grew up,Alexis,olmo,Alexis grew up,614,1,0.01805351367244928,0.0009049773755656109
+{n} grew up,Amelia,olmo,Amelia grew up,837,2,0.024610408703322553,0.0018099547511312218
+{n} grew up,Amara,olmo,Amara grew up,102,0,0.0029991179064980888,0.0
+{n} grew up,Elara,olmo,Elara grew up,66,5,0.0019406057042046457,0.004524886877828055
+{n} grew up,Sarah,control,Sarah grew up,4799,15,0.14110555718906204,0.013574660633484163
+{n} grew up,Jennifer,control,Jennifer grew up,3849,87,0.11317259629520729,0.07873303167420814
+{n} grew up,Emily,control,Emily grew up,3214,11,0.09450161717142017,0.009954751131221719
+{n} grew up,Maria,control,Maria grew up,2711,4,0.07971184945604234,0.0036199095022624436
+{n} grew up,Michael,control,Michael grew up,7665,884,0.22537488973831227,0.8
+{n} grew up,David,control,David grew up,8633,12,0.2538371067333137,0.01085972850678733
+{n} is a,Elena,olmo,Elena is a,22930,270,0.0334529157141169,0.013899613899613899
+{n} is a,Ava,olmo,Ava is a,16944,215,0.02471985189097238,0.011068211068211068
+{n} is a,Evelyn,olmo,Evelyn is a,11502,451,0.016780437703609794,0.023217503217503217
+{n} is a,Alexis,olmo,Alexis is a,14183,122,0.02069178820642477,0.006280566280566281
+{n} is a,Amelia,olmo,Amelia is a,16202,176,0.02363733713040218,0.00906048906048906
+{n} is a,Amara,olmo,Amara is a,4161,33,0.006070544364868749,0.001698841698841699
+{n} is a,Elara,olmo,Elara is a,392,37,0.0005718945904899181,0.0019047619047619048
+{n} is a,Sarah,control,Sarah is a,95629,4046,0.13951456069887852,0.2082882882882883
+{n} is a,Jennifer,control,Jennifer is a,35788,820,0.052211641848094875,0.04221364221364221
+{n} is a,Emily,control,Emily is a,68891,2617,0.10050609753428814,0.13472329472329472
+{n} is a,Maria,control,Maria is a,59742,1343,0.08715848628838951,0.06913770913770914
+{n} is a,Michael,control,Michael is a,142830,3031,0.20837679683590565,0.15603603603603602
+{n} is a,David,control,David is a,196247,6264,0.2863076471935586,0.32247104247104247
+Meet {n},Elena Rodriguez,full name,Meet Elena Rodriguez,0,0,,
+Meet {n},Elena Martinez,full name,Meet Elena Martinez,0,0,,
+Meet {n},Elena Rivera,full name,Meet Elena Rivera,0,0,,
+Meet {n},Elena Vasquez,full name,Meet Elena Vasquez,0,0,,
+Meet {n},Sarah Johnson,full name,Meet Sarah Johnson,87,0,,
+Meet {n},Emily Johnson,full name,Meet Emily Johnson,0,0,,

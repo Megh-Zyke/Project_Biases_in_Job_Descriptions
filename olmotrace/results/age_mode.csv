@@ -1,0 +1,329 @@
+role,age,pretrain_count,posttrain_count
+software engineer,20,81,0
+software engineer,21,95,3
+software engineer,22,356,0
+software engineer,23,614,1
+software engineer,24,1722,7
+software engineer,25,1747,5
+software engineer,26,992,1
+software engineer,27,867,6
+software engineer,28,1895,21
+software engineer,29,919,4
+software engineer,30,1071,15
+software engineer,31,842,3
+software engineer,32,1277,8
+software engineer,33,1090,6
+software engineer,34,783,0
+software engineer,35,730,26
+software engineer,36,562,0
+software engineer,37,490,3
+software engineer,38,585,0
+software engineer,39,195,0
+software engineer,40,519,13
+software engineer,41,412,0
+software engineer,42,155,0
+software engineer,43,263,0
+software engineer,44,82,0
+software engineer,45,271,3
+software engineer,46,135,0
+software engineer,47,437,0
+software engineer,48,91,0
+software engineer,49,98,2
+software engineer,50,42,0
+software engineer,51,186,0
+software engineer,52,167,0
+software engineer,53,744,1
+software engineer,54,43,0
+software engineer,55,63,0
+software engineer,56,63,0
+software engineer,57,56,0
+software engineer,58,14,0
+software engineer,59,24,0
+software engineer,60,89,0
+graphic designer,20,89,0
+graphic designer,21,315,0
+graphic designer,22,483,0
+graphic designer,23,621,2
+graphic designer,24,460,6
+graphic designer,25,894,4
+graphic designer,26,906,7
+graphic designer,27,1042,28
+graphic designer,28,1065,19
+graphic designer,29,815,5
+graphic designer,30,505,4
+graphic designer,31,279,2
+graphic designer,32,651,7
+graphic designer,33,561,0
+graphic designer,34,480,0
+graphic designer,35,405,4
+graphic designer,36,377,1
+graphic designer,37,272,3
+graphic designer,38,616,1
+graphic designer,39,120,1
+graphic designer,40,216,6
+graphic designer,41,137,1
+graphic designer,42,202,0
+graphic designer,43,59,1
+graphic designer,44,193,3
+graphic designer,45,168,2
+graphic designer,46,169,0
+graphic designer,47,65,2
+graphic designer,48,43,0
+graphic designer,49,35,1
+graphic designer,50,93,1
+graphic designer,51,42,0
+graphic designer,52,151,0
+graphic designer,53,77,1
+graphic designer,54,110,0
+graphic designer,55,90,0
+graphic designer,56,81,0
+graphic designer,57,221,59
+graphic designer,58,28,0
+graphic designer,59,0,0
+graphic designer,60,24,0
+UX designer,20,0,0
+UX designer,21,0,0
+UX designer,22,0,0
+UX designer,23,6,0
+UX designer,24,1,0
+UX designer,25,0,0
+UX designer,26,0,0
+UX designer,27,70,0
+UX designer,28,0,0
+UX designer,29,24,0
+UX designer,30,0,0
+UX designer,31,0,0
+UX designer,32,3,0
+UX designer,33,1,0
+UX designer,34,0,0
+UX designer,35,0,0
+UX designer,36,0,0
+UX designer,37,0,0
+UX designer,38,0,0
+UX designer,39,0,0
+UX designer,40,0,0
+UX designer,41,5,0
+UX designer,42,0,0
+UX designer,43,0,0
+UX designer,44,0,0
+UX designer,45,0,0
+UX designer,46,0,0
+UX designer,47,0,0
+UX designer,48,0,0
+UX designer,49,0,0
+UX designer,50,0,0
+UX designer,51,0,0
+UX designer,52,0,0
+UX designer,53,0,0
+UX designer,54,0,0
+UX designer,55,0,0
+UX designer,56,0,0
+UX designer,57,0,0
+UX designer,58,0,0
+UX designer,59,0,0
+UX designer,60,0,0
+product manager,20,1,0
+product manager,21,0,0
+product manager,22,0,0
+product manager,23,103,0
+product manager,24,122,0
+product manager,25,39,0
+product manager,26,149,0
+product manager,27,51,0
+product manager,28,195,1
+product manager,29,26,0
+product manager,30,82,1
+product manager,31,51,0
+product manager,32,60,2
+product manager,33,43,0
+product manager,34,27,0
+product manager,35,62,0
+product manager,36,44,0
+product manager,37,26,0
+product manager,38,24,0
+product manager,39,6,0
+product manager,40,8,0
+product manager,41,2,0
+product manager,42,0,0
+product manager,43,4,0
+product manager,44,18,0
+product manager,45,1,0
+product manager,46,13,0
+product manager,47,0,0
+product manager,48,0,0
+product manager,49,0,0
+product manager,50,54,0
+product manager,51,0,0
+product manager,52,0,0
+product manager,53,0,0
+product manager,54,0,0
+product manager,55,0,0
+product manager,56,5,0
+product manager,57,1,0
+product manager,58,0,0
+product manager,59,0,0
+product manager,60,0,0
+financial analyst,20,0,0
+financial analyst,21,11,0
+financial analyst,22,48,0
+financial analyst,23,168,0
+financial analyst,24,201,0
+financial analyst,25,181,1
+financial analyst,26,121,3
+financial analyst,27,246,1
+financial analyst,28,121,0
+financial analyst,29,141,2
+financial analyst,30,128,0
+financial analyst,31,118,7
+financial analyst,32,62,6
+financial analyst,33,68,64
+financial analyst,34,223,0
+financial analyst,35,105,0
+financial analyst,36,115,0
+financial analyst,37,87,0
+financial analyst,38,69,0
+financial analyst,39,0,0
+financial analyst,40,99,0
+financial analyst,41,24,1
+financial analyst,42,74,0
+financial analyst,43,4,0
+financial analyst,44,75,2
+financial analyst,45,141,0
+financial analyst,46,93,0
+financial analyst,47,92,0
+financial analyst,48,13,0
+financial analyst,49,18,0
+financial analyst,50,1,0
+financial analyst,51,22,0
+financial analyst,52,6,0
+financial analyst,53,16,0
+financial analyst,54,24,0
+financial analyst,55,1,0
+financial analyst,56,0,0
+financial analyst,57,16,0
+financial analyst,58,0,0
+financial analyst,59,51,0
+financial analyst,60,18,0
+registered nurse,20,1,0
+registered nurse,21,47,0
+registered nurse,22,30,0
+registered nurse,23,117,0
+registered nurse,24,75,0
+registered nurse,25,436,4
+registered nurse,26,68,0
+registered nurse,27,39,0
+registered nurse,28,176,0
+registered nurse,29,152,1
+registered nurse,30,76,0
+registered nurse,31,129,4
+registered nurse,32,260,1
+registered nurse,33,158,0
+registered nurse,34,178,0
+registered nurse,35,298,0
+registered nurse,36,331,0
+registered nurse,37,80,2
+registered nurse,38,95,0
+registered nurse,39,110,2
+registered nurse,40,191,2
+registered nurse,41,60,0
+registered nurse,42,184,0
+registered nurse,43,89,0
+registered nurse,44,119,0
+registered nurse,45,65,0
+registered nurse,46,13,0
+registered nurse,47,91,0
+registered nurse,48,87,0
+registered nurse,49,18,0
+registered nurse,50,55,0
+registered nurse,51,7,0
+registered nurse,52,88,0
+registered nurse,53,64,0
+registered nurse,54,64,0
+registered nurse,55,35,0
+registered nurse,56,23,0
+registered nurse,57,12,0
+registered nurse,58,76,0
+registered nurse,59,78,1
+registered nurse,60,55,0
+woman,20,102753,1651
+woman,21,84813,678
+woman,22,94969,853
+woman,23,103825,895
+woman,24,81663,906
+woman,25,97906,966
+woman,26,76475,614
+woman,27,68316,517
+woman,28,72358,946
+woman,29,60059,510
+woman,30,103452,1215
+woman,31,47396,305
+woman,32,67189,626
+woman,33,44378,466
+woman,34,45153,341
+woman,35,70652,618
+woman,36,38444,380
+woman,37,39383,266
+woman,38,41269,333
+woman,39,35579,328
+woman,40,83965,1166
+woman,41,33941,183
+woman,42,42035,269
+woman,43,34241,236
+woman,44,31776,310
+woman,45,52893,297
+woman,46,27845,292
+woman,47,31082,197
+woman,48,32414,175
+woman,49,31219,120
+woman,50,70735,477
+woman,51,29424,235
+woman,52,33414,286
+woman,53,31069,194
+woman,54,29749,146
+woman,55,41080,393
+woman,56,27164,377
+woman,57,26322,171
+woman,58,26868,213
+woman,59,22733,114
+woman,60,63486,556
+man,20,132158,1121
+man,21,116138,1377
+man,22,125953,1348
+man,23,111874,1812
+man,24,104459,1048
+man,25,128271,1391
+man,26,96460,1051
+man,27,96157,1264
+man,28,96901,846
+man,29,83833,870
+man,30,133246,1467
+man,31,68224,742
+man,32,81218,786
+man,33,63080,911
+man,34,66598,630
+man,35,97553,1411
+man,36,62331,610
+man,37,60004,599
+man,38,60457,496
+man,39,51522,418
+man,40,118962,708
+man,41,48123,517
+man,42,62317,443
+man,43,52473,488
+man,44,48883,407
+man,45,81153,672
+man,46,46267,428
+man,47,49837,494
+man,48,48587,437
+man,49,41508,582
+man,50,112594,909
+man,51,41765,384
+man,52,51738,418
+man,53,42552,373
+man,54,41688,342
+man,55,60712,385
+man,56,43120,344
+man,57,39449,289
+man,58,40574,281
+man,59,34704,257
+man,60,92572,1055
